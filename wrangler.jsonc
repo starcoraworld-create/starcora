@@ -1,0 +1,10 @@
+{
+  // Starcora website: a plain static site served by Cloudflare.
+  "name": "starcora",
+  "compatibility_date": "2026-10-01",
+  "assets": {
+    "directory": ".",
+    "not_found_handling": "404-page",
+    "html_handling": "auto-trailing-slash"
+  }
+}
