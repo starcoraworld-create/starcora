@@ -55,7 +55,7 @@
   var CLIPS={'Coming soon!':'soon','Try book 0 first!':'try0','Try book 1 first!':'try1','Try book 2 first!':'try2'},clip=null;
   function voice(text){
     var k=CLIPS[text];if(!k)return;
-    try{if(clip){clip.pause()}clip=new Audio('assets/voice/'+k+'.mp3');var p=clip.play();p&&p.catch(function(){})}catch(e){}
+    try{if(clip){clip.pause()}clip=new Audio('assets/voice/'+k+'.mp3');np('Starcora');var p=clip.play();p&&p.catch(function(){})}catch(e){}
   }
   function talk(text,ms,speak){say.textContent=text;say.classList.add('on');clearTimeout(say._t);say._t=setTimeout(function(){say.classList.remove('on')},ms||2600);if(speak)voice(text)}
 
@@ -67,7 +67,7 @@
   function playIntro(){
     try{
       if(intro){intro.pause();intro.currentTime=0}
-      intro=new Audio('assets/voice/shelf-intro.mp3');
+      intro=new Audio('assets/voice/shelf-intro.mp3');np('Follow the stars');
       hear&&hear.classList.add('playing');hear&&hear.classList.remove('glow');
       intro.onended=function(){hear&&hear.classList.remove('playing')};
       var pr=intro.play();introDone=true;
@@ -104,7 +104,8 @@
 
   // the Starcora jingle plays as the cover swings open, then the book starts on page 1
   var jingle=null;
-  function playJingle(){try{jingle=new Audio('assets/jingle.mp3');var p=jingle.play();p&&p.catch(function(){})}catch(e){}}
+  function np(t){try{if('mediaSession' in navigator&&window.MediaMetadata)navigator.mediaSession.metadata=new MediaMetadata({title:t,artist:'Starcora',artwork:[{src:new URL('assets/now-playing.jpg',location.href).href,sizes:'512x512',type:'image/jpeg'}]})}catch(e){}}
+  function playJingle(){try{jingle=new Audio('assets/jingle.mp3');np('Starcora');var p=jingle.play();p&&p.catch(function(){})}catch(e){}}
   function open(b,href){
     say.classList.remove('on');stopIntro();
     var t=b.querySelector('.tome').getBoundingClientRect();

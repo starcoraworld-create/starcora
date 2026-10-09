@@ -1127,4 +1127,5 @@ label();
   <b>Turn your phone upright to read</b>
   <span>Storybooks work best held tall</span>
 </div>
+<script id="sc-np">/* lock-screen picture and title when the book plays sound */document.addEventListener("play",function(){try{if("mediaSession" in navigator&&window.MediaMetadata)navigator.mediaSession.metadata=new MediaMetadata({title:(document.querySelector("meta[property='og:title']")||{}).content?document.title.split(":")[0]:"Starcora",artist:"Starcora",artwork:[{src:new URL("../../assets/now-playing.jpg",location.href).href,sizes:"512x512",type:"image/jpeg"}]})}catch(e){}},true)</script>
 </html>
