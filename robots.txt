@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://starcora.world/sitemap.xml

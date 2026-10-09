@@ -1,0 +1,322 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Free colouring pages for kids to print or paint online | Starcora</title>
+<meta name="description" content="Free printable colouring pages for kids aged 4 to 7. Paint online with fill, brush, zoom and stickers, or print and colour at home or in class. Characters, plants and magical places.">
+<link rel="canonical" href="https://starcora.world/art">
+<meta property="og:site_name" content="Starcora">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_GB">
+<meta property="og:title" content="Free colouring pages for kids to print or paint online | Starcora">
+<meta property="og:description" content="Free printable colouring pages for kids aged 4 to 7. Paint online with fill, brush, zoom and stickers, or print and colour at home or in class. Characters, plants and magical places.">
+<meta property="og:url" content="https://starcora.world/art">
+<meta property="og:image" content="https://starcora.world/assets/share.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json" data-seo>{"@context": "https://schema.org", "@type": "CollectionPage", "name": "Free colouring pages for kids", "description": "Printable and online colouring pages for children aged 4 to 7, starring Sola, Oro and Rose.", "isAccessibleForFree": true, "audience": {"@type": "PeopleAudience", "suggestedMinAge": 4, "suggestedMaxAge": 7}, "publisher": {"@id": "https://starcora.world/#org"}}</script>
+<meta name="theme-color" content="#8E6BC4">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="stories.css">
+<style>
+.hero.short{height:auto;min-height:0;padding:150px 16px 70px;text-align:center}
+.hero.short .titles{position:relative;top:auto}
+.hero.short .isl{width:clamp(150px,18vw,240px);margin:6px auto 0;animation:bob 6s ease-in-out infinite;filter:drop-shadow(0 18px 22px rgba(70,30,90,.3))}
+.gallery{max-width:1080px;margin:0 auto;padding:clamp(36px,6vw,64px) 16px clamp(56px,8vw,90px)}
+.how-old{display:flex;justify-content:center;gap:clamp(18px,4vw,48px);margin:0 0 34px;flex-wrap:wrap;color:var(--ink-soft);font-size:16px}
+.how b{color:var(--ink);font-family:var(--display);font-weight:500;font-size:19px;display:block}
+.how div{text-align:center;max-width:15rem}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:22px}
+.card{background:#fff;border-radius:22px;padding:14px;display:flex;flex-direction:column;gap:12px;box-shadow:0 10px 30px -14px rgba(70,30,90,.35);transition:transform .35s cubic-bezier(.3,1.5,.5,1)}
+.card:hover{transform:translateY(-4px)}
+.thumb{aspect-ratio:1;border-radius:14px;background:#fff;display:grid;place-items:center;overflow:hidden;border:1px solid #EFE6F3}
+.thumb img{width:100%;height:100%;object-fit:contain}
+.thumb.soon{background:linear-gradient(160deg,#F6EEFB,#FFF6EC);color:var(--ink-soft);font-family:var(--display);font-style:italic;font-size:17px;text-align:center;padding:12px}
+.thumb.soon span{display:block;font-size:34px;font-style:normal;margin-bottom:4px}
+.cname{font-family:var(--display);font-weight:500;font-size:22px;text-align:center;margin:0}
+.btns{display:flex;gap:8px}
+.pill{flex:1;padding:12px 8px;border-radius:999px;border:0;cursor:pointer;font:700 16px var(--body);color:#fff;background:#9E7CC8;box-shadow:0 4px 0 #7A5BA6;transition:transform .12s}
+.pill.alt{background:#E89B7A;box-shadow:0 4px 0 #BC6F52}
+.pill:active{transform:translateY(3px);box-shadow:0 1px 0 #7A5BA6}
+.pill:disabled{opacity:.35;cursor:default}
+
+/* paint desk */
+.desk[hidden]{display:none!important}
+.desk{position:fixed;inset:0;background:linear-gradient(180deg,#B49AD8,#F2C4D4);z-index:30;display:flex;flex-direction:column}
+.deskbar{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:12px 16px}
+.deskbar h2{font-family:var(--display);font-weight:500;font-size:28px;margin:0;color:#fff;text-shadow:0 2px 12px rgba(70,30,90,.4)}
+.round{width:54px;height:54px;border-radius:50%;background:#fff;border:0;display:grid;place-items:center;color:var(--ink);cursor:pointer;box-shadow:0 4px 0 rgba(70,30,90,.25)}
+.round.spacer{visibility:hidden}
+.round svg{width:26px;height:26px}
+.deskbody{flex:1;min-height:0;display:flex;gap:18px;padding:0 16px 16px;align-items:center;justify-content:center}
+.stage{position:relative;aspect-ratio:1;height:min(100%,calc(100vw - 32px));max-width:100%;background:#fff;border-radius:22px;overflow:hidden;touch-action:none;box-shadow:0 20px 50px -20px rgba(70,30,90,.5)}
+.stage canvas{position:absolute;inset:0;width:100%;height:100%}
+.stage{flex:none}
+.zoomer{position:absolute;inset:0;transform-origin:0 0}
+.zoomctl{position:absolute;right:10px;bottom:10px;z-index:5;display:flex;flex-direction:column;gap:8px}
+.zbtn{width:46px;height:46px;border-radius:50%;border:0;background:#fff;color:var(--ink);display:grid;place-items:center;cursor:pointer;box-shadow:0 3px 0 rgba(70,30,90,.2),0 4px 12px rgba(70,30,90,.2)}
+.zbtn svg{width:22px;height:22px}
+.zbtn:disabled{opacity:.35;cursor:default}
+#stampC{cursor:crosshair}
+.tools{display:flex;flex-direction:column;gap:14px;width:240px;flex:none;background:rgba(255,255,255,.85);border-radius:22px;padding:16px}
+.row{display:flex;flex-wrap:wrap;gap:8px}
+.tool{width:60px;height:60px;border-radius:18px;background:#fff;border:3px solid #E9DDF1;display:grid;place-items:center;color:var(--ink);cursor:pointer}
+.tool svg{width:32px;height:32px}
+.tool.act svg{width:28px;height:28px}
+.tool:disabled{opacity:.35;cursor:default}
+.tool[aria-pressed="true"]{border-color:#9E7CC8;background:#F3ECFA}
+.sw{width:42px;height:42px;border-radius:50%;border:3px solid #fff;box-shadow:0 0 0 2px #E2D6EA;cursor:pointer}
+.sw[aria-pressed="true"]{box-shadow:0 0 0 4px var(--ink)}
+@media (max-width:440px){#swatches{gap:6px}#swatches .sw{width:36px;height:36px}.tools .row:first-child{gap:6px}.tools .row:first-child .tool{width:48px;height:48px}}
+.stamp{width:56px;height:56px;border-radius:16px;background:#fff;border:3px solid #E9DDF1;padding:6px;cursor:pointer}
+.stamp img{width:100%;height:100%;object-fit:contain}
+.stamp[aria-pressed="true"]{border-color:#9E7CC8;background:#F3ECFA}
+.sizes .sz{width:48px;height:48px;border-radius:50%;background:#fff;border:3px solid #E9DDF1;display:grid;place-items:center;cursor:pointer}
+.sizes .sz span{display:block;border-radius:50%;background:var(--ink)}
+.sizes .sz[aria-pressed="true"]{border-color:#9E7CC8;background:#F3ECFA}
+.panel[hidden]{display:none!important}
+.actions{display:flex;gap:8px}
+.ghost{width:100%;padding:10px;border-radius:999px;border:2px solid #E2D6EA;background:#fff;font:700 15px var(--body);color:var(--ink);cursor:pointer}
+@media (max-width:760px){
+  .hero.short{padding:150px 16px 50px}
+  .deskbody{flex-direction:column;padding-bottom:10px}
+  .desk{overflow-y:auto}
+  .deskbody{flex:none}
+  .stage{height:auto;width:100%;max-width:520px}
+  .tools{width:100%;max-width:520px;gap:10px;padding:12px}
+  .tool{width:52px;height:52px}.sw{width:38px;height:38px}
+}
+#printSheet{display:none}
+@media print{body *{visibility:hidden}#printSheet,#printSheet *{visibility:visible}#printSheet{display:block;position:fixed;inset:0;background:#fff}#printSheet img{width:100%;height:auto}@page{margin:12mm}}
+
+.today{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:clamp(18px,4vw,48px);align-items:center;background:#fff;border-radius:28px;padding:clamp(16px,3vw,28px);box-shadow:0 18px 50px -24px rgba(70,30,90,.45);margin:0 0 40px}
+.today .thumb{border:0;background:#FBF7FD}
+.today .tag{display:inline-block;background:#FFE7A8;color:#6B4A2A;font-weight:700;font-size:14px;letter-spacing:.06em;text-transform:uppercase;padding:5px 12px;border-radius:999px}
+.today h2{font-family:var(--display);font-weight:500;font-variation-settings:"SOFT" 100;font-size:clamp(30px,4vw,48px);line-height:1.05;margin:12px 0 8px}
+.today p{margin:0 0 20px;color:var(--ink-soft)}
+.today .btns{max-width:340px}
+.tabs{display:flex;gap:14px;overflow-x:auto;padding:6px 4px 14px;margin:0 -4px;scrollbar-width:none}
+.tabs::-webkit-scrollbar{display:none}
+.tab{flex:none;display:flex;flex-direction:column;align-items:center;gap:6px;background:none;border:0;cursor:pointer;font:700 14px var(--body);color:var(--ink-soft);padding:0;-webkit-tap-highlight-color:transparent}
+.tab .disc{position:relative;width:76px;height:76px;border-radius:50%;background:#fff;display:grid;place-items:center;overflow:visible;box-shadow:0 6px 16px -8px rgba(70,30,90,.5);border:3px solid #fff;transition:transform .3s cubic-bezier(.3,1.6,.5,1),border-color .2s}
+.tab .disc img{width:100%;height:100%;object-fit:cover;border-radius:50%}
+.tab .disc img.ic{object-fit:contain;padding:11px;border-radius:0}
+.tab .disc img.bk{object-fit:contain;padding:9px 12px;background:#fff}
+.tab .disc svg{width:58%;height:58%}
+.tab .count{position:absolute;right:-4px;top:-4px;min-width:26px;height:26px;padding:0 7px;border-radius:999px;background:#9E7CC8;color:#fff;font-size:13px;display:grid;place-items:center;border:2px solid #fff}
+.tab[aria-pressed="true"] .disc{border-color:#9E7CC8;transform:translateY(-4px) scale(1.06)}
+.tab[aria-pressed="true"]{color:var(--ink)}
+.tab:hover .disc{transform:translateY(-3px)}
+.shelf{font-family:var(--display);font-weight:500;font-size:26px;margin:22px 0 16px}
+.card{position:relative}
+.ribbon{position:absolute;top:10px;left:-6px;background:#E5566F;color:#fff;font-weight:800;font-size:13px;letter-spacing:.05em;padding:4px 12px 4px 10px;border-radius:0 999px 999px 0;box-shadow:0 3px 0 #A93A4F;z-index:2}
+.hint2{text-align:center;color:var(--ink-soft);margin:34px 0 0;font-size:16px}
+.grid .card{animation:pop .45s cubic-bezier(.3,1.5,.5,1) both}
+@keyframes pop{from{opacity:0;transform:translateY(10px) scale(.96)}}
+@media (max-width:760px){.today{grid-template-columns:1fr}.grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.card{padding:10px;border-radius:18px}.cname{font-size:17px}.pill{padding:10px 4px;font-size:14px}.tab .disc{width:64px;height:64px}}
+@media (prefers-reduced-motion:reduce){.grid .card{animation:none}}
+.about{max-width:44rem;margin:56px auto 0;text-align:center}.about h2{font-family:var(--display);font-weight:500;font-size:clamp(24px,2.6vw,30px);margin:0 0 8px}.about p{color:var(--ink-soft);margin:0}
+</style>
+</head>
+<body>
+<header class="site-header">
+  <nav class="menu left" aria-label="Main"><a href="index.html"><img class="ni" src="assets/nav/home.webp" alt="" width="48" height="48">Home</a><a href="stories.html"><img class="ni" src="assets/nav/stories.webp" alt="" width="48" height="48">Stories</a><a href="videos.html"><img class="ni" src="assets/nav/videos.webp" alt="" width="48" height="48">Videos</a></nav>
+  <a class="brand" href="index.html" aria-label="Starcora home"><img src="assets/logo-cream.svg" alt="Starcora" width="240" height="80"></a>
+  <nav class="menu right" aria-label="More"><a href="art.html" aria-current="page"><img class="ni" src="assets/nav/art.webp" alt="" width="48" height="48">Art</a><a href="grownups.html"><img class="ni" src="assets/nav/grownups.webp" alt="" width="48" height="48">Grown-ups</a></nav>
+  <button class="menu-btn" type="button" aria-label="Menu" aria-expanded="false" aria-controls="menu-panel"><span></span><span></span><span></span></button>
+  <nav class="menu-panel" id="menu-panel" aria-label="Menu" hidden><a href="index.html"><img class="ni" src="assets/nav/home.webp" alt="" width="48" height="48">Home</a><a href="stories.html"><img class="ni" src="assets/nav/stories.webp" alt="" width="48" height="48">Stories</a><a href="videos.html"><img class="ni" src="assets/nav/videos.webp" alt="" width="48" height="48">Videos</a><a href="art.html" aria-current="page"><img class="ni" src="assets/nav/art.webp" alt="" width="48" height="48">Art</a><a href="grownups.html"><img class="ni" src="assets/nav/grownups.webp" alt="" width="48" height="48">Grown-ups</a></nav>
+  <script>(function(){var b=document.querySelector('.menu-btn'),p=document.getElementById('menu-panel');function set(o){b.setAttribute('aria-expanded',o);p.hidden=!o}b.addEventListener('click',function(e){e.stopPropagation();set(p.hidden)});document.addEventListener('click',function(e){if(!p.hidden&&!p.contains(e.target))set(false)});document.addEventListener('keydown',function(e){if(e.key==='Escape')set(false)})})();</script>
+</header>
+
+<main>
+<section class="hero short" aria-labelledby="t">
+  <div class="sky"></div>
+  <div class="titles"><h1 id="t">Colour the Moonmist</h1><p>Free colouring pages for kids: paint them here, or print them out</p></div>
+  <img class="isl" src="assets/island-art.webp" alt="The Starcora art island with an easel and paint pots" style="position:relative">
+</section>
+
+<section class="gallery" id="gallery">
+  <div class="today" id="today"></div>
+  <nav class="tabs" id="tabs" aria-label="Choose a collection"></nav>
+  <h2 class="shelf" id="shelfName">All pages</h2>
+  <div class="grid" id="grid"></div>
+  <p class="hint2">Tap <b>Paint</b> to colour on screen, or <b>Print</b> to colour at the table.</p>
+  <div class="about">
+    <h2>Free colouring pages for kids aged 4 to 7</h2>
+    <p>Every Starcora colouring page is free. Children can colour online with the fill bucket, brush, stickers and zoom, then save their picture, or print the page for a calm activity at home or in the classroom. Choose from Sola, Oro and Rose, the plants of the Moonmist and the magical places of Starcora, with new pages added over time.</p>
+  </div>
+</section>
+</main>
+
+<div class="desk" id="desk" hidden>
+  <div class="deskbar">
+    <button class="round" id="backBtn" aria-label="Back to all pages"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5l-7 7 7 7"/></svg></button>
+    <h2 id="deskTitle">Dotstool</h2>
+    <span class="round spacer" aria-hidden="true"></span>
+  </div>
+  <div class="deskbody">
+    <div class="stage" id="stage">
+      <div class="zoomer" id="zoomer">
+      <canvas id="paintC" width="800" height="800"></canvas>
+      <canvas id="lineC" width="800" height="800"></canvas>
+      <canvas id="stampC" width="800" height="800"></canvas>
+      </div>
+      <div class="zoomctl">
+        <button class="zbtn" id="zIn" type="button" aria-label="Zoom in"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></button>
+        <button class="zbtn" id="zOut" type="button" aria-label="Zoom out" disabled><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M5 12h14"/></svg></button>
+      </div>
+    </div>
+    <div class="tools">
+      <div class="row" role="group" aria-label="Tools">
+        <button class="tool" data-tool="fill" aria-pressed="true" aria-label="Fill"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"><path d="M6 15l9-9 10 10-9 9z" fill="#fff"/><path d="M6 15h19"/><path d="M27 21c0 2-1.3 4-3 4s-3-2-3-4 3-5 3-5 3 3 3 5z" fill="currentColor"/></svg></button>
+        <button class="tool" data-tool="brush" aria-pressed="false" aria-label="Brush"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M26 5L14 17"/><path d="M13 18c-4 0-6 3-6 5s-1 3-3 4c5 1 11 0 11-5z" fill="currentColor"/></svg></button>
+        <button class="tool" data-tool="stamp" aria-pressed="false" aria-label="Stickers"><svg viewBox="0 0 32 32"><path d="M16 4l3.6 7.6 8.2 1-6 5.7 1.6 8.2L16 22.5 8.6 26.5l1.6-8.2-6-5.7 8.2-1z" fill="#F4C840" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg></button>
+        <button class="tool" data-tool="erase" aria-pressed="false" aria-label="Eraser"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"><path d="M5 20l11-11 9 9-7 7h-8z" fill="#F7C9C9"/><path d="M10 15l9 9"/><path d="M12 27h16" stroke-linecap="round"/></svg></button>
+        <button class="tool act" id="undoBtn" type="button" aria-label="Undo" disabled><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 14L4 9l5-5"/><path d="M4 9h10a6 6 0 0 1 0 12h-3"/></svg></button>
+        <button class="tool act" id="redoBtn" type="button" aria-label="Redo" disabled><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M15 14l5-5-5-5"/><path d="M20 9H10a6 6 0 0 0 0 12h3"/></svg></button>
+      </div>
+      <div class="panel" id="colours"><div class="row" id="swatches" role="group" aria-label="Colours"></div></div>
+      <div class="panel sizes" id="sizes" hidden><div class="row" role="group" aria-label="Brush size">
+        <button class="sz" data-size="12" aria-pressed="false" aria-label="Thin"><span style="width:8px;height:8px"></span></button>
+        <button class="sz" data-size="28" aria-pressed="true" aria-label="Medium"><span style="width:16px;height:16px"></span></button>
+        <button class="sz" data-size="56" aria-pressed="false" aria-label="Thick"><span style="width:26px;height:26px"></span></button>
+      </div></div>
+      <div class="panel" id="stamps" hidden><div class="row" id="stampRow" role="group" aria-label="Stickers"></div></div>
+      <div class="actions"><button class="pill" id="saveBtn">Save</button><button class="pill alt" id="printPaintBtn">Print</button></div>
+      <button class="ghost" id="clearBtn">Start again</button>
+    </div>
+  </div>
+</div>
+<div id="printSheet"><img id="printImg" alt=""></div>
+
+<footer class="site-footer">
+  <img src="assets/logo-cream.svg" alt="Starcora" width="160" height="54">
+  <p class="tagline">Free kids stories, story games and colouring pages for children aged 4 to 7.</p>
+  <nav aria-label="Footer"><a href="index.html">Home</a><a href="stories.html">Storybooks</a><a href="videos.html">Story videos</a><a href="art.html">Colouring pages</a><a href="grownups.html">Parents and teachers</a><a href="privacy.html">Privacy</a><a href="mailto:hello@starcora.world?subject=Starcora%20feedback">Feedback</a></nav>
+  <div><a class="mail" href="mailto:hello@starcora.world">hello@starcora.world</a></div>
+  <div>&copy; 2026 Starcora</div>
+</footer>
+
+<script>
+const svgUrl=s=>'data:image/svg+xml;charset=utf-8,'+encodeURIComponent(s);
+// Every colouring page is one line. tags decide which tabs it shows under. added = the day it went up (pages added after launch get a "New" ribbon for 3 weeks).
+const C='assets/colour/';
+const PAGES=[
+ {id:'sola',name:'Sola',tags:['sola'],art:C+'sola-colouring-page.png',alt:'Sola from Starcora colouring page: a girl in a puffy space suit waving among flowers',added:'2026-10-09'},
+ {id:'oro',name:'Oro',tags:['oro'],art:C+'oro-robot-colouring-page.png',alt:'Oro the robot colouring page: a friendly retro robot with antennae and a wind-up key',added:'2026-10-09'},
+ {id:'rose',name:'Rose',tags:['rose'],art:C+'rose-deer-colouring-page.png',alt:'Rose colouring page: a little deer girl in dungarees holding a flower',added:'2026-10-09'},
+ {id:'dotstool',name:'Dotstool',tags:['plants'],art:C+'dotstool-mushroom-colouring-page.png',alt:'Dotstool colouring page: a big spotty mushroom with flowers',added:'2026-10-09'},
+ {id:'spiral',name:'Spiral Tree',tags:['plants','places'],art:C+'spiral-tree-colouring-page.png',alt:'Spiral tree colouring page from the Moonmist forest',added:'2026-10-09'},
+ {id:'swirlbud',name:'Swirlbud',tags:['plants'],art:C+'swirlbud-lollipop-flower-colouring-page.png',alt:'Swirlbud colouring page: lollipop swirl flowers from Starcora',added:'2026-10-09'},
+ {id:'lantern',name:'Lantern-bloom',tags:['plants'],art:C+'lantern-bloom-flower-colouring-page.png',alt:'Lantern-bloom colouring page: a glowing hanging flower',added:'2026-10-09'},
+ {id:'daisy',name:'Daisy',tags:['plants'],art:C+'daisy-flower-colouring-page.png',alt:'Daisy flower colouring page for kids',added:'2026-10-09'},
+ {id:'tulip',name:'Tulip',tags:['plants'],art:C+'tulip-flower-colouring-page.png',alt:'Tulip flower colouring page for kids',added:'2026-10-09'},
+ {id:'sky',name:'Moonmist Sky',tags:['places'],art:C+'moonmist-sky-colouring-page.png',alt:'Moonmist sky colouring page with the moon, stars, a ringed planet, clouds and treetops',added:'2026-10-09'},
+ {id:'chest',name:'Cova Chest',tags:['things'],art:C+'cova-treasure-chest-colouring-page.png',alt:'Cova Chest colouring page: a treasure chest with a planet carving on a shelf with a plant and books',added:'2026-10-09'}
+];
+const ICON={
+ all:'<svg viewBox="0 0 40 40"><path d="M20 4l4.6 10.4L36 16l-8.5 7.6L30 35l-10-5.8L10 35l2.5-11.4L4 16l11.4-1.6z" fill="#F4C840" stroke="#3A2438" stroke-width="2" stroke-linejoin="round"/></svg>',
+ plants:'<svg viewBox="0 0 40 40"><path d="M20 22v14" stroke="#5FB89A" stroke-width="3" stroke-linecap="round"/><g fill="#F4A8A0" stroke="#3A2438" stroke-width="1.8"><circle cx="20" cy="9" r="5"/><circle cx="28" cy="15" r="5"/><circle cx="25" cy="24" r="5"/><circle cx="15" cy="24" r="5"/><circle cx="12" cy="15" r="5"/></g><circle cx="20" cy="17" r="4.5" fill="#F4E4A0" stroke="#3A2438" stroke-width="1.8"/></svg>',
+ places:'<svg viewBox="0 0 40 40"><path d="M17 36c1-6 1-12 0-18h6c-1 6-1 12 0 18z" fill="#8A5A78" stroke="#3A2438" stroke-width="1.8" stroke-linejoin="round"/><circle cx="20" cy="13" r="10" fill="#A8E0C4" stroke="#3A2438" stroke-width="1.8"/><circle cx="12" cy="18" r="6" fill="#5CB8B0" stroke="#3A2438" stroke-width="1.8"/><circle cx="28" cy="18" r="6" fill="#5CB8B0" stroke="#3A2438" stroke-width="1.8"/></svg>',
+ things:'<svg viewBox="0 0 40 40"><rect x="6" y="16" width="28" height="18" rx="3" fill="#8A5A78" stroke="#3A2438" stroke-width="1.8"/><path d="M6 18c0-7 6-11 14-11s14 4 14 11z" fill="#A8748A" stroke="#3A2438" stroke-width="1.8"/><rect x="17" y="17" width="6" height="7" rx="1.5" fill="#F4E4A0" stroke="#3A2438" stroke-width="1.5"/></svg>'};
+const TABS=[
+ {id:'all',name:'All',img:'assets/stickers/star.webp',ic:1},
+ {id:'sola',name:'Sola',img:'assets/face-sola.webp'},
+ {id:'oro',name:'Oro',img:'assets/face-oro.webp'},
+ {id:'rose',name:'Rose',img:'assets/face-rose.webp'},
+ {id:'plants',name:'Plants',img:'assets/stickers/bloom.webp',ic:1},
+ {id:'places',name:'Places',img:'assets/stickers/planet.webp',ic:1},
+ {id:'things',name:'Things',img:'assets/stickers/chest.webp',ic:1},
+ {id:'book0',name:'Book 0',img:'assets/book-0-sm.webp',book:1},
+ {id:'book1',name:'Book 1',img:'assets/book-1-sm.webp',book:1}];
+const COLOURS=['#B89AC8','#8E5C9E','#7848A0','#F2A7C3','#F06090','#E05878','#E5566F','#E89B7A','#F4C840','#E8C240','#C8A028','#BFE6D6','#A8D8C0','#5FB89A','#2F7C7A','#8FB8E8','#A97A55','#8B6040','#B4C4D4','#8898A8','#C9C9D2','#FFFFFF','#FFF6E0','#2B2230'];
+const STICKERS=['star','planet','rocket','sun','moon','flower','mushroom','bloom','lantern','chest','letter','key'];
+
+const NEW_DAYS=21,LAUNCH=new Date('2026-10-10'),now=Date.now();
+const isNew=p=>p.art&&new Date(p.added)>=LAUNCH&&(now-new Date(p.added))/864e5<NEW_DAYS;
+const inTab=(p,t)=>t==='all'||p.tags.includes(t);
+let current_tab='all';
+const grid=document.getElementById('grid'),tabsEl=document.getElementById('tabs');
+function cardHTML(p){return (isNew(p)?'<span class="ribbon">New</span>':'')+(p.art?`<div class="thumb"><img src="${p.art}" alt="${p.alt||p.name+' colouring page for kids'}, free to print"></div>`:`<div class="thumb soon"><span>✦</span>Coming soon</div>`)+
+ `<p class="cname">${p.name}</p><div class="btns"><button class="pill" data-paint="${p.id}" ${p.art?'':'disabled'}>Paint</button><button class="pill alt" data-print="${p.id}" ${p.art?'':'disabled'}>Print</button></div>`}
+function renderTabs(){tabsEl.innerHTML='';TABS.forEach(t=>{const n=PAGES.filter(p=>inTab(p,t.id)).length;if(!n)return;
+ const b=document.createElement('button');b.className='tab';b.setAttribute('aria-pressed',t.id===current_tab);b.setAttribute('aria-label',t.name+', '+n+' pages');
+ b.innerHTML=`<span class="disc">${t.img?`<img class="${t.book?'bk':t.ic?'ic':''}" src="${t.img}" alt="">`:t.icon}<span class="count">${n}</span></span>${t.name}`;
+ b.onclick=()=>{current_tab=t.id;renderTabs();renderGrid()};tabsEl.appendChild(b)})}
+function renderGrid(){const t=TABS.find(x=>x.id===current_tab);document.getElementById('shelfName').textContent=current_tab==='all'?'All pages':t.name;
+ const list=PAGES.filter(p=>inTab(p,current_tab)).sort((a,b)=>(!!b.art-!!a.art)||(new Date(b.added)-new Date(a.added))||(PAGES.indexOf(a)-PAGES.indexOf(b)));
+ grid.innerHTML='';list.forEach((p,i)=>{const c=document.createElement('div');c.className='card';c.style.animationDelay=(i*40)+'ms';c.innerHTML=cardHTML(p);grid.appendChild(c)})}
+function renderToday(){const ready=PAGES.filter(x=>x.art);if(!ready.length)return;const wk=Math.floor((now/864e5+3)/7);const p=PAGES.find(x=>x.featured&&x.art)||ready[wk%ready.length];
+ document.getElementById('today').innerHTML=`<div class="thumb"><img src="${p.art}" alt="${p.alt||p.name+' colouring page for kids'}, free to print"></div><div><span class="tag">Colour me today</span><h2>${p.name}</h2><p>This week's page. Paint it here, or print it and colour it at the table.</p><div class="btns"><button class="pill" data-paint="${p.id}">Paint</button><button class="pill alt" data-print="${p.id}">Print</button></div></div>`}
+renderToday();renderTabs();renderGrid();
+document.getElementById('gallery').addEventListener('click',e=>{const b=e.target.closest('button[data-paint],button[data-print]');if(!b||b.disabled)return;const p=PAGES.find(x=>x.id===(b.dataset.paint||b.dataset.print));if(b.dataset.paint)openDesk(p);else printBlank(p)});
+const N=800,paintC=document.getElementById('paintC'),lineC=document.getElementById('lineC'),stampC=document.getElementById('stampC');
+const pctx=paintC.getContext('2d',{willReadFrequently:true}),lctx=lineC.getContext('2d',{willReadFrequently:true}),sctx=stampC.getContext('2d',{willReadFrequently:true});
+let walls=null,current=null,tool='fill',colour=COLOURS[0],size=28,stampKey='star';const stampImgs={};
+for(const k of STICKERS){const im=new Image();im.src='assets/stickers/'+k+'.webp';stampImgs[k]=im}
+function loadImg(src){return new Promise((res,rej)=>{const i=new Image();i.onload=()=>res(i);i.onerror=rej;i.src=src})}
+async function openDesk(p){current=p;try{zReset()}catch(_){}document.getElementById('deskTitle').textContent=p.name;document.getElementById('desk').hidden=false;document.body.style.overflow='hidden';
+ const img=await loadImg(p.art);lctx.clearRect(0,0,N,N);lctx.drawImage(img,0,0,N,N);const d=lctx.getImageData(0,0,N,N).data;walls=new Uint8Array(N*N);
+ for(let i=0;i<N*N;i++){const a=d[i*4+3],lum=(d[i*4]+d[i*4+1]+d[i*4+2])/3;walls[i]=(a>60&&lum<160)?1:0}pctx.clearRect(0,0,N,N);sctx.clearRect(0,0,N,N);hist.length=0;redo.length=0;updUR()}
+document.getElementById('backBtn').onclick=()=>{document.getElementById('desk').hidden=true;document.body.style.overflow=''};
+const hist=[],redo=[],undoBtn=document.getElementById('undoBtn'),redoBtn=document.getElementById('redoBtn');
+function cur(){return[pctx.getImageData(0,0,N,N),sctx.getImageData(0,0,N,N)]}
+function put(st){pctx.putImageData(st[0],0,0);sctx.putImageData(st[1],0,0)}
+function updUR(){undoBtn.disabled=!hist.length;redoBtn.disabled=!redo.length}
+function snap(){hist.push(cur());if(hist.length>10)hist.shift();redo.length=0;updUR()}
+undoBtn.onclick=()=>{const st=hist.pop();if(!st)return;redo.push(cur());put(st);updUR()};
+redoBtn.onclick=()=>{const st=redo.pop();if(!st)return;hist.push(cur());put(st);updUR()};
+document.getElementById('clearBtn').onclick=()=>{snap();pctx.clearRect(0,0,N,N);sctx.clearRect(0,0,N,N)};
+function press(g,el){g.forEach(b=>b.setAttribute('aria-pressed',b===el))}
+const toolBtns=[...document.querySelectorAll('.tool[data-tool]')];
+toolBtns.forEach(b=>b.onclick=()=>{tool=b.dataset.tool;press(toolBtns,b);document.getElementById('colours').hidden=!(tool==='fill'||tool==='brush');document.getElementById('sizes').hidden=!(tool==='brush'||tool==='erase');document.getElementById('stamps').hidden=tool!=='stamp'});
+const swRow=document.getElementById('swatches');
+COLOURS.forEach((c,i)=>{const b=document.createElement('button');b.className='sw';b.style.background=c;b.setAttribute('aria-label','Colour '+(i+1));b.setAttribute('aria-pressed',i===0);b.onclick=()=>{colour=c;press([...swRow.children],b)};swRow.appendChild(b)});
+const szBtns=[...document.querySelectorAll('.sz')];szBtns.forEach(b=>b.onclick=()=>{size=+b.dataset.size;press(szBtns,b)});
+const stRow=document.getElementById('stampRow');
+STICKERS.forEach(k=>{const b=document.createElement('button');b.className='stamp';b.setAttribute('aria-label',k+' sticker');b.setAttribute('aria-pressed',k===stampKey);b.innerHTML=`<img src="assets/stickers/${k}.webp" alt="">`;b.onclick=()=>{stampKey=k;press([...stRow.children],b)};stRow.appendChild(b)});
+function hexRgb(h){const n=parseInt(h.slice(1),16);return[n>>16&255,n>>8&255,n&255]}
+function fillAt(x,y){x|=0;y|=0;if(x<0||y<0||x>=N||y>=N)return;const start=y*N+x;if(walls[start])return;snap();
+ const mask=new Uint8Array(N*N),stack=[start];mask[start]=1;
+ while(stack.length){const i=stack.pop(),px=i%N;for(const j of[px>0?i-1:-1,px<N-1?i+1:-1,i-N,i+N]){if(j>=0&&j<N*N&&!mask[j]&&!walls[j]){mask[j]=1;stack.push(j)}}}
+ for(let pass=0;pass<3;pass++){const add=[];for(let i=0;i<N*N;i++){if(mask[i]||!walls[i])continue;const px=i%N;if((px>0&&mask[i-1])||(px<N-1&&mask[i+1])||(i>=N&&mask[i-N])||(i<N*N-N&&mask[i+N]))add.push(i)}add.forEach(i=>mask[i]=1)}
+ const img=pctx.getImageData(0,0,N,N),d=img.data,[r,g,b]=hexRgb(colour);for(let i=0;i<N*N;i++)if(mask[i]){d[i*4]=r;d[i*4+1]=g;d[i*4+2]=b;d[i*4+3]=255}pctx.putImageData(img,0,0)}
+let drawing=false,last=null;function pos(e){const r=stampC.getBoundingClientRect();return[(e.clientX-r.left)*N/r.width,(e.clientY-r.top)*N/r.height]}
+function stroke(a,b){for(const ctx of(tool==='erase'?[pctx,sctx]:[pctx])){ctx.save();ctx.globalCompositeOperation=tool==='erase'?'destination-out':'source-over';ctx.strokeStyle=colour;ctx.lineWidth=size/Math.sqrt(zm.z);ctx.lineCap='round';ctx.lineJoin='round';ctx.beginPath();ctx.moveTo(a[0],a[1]);ctx.lineTo(b[0],b[1]);ctx.stroke();ctx.restore()}}
+/* zoom: pinch with two fingers, or the + and - buttons */
+const stage=document.getElementById('stage'),zoomer=document.getElementById('zoomer'),zIn=document.getElementById('zIn'),zOut=document.getElementById('zOut');
+const zm={z:1,tx:0,ty:0};
+function zApply(){const W=stage.clientWidth,H=stage.clientHeight;zm.tx=Math.min(0,Math.max(W*(1-zm.z),zm.tx));zm.ty=Math.min(0,Math.max(H*(1-zm.z),zm.ty));zoomer.style.transform=`translate(${zm.tx}px,${zm.ty}px) scale(${zm.z})`;zOut.disabled=zm.z<=1.01;zIn.disabled=zm.z>=3.99}
+function zoomAt(nz,cx,cy){nz=Math.min(4,Math.max(1,nz));zm.tx=cx-(cx-zm.tx)*nz/zm.z;zm.ty=cy-(cy-zm.ty)*nz/zm.z;zm.z=nz;zApply()}
+function zReset(){zm.z=1;zm.tx=zm.ty=0;zApply()}
+zIn.onclick=()=>zoomAt(zm.z*1.6,stage.clientWidth/2,stage.clientHeight/2);
+zOut.onclick=()=>zoomAt(zm.z/1.6,stage.clientWidth/2,stage.clientHeight/2);
+stage.addEventListener('wheel',e=>{e.preventDefault();const r=stage.getBoundingClientRect();zoomAt(zm.z*(e.deltaY<0?1.15:1/1.15),e.clientX-r.left,e.clientY-r.top)},{passive:false});
+const pts=new Map();let mode=null,pend=null,pinch=null;
+function sp(e){const r=stage.getBoundingClientRect();return[e.clientX-r.left,e.clientY-r.top]}
+function pinchInfo(){const [a,b]=[...pts.values()];return{d:Math.hypot(a[0]-b[0],a[1]-b[1])||1,m:[(a[0]+b[0])/2,(a[1]+b[1])/2]}}
+stampC.addEventListener('pointerdown',e=>{e.preventDefault();pts.set(e.pointerId,sp(e));try{stampC.setPointerCapture(e.pointerId)}catch(_){}
+  if(pts.size===2){if(drawing){const s=hist.pop();if(s){put(s)}updUR();drawing=false}
+    pend=null;mode='pinch';const pi=pinchInfo();pinch={d0:pi.d,m0:pi.m,z0:zm.z,tx0:zm.tx,ty0:zm.ty};return}
+  if(pts.size>2||mode==='pinch')return;
+  mode='draw';const p=pos(e);
+  if(tool==='fill'||tool==='stamp'){pend={p,s:sp(e)};return}
+  snap();drawing=true;last=p;stroke(p,p)});
+stampC.addEventListener('pointermove',e=>{if(!pts.has(e.pointerId))return;pts.set(e.pointerId,sp(e));
+  if(mode==='pinch'&&pts.size>=2){const pi=pinchInfo(),nz=Math.min(4,Math.max(1,pinch.z0*pi.d/pinch.d0));
+    const cx=(pinch.m0[0]-pinch.tx0)/pinch.z0,cy=(pinch.m0[1]-pinch.ty0)/pinch.z0;zm.z=nz;zm.tx=pi.m[0]-cx*nz;zm.ty=pi.m[1]-cy*nz;zApply();return}
+  if(drawing){const p=pos(e);stroke(last,p);last=p}});
+function endPt(e){if(!pts.has(e.pointerId))return;pts.delete(e.pointerId);
+  if(mode==='draw'&&pend&&e.type==='pointerup'){const p=pend.p;if(tool==='fill')fillAt(p[0],p[1]);else{snap();const im=stampImgs[stampKey],s=150,k=s/Math.max(im.naturalWidth||1,im.naturalHeight||1),w=im.naturalWidth*k,h=im.naturalHeight*k;sctx.drawImage(im,p[0]-w/2,p[1]-h/2,w,h)}}
+  pend=null;drawing=false;if(pts.size===0)mode=null}
+['pointerup','pointercancel'].forEach(t=>stampC.addEventListener(t,endPt));
+window.addEventListener('resize',zApply);
+function composite(){const c=document.createElement('canvas');c.width=c.height=N;const x=c.getContext('2d');x.fillStyle='#fff';x.fillRect(0,0,N,N);x.drawImage(paintC,0,0);x.drawImage(lineC,0,0);x.drawImage(stampC,0,0);return c}
+function doPrint(src){const img=document.getElementById('printImg');img.onload=()=>window.print();img.src=src}
+document.getElementById('saveBtn').onclick=()=>{composite().toBlob(b=>{const a=document.createElement('a');a.href=URL.createObjectURL(b);a.download='starcora-'+current.id+'.png';document.body.appendChild(a);a.click();a.remove()})};
+document.getElementById('printPaintBtn').onclick=()=>doPrint(composite().toDataURL('image/png'));
+function printBlank(p){doPrint(p.art)}
+</script>
+<script src="names.js"></script>
+</body>
+</html>

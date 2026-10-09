@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Story videos for kids aged 4 to 7 | Starcora</title>
+<meta name="description" content="Watch the Starcora storybooks come to life. Gentle story videos and short clips for kids aged 4 to 7, with Sola, Oro and Rose.">
+<link rel="canonical" href="https://starcora.world/videos">
+<meta property="og:site_name" content="Starcora">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_GB">
+<meta property="og:title" content="Story videos for kids aged 4 to 7 | Starcora">
+<meta property="og:description" content="Watch the Starcora storybooks come to life. Gentle story videos and short clips for kids aged 4 to 7, with Sola, Oro and Rose.">
+<meta property="og:url" content="https://starcora.world/videos">
+<meta property="og:image" content="https://starcora.world/assets/share.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json" data-seo>{"@context": "https://schema.org", "@type": "CollectionPage", "name": "Starcora story videos", "description": "Story videos and short clips for children aged 4 to 7.", "audience": {"@type": "PeopleAudience", "suggestedMinAge": 4, "suggestedMaxAge": 7}, "publisher": {"@id": "https://starcora.world/#org"}}</script>
+<meta name="theme-color" content="#8E6BC4">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="stories.css">
+<style>
+.hero.short{height:auto;min-height:0;padding:150px 16px 70px;text-align:center}
+.hero.short .titles{position:relative;top:auto}
+.hero.short .isl{width:clamp(150px,18vw,240px);margin:6px auto 0;animation:bob 6s ease-in-out infinite;filter:drop-shadow(0 18px 22px rgba(70,30,90,.3))}
+.wrap{max-width:1120px;margin:0 auto;padding:clamp(36px,6vw,64px) 16px clamp(56px,8vw,90px)}
+.wrap h2{font-family:var(--display);font-weight:500;font-variation-settings:"SOFT" 100;font-size:clamp(26px,3vw,36px);margin:0 0 6px}
+.wrap .sub{margin:0 0 22px;color:var(--ink-soft)}
+.stories{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:24px;margin-bottom:56px}
+.shorts{display:flex;gap:18px;overflow-x:auto;padding:4px 4px 16px;margin:0 -4px;scroll-snap-type:x mandatory;scrollbar-width:thin}
+.vid{position:relative;display:block;width:100%;padding:0;border:0;background:#fff;border-radius:22px;overflow:hidden;cursor:pointer;text-align:left;font:inherit;color:inherit;
+  box-shadow:0 14px 36px -18px rgba(70,30,90,.5);transition:transform .35s cubic-bezier(.3,1.5,.5,1);-webkit-tap-highlight-color:transparent}
+.vid:hover{transform:translateY(-4px)}
+.vid .pic{position:relative;display:block;aspect-ratio:16/9;background:#E9DDF1;overflow:hidden}
+.shorts .vid{flex:none;width:190px;scroll-snap-align:start}
+.shorts .vid .pic{aspect-ratio:9/16}
+.vid .pic img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
+.vid:hover .pic img{transform:scale(1.04)}
+.play{position:absolute;left:50%;top:50%;width:68px;height:68px;transform:translate(-50%,-50%);border-radius:50%;background:rgba(251,243,228,.95);display:grid;place-items:center;
+  box-shadow:0 6px 20px rgba(42,23,48,.45);transition:transform .3s cubic-bezier(.3,1.6,.5,1)}
+.vid:hover .play{transform:translate(-50%,-50%) scale(1.1)}
+.play:after{content:"";margin-left:6px;border-left:22px solid #8E5C9E;border-top:14px solid transparent;border-bottom:14px solid transparent}
+.vid .meta{display:block;padding:14px 18px 16px}
+.vid .tag{display:inline-block;font-size:13px;font-weight:700;color:#8E5C9E;letter-spacing:.04em}
+.vid .vt{display:block;font-family:var(--display);font-weight:500;font-size:21px;line-height:1.2;margin-top:2px}
+.shorts .vid .vt{font-size:17px}
+.vid.soon{cursor:default}
+.vid.soon .pic img{filter:saturate(.6) brightness(.8)}
+.vid.soon .play{display:none}
+.vid .soonlabel{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);background:rgba(42,23,48,.72);color:#FBF3E4;font-family:var(--display);font-style:italic;font-size:17px;padding:6px 16px;border-radius:999px;white-space:nowrap}
+.note{font-size:15px;color:var(--ink-soft);max-width:44rem;margin:30px 0 0}
+
+/* player */
+.player[hidden]{display:none!important}
+.player{position:fixed;inset:0;z-index:80;background:rgba(30,16,40,.86);display:grid;place-items:center;padding:16px}
+.frame{position:relative;width:min(100%,1000px);aspect-ratio:16/9;border-radius:18px;overflow:hidden;background:#000;box-shadow:0 30px 80px rgba(0,0,0,.5)}
+.player.tall .frame{width:auto;height:min(86vh,800px);aspect-ratio:9/16}
+.frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.close{position:absolute;top:calc(14px + env(safe-area-inset-top,0px));right:14px;width:54px;height:54px;border-radius:50%;border:0;background:#FBF3E4;color:var(--ink);cursor:pointer;display:grid;place-items:center;box-shadow:0 4px 0 rgba(0,0,0,.25)}
+.close svg{width:24px;height:24px}
+@media (max-width:760px){.hero.short{padding:150px 16px 50px}.stories{grid-template-columns:1fr}.shorts .vid{width:150px}}
+</style>
+</head>
+<body>
+<header class="site-header">
+  <nav class="menu left" aria-label="Main"><a href="index.html"><img class="ni" src="assets/nav/home.webp" alt="" width="48" height="48">Home</a><a href="stories.html"><img class="ni" src="assets/nav/stories.webp" alt="" width="48" height="48">Stories</a><a href="videos.html" aria-current="page"><img class="ni" src="assets/nav/videos.webp" alt="" width="48" height="48">Videos</a></nav>
+  <a class="brand" href="index.html" aria-label="Starcora home"><img src="assets/logo-cream.svg" alt="Starcora" width="240" height="80"></a>
+  <nav class="menu right" aria-label="More"><a href="art.html"><img class="ni" src="assets/nav/art.webp" alt="" width="48" height="48">Art</a><a href="grownups.html"><img class="ni" src="assets/nav/grownups.webp" alt="" width="48" height="48">Grown-ups</a></nav>
+  <button class="menu-btn" type="button" aria-label="Menu" aria-expanded="false" aria-controls="menu-panel"><span></span><span></span><span></span></button>
+  <nav class="menu-panel" id="menu-panel" aria-label="Menu" hidden><a href="index.html"><img class="ni" src="assets/nav/home.webp" alt="" width="48" height="48">Home</a><a href="stories.html"><img class="ni" src="assets/nav/stories.webp" alt="" width="48" height="48">Stories</a><a href="videos.html" aria-current="page"><img class="ni" src="assets/nav/videos.webp" alt="" width="48" height="48">Videos</a><a href="art.html"><img class="ni" src="assets/nav/art.webp" alt="" width="48" height="48">Art</a><a href="grownups.html"><img class="ni" src="assets/nav/grownups.webp" alt="" width="48" height="48">Grown-ups</a></nav>
+  <script>(function(){var b=document.querySelector('.menu-btn'),p=document.getElementById('menu-panel');function set(o){b.setAttribute('aria-expanded',o);p.hidden=!o}b.addEventListener('click',function(e){e.stopPropagation();set(p.hidden)});document.addEventListener('click',function(e){if(!p.hidden&&!p.contains(e.target))set(false)});document.addEventListener('keydown',function(e){if(e.key==='Escape')set(false)})})();</script>
+</header>
+
+<main>
+<section class="hero short" aria-labelledby="t">
+  <div class="sky"></div>
+  <div class="titles"><h1 id="t">Story videos</h1><p>Sit back and watch the stories come to life</p></div>
+  <img class="isl" src="assets/island-videos.webp" alt="The Starcora video island with a cinema screen and cushions" style="position:relative" onerror="this.remove()">
+</section>
+
+<section class="wrap">
+  <h2>Full stories</h2>
+  <p class="sub">Watch a whole storybook, from the first page to The End.</p>
+  <div class="stories" id="stories"></div>
+
+  <h2>Little moments</h2>
+  <p class="sub">Short clips of the best bits.</p>
+  <div class="shorts" id="shorts"></div>
+
+  <p class="note">Story videos for kids aged 4 to 7: watch the Starcora storybooks being played, page by page, with Sola, Oro and Rose. Lovely for quiet time, and a gentle way into reading.</p>
+  <p class="note">For grown-ups: the videos play from YouTube in privacy-enhanced mode, and only load when you tap play.</p>
+</section>
+</main>
+
+<footer class="site-footer">
+  <img src="assets/logo-cream.svg" alt="Starcora" width="160" height="54">
+  <p class="tagline">Free kids stories, story games and colouring pages for children aged 4 to 7.</p>
+  <nav aria-label="Footer"><a href="index.html">Home</a><a href="stories.html">Storybooks</a><a href="videos.html">Story videos</a><a href="art.html">Colouring pages</a><a href="grownups.html">Parents and teachers</a><a href="privacy.html">Privacy</a><a href="mailto:hello@starcora.world?subject=Starcora%20feedback">Feedback</a></nav>
+  <div><a class="mail" href="mailto:hello@starcora.world">hello@starcora.world</a></div>
+  <div>&copy; 2026 Starcora</div>
+</footer>
+
+<div class="player" id="player" hidden role="dialog" aria-modal="true" aria-label="Video player">
+  <button class="close" id="close" aria-label="Close video"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+  <div class="frame" id="frame"></div>
+</div>
+
+<script>
+// Every video is one line. Paste the YouTube link (or just its ID) into "youtube" when it is up.
+// kind: 'story' = a full book (wide), 'short' = a Short (tall). Leave youtube empty to show "coming soon".
+const VIDEOS=[
+ {kind:'story', book:0, title:'Welcome to Starcora', youtube:'', thumb:'assets/video/b0-story.webp'},
+ {kind:'story', book:1, title:'The Fallen Star',     youtube:'', thumb:'assets/video/b1-story.webp'},
+ {kind:'story', book:2, title:'The Star Rocket',     youtube:'', thumb:'assets/video/b2-story.webp'},
+ {kind:'short', book:0, title:'Meet Oro',            youtube:'', thumb:'assets/video/b0-short.webp'},
+ {kind:'short', book:1, title:'Oh bolts!',           youtube:'', thumb:'assets/video/b1-short.webp'},
+ {kind:'short', book:2, title:'Piece by piece',      youtube:'', thumb:'assets/video/b2-short.webp'}
+];
+function ytId(s){if(!s)return'';const m=String(s).match(/(?:youtu\.be\/|v=|embed\/|shorts\/)([\w-]{11})/);return m?m[1]:(/^[\w-]{11}$/.test(s)?s:'')}
+function card(v){
+  const id=ytId(v.youtube),b=document.createElement('button');
+  b.className='vid'+(id?'':' soon');b.type='button';
+  b.setAttribute('aria-label',(id?'Play: ':'Coming soon: ')+v.title);
+  b.innerHTML=`<span class="pic"><img src="${v.thumb}" alt="${v.title}: Starcora story video for kids" loading="lazy"><span class="play"></span>${id?'':'<span class="soonlabel">Coming soon</span>'}</span>
+    <span class="meta"><span class="tag">Book ${v.book}</span><span class="vt">${v.title}</span></span>`;
+  if(id)b.onclick=()=>play(id,v.kind==='short');else b.disabled=false;
+  return b;
+}
+VIDEOS.filter(v=>v.kind==='story').forEach(v=>document.getElementById('stories').appendChild(card(v)));
+VIDEOS.filter(v=>v.kind==='short').forEach(v=>document.getElementById('shorts').appendChild(card(v)));
+
+const player=document.getElementById('player'),frame=document.getElementById('frame');let last=null;
+function play(id,tall){
+  last=document.activeElement;player.classList.toggle('tall',tall);
+  frame.innerHTML=`<iframe src="https://www.youtube-nocookie.com/embed/${id}?autoplay=1&rel=0&modestbranding=1&playsinline=1" title="Starcora video" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe>`;
+  player.hidden=false;document.body.style.overflow='hidden';document.getElementById('close').focus();
+}
+function close(){frame.innerHTML='';player.hidden=true;document.body.style.overflow='';last&&last.focus()}
+document.getElementById('close').onclick=close;
+player.addEventListener('click',e=>{if(e.target===player)close()});
+document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!player.hidden)close()});
+</script>
+<script src="names.js"></script>
+</body>
+</html>
