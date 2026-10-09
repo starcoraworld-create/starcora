@@ -4,6 +4,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Free colouring pages for kids to print or paint online | Starcora</title>
+<link rel="preload" as="image" href="assets/logo-cream.webp" fetchpriority="high">
+<link rel="preload" as="image" href="assets/sky.webp" fetchpriority="high">
 <meta name="description" content="Free printable colouring pages for kids aged 4 to 7. Paint online with fill, brush, zoom and stickers, or print and colour at home or in class. Characters, plants and magical places.">
 <link rel="canonical" href="https://starcora.world/art">
 <meta property="og:site_name" content="Starcora">
@@ -21,7 +23,7 @@
 <style>
 .hero.short{height:auto;min-height:0;padding:150px 16px 70px;text-align:center}
 .hero.short .titles{position:relative;top:auto}
-.hero.short .isl{width:clamp(150px,18vw,240px);margin:6px auto 0;animation:bob 6s ease-in-out infinite;filter:drop-shadow(0 18px 22px rgba(70,30,90,.3))}
+.hero.short .isl{height:auto;width:clamp(150px,18vw,240px);margin:6px auto 0;animation:bob 6s ease-in-out infinite;filter:drop-shadow(0 18px 22px rgba(70,30,90,.3))}
 .gallery{max-width:1080px;margin:0 auto;padding:clamp(36px,6vw,64px) 16px clamp(56px,8vw,90px)}
 .how-old{display:flex;justify-content:center;gap:clamp(18px,4vw,48px);margin:0 0 34px;flex-wrap:wrap;color:var(--ink-soft);font-size:16px}
 .how b{color:var(--ink);font-family:var(--display);font-weight:500;font-size:19px;display:block}
@@ -35,9 +37,9 @@
 .thumb.soon span{display:block;font-size:34px;font-style:normal;margin-bottom:4px}
 .cname{font-family:var(--display);font-weight:500;font-size:22px;text-align:center;margin:0}
 .btns{display:flex;gap:8px}
-.pill{flex:1;padding:12px 8px;border-radius:999px;border:0;cursor:pointer;font:700 16px var(--body);color:#fff;background:#9E7CC8;box-shadow:0 4px 0 #7A5BA6;transition:transform .12s}
-.pill.alt{background:#E89B7A;box-shadow:0 4px 0 #BC6F52}
-.pill:active{transform:translateY(3px);box-shadow:0 1px 0 #7A5BA6}
+.pill{flex:1;padding:12px 8px;border-radius:999px;border:0;cursor:pointer;font:700 16px var(--body);color:#fff;background:#7E5DAE;box-shadow:0 4px 0 #5E4388;transition:transform .12s}
+.pill.alt{background:#E89B7A;color:#3A2438;box-shadow:0 4px 0 #BC6F52}
+.pill:active{transform:translateY(3px);box-shadow:0 1px 0 #5E4388}
 .pill:disabled{opacity:.35;cursor:default}
 
 /* paint desk */
@@ -103,7 +105,7 @@
 .tab .disc img.ic{object-fit:contain;padding:11px;border-radius:0}
 .tab .disc img.bk{object-fit:contain;padding:9px 12px;background:#fff}
 .tab .disc svg{width:58%;height:58%}
-.tab .count{position:absolute;right:-4px;top:-4px;min-width:26px;height:26px;padding:0 7px;border-radius:999px;background:#9E7CC8;color:#fff;font-size:13px;display:grid;place-items:center;border:2px solid #fff}
+.tab .count{position:absolute;right:-4px;top:-4px;min-width:26px;height:26px;padding:0 7px;border-radius:999px;background:#7E5DAE;color:#fff;font-size:13px;display:grid;place-items:center;border:2px solid #fff}
 .tab[aria-pressed="true"] .disc{border-color:#9E7CC8;transform:translateY(-4px) scale(1.06)}
 .tab[aria-pressed="true"]{color:var(--ink)}
 .tab:hover .disc{transform:translateY(-3px)}
@@ -121,10 +123,10 @@
 <body>
 <header class="site-header">
   <nav class="menu left" aria-label="Main"><a href="index.html"><img class="ni" src="assets/nav/home.webp" alt="" width="48" height="48">Home</a><a href="stories.html"><img class="ni" src="assets/nav/stories.webp" alt="" width="48" height="48">Stories</a><a href="videos.html"><img class="ni" src="assets/nav/videos.webp" alt="" width="48" height="48">Videos</a></nav>
-  <a class="brand" href="index.html" aria-label="Starcora home"><img src="assets/logo-cream.svg" alt="Starcora" width="240" height="80"></a>
+  <a class="brand" href="index.html" aria-label="Starcora home"><img src="assets/logo-cream.webp" alt="Starcora" width="240" height="80" fetchpriority="high"></a>
   <nav class="menu right" aria-label="More"><a href="art.html" aria-current="page"><img class="ni" src="assets/nav/art.webp" alt="" width="48" height="48">Art</a><a href="grownups.html"><img class="ni" src="assets/nav/grownups.webp" alt="" width="48" height="48">Grown-ups</a></nav>
   <button class="menu-btn" type="button" aria-label="Menu" aria-expanded="false" aria-controls="menu-panel"><span></span><span></span><span></span></button>
-  <nav class="menu-panel" id="menu-panel" aria-label="Menu" hidden><a href="index.html"><img class="ni" src="assets/nav/home.webp" alt="" width="48" height="48">Home</a><a href="stories.html"><img class="ni" src="assets/nav/stories.webp" alt="" width="48" height="48">Stories</a><a href="videos.html"><img class="ni" src="assets/nav/videos.webp" alt="" width="48" height="48">Videos</a><a href="art.html" aria-current="page"><img class="ni" src="assets/nav/art.webp" alt="" width="48" height="48">Art</a><a href="grownups.html"><img class="ni" src="assets/nav/grownups.webp" alt="" width="48" height="48">Grown-ups</a></nav>
+  <nav class="menu-panel" id="menu-panel" aria-label="Menu" hidden><a href="index.html"><img class="ni" loading="lazy" src="assets/nav/home.webp" alt="" width="48" height="48">Home</a><a href="stories.html"><img class="ni" loading="lazy" src="assets/nav/stories.webp" alt="" width="48" height="48">Stories</a><a href="videos.html"><img class="ni" loading="lazy" src="assets/nav/videos.webp" alt="" width="48" height="48">Videos</a><a href="art.html" aria-current="page"><img class="ni" loading="lazy" src="assets/nav/art.webp" alt="" width="48" height="48">Art</a><a href="grownups.html"><img class="ni" loading="lazy" src="assets/nav/grownups.webp" alt="" width="48" height="48">Grown-ups</a></nav>
   <script>(function(){var b=document.querySelector('.menu-btn'),p=document.getElementById('menu-panel');function set(o){b.setAttribute('aria-expanded',o);p.hidden=!o}b.addEventListener('click',function(e){e.stopPropagation();set(p.hidden)});document.addEventListener('click',function(e){if(!p.hidden&&!p.contains(e.target))set(false)});document.addEventListener('keydown',function(e){if(e.key==='Escape')set(false)})})();</script>
 </header>
 
@@ -132,7 +134,7 @@
 <section class="hero short" aria-labelledby="t">
   <div class="sky"></div>
   <div class="titles"><h1 id="t">Colour the Moonmist</h1><p>Free colouring pages for kids: paint them here, or print them out</p></div>
-  <img class="isl" src="assets/island-art.webp" alt="The Starcora art island with an easel and paint pots" style="position:relative">
+  <img class="isl" src="assets/island-art-400.webp" width="400" height="349" alt="The Starcora art island with an easel and paint pots" style="position:relative">
 </section>
 
 <section class="gallery" id="gallery">
@@ -190,7 +192,7 @@
 <div id="printSheet"><img id="printImg" alt=""></div>
 
 <footer class="site-footer">
-  <img src="assets/logo-cream.svg" alt="Starcora" width="160" height="54">
+  <img src="assets/logo-cream.webp" alt="Starcora" width="160" height="53" loading="lazy">
   <p class="tagline">Free kids stories, story games and colouring pages for children aged 4 to 7.</p>
   <nav aria-label="Footer"><a href="index.html">Home</a><a href="stories.html">Storybooks</a><a href="videos.html">Story videos</a><a href="art.html">Colouring pages</a><a href="grownups.html">Parents and teachers</a><a href="privacy.html">Privacy</a><a href="mailto:hello@starcora.world?subject=Starcora%20feedback">Feedback</a></nav>
   <div><a class="mail" href="mailto:hello@starcora.world">hello@starcora.world</a></div>
@@ -200,7 +202,7 @@
 <script>
 const svgUrl=s=>'data:image/svg+xml;charset=utf-8,'+encodeURIComponent(s);
 // Every colouring page is one line. tags decide which tabs it shows under. added = the day it went up (pages added after launch get a "New" ribbon for 3 weeks).
-const C='assets/colour/';
+const C='assets/colour/';const TH=a=>a.replace('assets/colour/','assets/colour/thumbs/').replace('.png','.webp');
 const PAGES=[
  {id:'sola',name:'Sola',tags:['sola'],art:C+'sola-colouring-page.png',alt:'Sola from Starcora colouring page: a girl in a puffy space suit waving among flowers',added:'2026-10-09'},
  {id:'oro',name:'Oro',tags:['oro'],art:C+'oro-robot-colouring-page.png',alt:'Oro the robot colouring page: a friendly retro robot with antennae and a wind-up key',added:'2026-10-09'},
@@ -237,7 +239,7 @@ const isNew=p=>p.art&&new Date(p.added)>=LAUNCH&&(now-new Date(p.added))/864e5<N
 const inTab=(p,t)=>t==='all'||p.tags.includes(t);
 let current_tab='all';
 const grid=document.getElementById('grid'),tabsEl=document.getElementById('tabs');
-function cardHTML(p){return (isNew(p)?'<span class="ribbon">New</span>':'')+(p.art?`<div class="thumb"><img src="${p.art}" alt="${p.alt||p.name+' colouring page for kids'}, free to print"></div>`:`<div class="thumb soon"><span>✦</span>Coming soon</div>`)+
+function cardHTML(p){return (isNew(p)?'<span class="ribbon">New</span>':'')+(p.art?`<div class="thumb"><img src="${TH(p.art)}" loading="lazy" width="420" height="420" alt="${p.alt||p.name+' colouring page for kids'}, free to print"></div>`:`<div class="thumb soon"><span>✦</span>Coming soon</div>`)+
  `<p class="cname">${p.name}</p><div class="btns"><button class="pill" data-paint="${p.id}" ${p.art?'':'disabled'}>Paint</button><button class="pill alt" data-print="${p.id}" ${p.art?'':'disabled'}>Print</button></div>`}
 function renderTabs(){tabsEl.innerHTML='';TABS.forEach(t=>{const n=PAGES.filter(p=>inTab(p,t.id)).length;if(!n)return;
  const b=document.createElement('button');b.className='tab';b.setAttribute('aria-pressed',t.id===current_tab);b.setAttribute('aria-label',t.name+', '+n+' pages');
@@ -247,7 +249,7 @@ function renderGrid(){const t=TABS.find(x=>x.id===current_tab);document.getEleme
  const list=PAGES.filter(p=>inTab(p,current_tab)).sort((a,b)=>(!!b.art-!!a.art)||(new Date(b.added)-new Date(a.added))||(PAGES.indexOf(a)-PAGES.indexOf(b)));
  grid.innerHTML='';list.forEach((p,i)=>{const c=document.createElement('div');c.className='card';c.style.animationDelay=(i*40)+'ms';c.innerHTML=cardHTML(p);grid.appendChild(c)})}
 function renderToday(){const ready=PAGES.filter(x=>x.art);if(!ready.length)return;const wk=Math.floor((now/864e5+3)/7);const p=PAGES.find(x=>x.featured&&x.art)||ready[wk%ready.length];
- document.getElementById('today').innerHTML=`<div class="thumb"><img src="${p.art}" alt="${p.alt||p.name+' colouring page for kids'}, free to print"></div><div><span class="tag">Colour me today</span><h2>${p.name}</h2><p>This week's page. Paint it here, or print it and colour it at the table.</p><div class="btns"><button class="pill" data-paint="${p.id}">Paint</button><button class="pill alt" data-print="${p.id}">Print</button></div></div>`}
+ document.getElementById('today').innerHTML=`<div class="thumb"><img src="${TH(p.art)}" width="420" height="420" alt="${p.alt||p.name+' colouring page for kids'}, free to print"></div><div><span class="tag">Colour me today</span><h2>${p.name}</h2><p>This week's page. Paint it here, or print it and colour it at the table.</p><div class="btns"><button class="pill" data-paint="${p.id}">Paint</button><button class="pill alt" data-print="${p.id}">Print</button></div></div>`}
 renderToday();renderTabs();renderGrid();
 document.getElementById('gallery').addEventListener('click',e=>{const b=e.target.closest('button[data-paint],button[data-print]');if(!b||b.disabled)return;const p=PAGES.find(x=>x.id===(b.dataset.paint||b.dataset.print));if(b.dataset.paint)openDesk(p);else printBlank(p)});
 const N=800,paintC=document.getElementById('paintC'),lineC=document.getElementById('lineC'),stampC=document.getElementById('stampC');

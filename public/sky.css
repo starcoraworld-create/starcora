@@ -131,7 +131,7 @@ a{color:inherit}
 .meet .trio p{font-size:16px;margin:0;color:var(--ink-soft)}
 .feedback{max-width:44rem;margin:0 auto clamp(64px,9vw,110px);padding:34px 28px;text-align:center;background:linear-gradient(180deg,#EFE4F7,#F9E3EC);border-radius:28px}
 .feedback p{margin:0 auto 18px;color:var(--ink-soft)}
-.fbtn{display:inline-block;padding:13px 26px;border-radius:999px;background:#9E7CC8;color:#fff;font-weight:700;text-decoration:none;box-shadow:0 4px 0 #7A5BA6}
+.fbtn{display:inline-block;padding:13px 26px;border-radius:999px;background:#7E5DAE;color:#fff;font-weight:700;text-decoration:none;box-shadow:0 4px 0 #5E4388}
 @media (max-width:760px){.meet .trio{grid-template-columns:1fr}.feedback{margin-left:16px;margin-right:16px}}
 .meet h2,.feedback h2{line-height:1.15}
 .island img{height:auto}

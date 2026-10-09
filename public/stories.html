@@ -4,6 +4,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Interactive storybooks and story games for kids aged 4 to 7 | Starcora</title>
+<link rel="preload" as="image" href="assets/logo-cream.webp" fetchpriority="high">
+<link rel="preload" as="image" href="assets/sky.webp" fetchpriority="high">
 <meta name="description" content="Free interactive storybooks for kids aged 4 to 7. Read along, tap, crack secret codes and solve puzzles with Sola, Oro and Rose in gentle story games. New stories every Friday.">
 <link rel="canonical" href="https://starcora.world/stories">
 <meta property="og:site_name" content="Starcora">
@@ -23,10 +25,10 @@
 <div class="flash"></div>
 <header class="site-header">
   <nav class="menu left" aria-label="Main"><a href="index.html"><img class="ni" src="assets/nav/home.webp" alt="" width="48" height="48">Home</a><a href="stories.html" aria-current="page"><img class="ni" src="assets/nav/stories.webp" alt="" width="48" height="48">Stories</a><a href="videos.html"><img class="ni" src="assets/nav/videos.webp" alt="" width="48" height="48">Videos</a></nav>
-  <a class="brand" href="index.html" aria-label="Starcora home"><img src="assets/logo-cream.svg" alt="Starcora" width="240" height="80"></a>
+  <a class="brand" href="index.html" aria-label="Starcora home"><img src="assets/logo-cream.webp" alt="Starcora" width="240" height="80" fetchpriority="high"></a>
   <nav class="menu right" aria-label="More"><a href="art.html"><img class="ni" src="assets/nav/art.webp" alt="" width="48" height="48">Art</a><a href="grownups.html"><img class="ni" src="assets/nav/grownups.webp" alt="" width="48" height="48">Grown-ups</a></nav>
   <button class="menu-btn" type="button" aria-label="Menu" aria-expanded="false" aria-controls="menu-panel"><span></span><span></span><span></span></button>
-  <nav class="menu-panel" id="menu-panel" aria-label="Menu" hidden><a href="index.html"><img class="ni" src="assets/nav/home.webp" alt="" width="48" height="48">Home</a><a href="stories.html" aria-current="page"><img class="ni" src="assets/nav/stories.webp" alt="" width="48" height="48">Stories</a><a href="videos.html"><img class="ni" src="assets/nav/videos.webp" alt="" width="48" height="48">Videos</a><a href="art.html"><img class="ni" src="assets/nav/art.webp" alt="" width="48" height="48">Art</a><a href="grownups.html"><img class="ni" src="assets/nav/grownups.webp" alt="" width="48" height="48">Grown-ups</a></nav>
+  <nav class="menu-panel" id="menu-panel" aria-label="Menu" hidden><a href="index.html"><img class="ni" loading="lazy" src="assets/nav/home.webp" alt="" width="48" height="48">Home</a><a href="stories.html" aria-current="page"><img class="ni" loading="lazy" src="assets/nav/stories.webp" alt="" width="48" height="48">Stories</a><a href="videos.html"><img class="ni" loading="lazy" src="assets/nav/videos.webp" alt="" width="48" height="48">Videos</a><a href="art.html"><img class="ni" loading="lazy" src="assets/nav/art.webp" alt="" width="48" height="48">Art</a><a href="grownups.html"><img class="ni" loading="lazy" src="assets/nav/grownups.webp" alt="" width="48" height="48">Grown-ups</a></nav>
   <script>(function(){var b=document.querySelector('.menu-btn'),p=document.getElementById('menu-panel');function set(o){b.setAttribute('aria-expanded',o);p.hidden=!o}b.addEventListener('click',function(e){e.stopPropagation();set(p.hidden)});document.addEventListener('click',function(e){if(!p.hidden&&!p.contains(e.target))set(false)});document.addEventListener('keydown',function(e){if(e.key==='Escape')set(false)})})();</script>
 </header>
 
@@ -43,35 +45,35 @@
   <ol class="books">
     <li class="book ready" data-n="0" style="--x:19%;--y:66%" >
       <a href="books/book-0/index.html" aria-label="Book 0: Welcome to Starcora">
-        <span class="tome"><span class="pages"></span><img class="cover" src="assets/book-0.webp" alt="Book 0 cover: Welcome to Starcora, a Starcora interactive storybook for kids" width="440" height="576"></span>
+        <span class="tome"><span class="pages"></span><img class="cover" src="assets/book-0-300.webp" srcset="assets/book-0-300.webp 300w, assets/book-0.webp 440w" sizes="(max-width:760px) 44vw, 13vw" alt="Book 0 cover: Welcome to Starcora, a Starcora interactive storybook for kids" width="440" height="576"></span>
         <span class="num">0</span><span class="seal" aria-hidden="true"></span>
         <span class="title">Welcome to Starcora</span>
       </a>
     </li>
     <li class="book ready" data-n="1" style="--x:38%;--y:52%">
       <a href="books/book-1/index.html" aria-label="Book 1: The Fallen Star">
-        <span class="tome"><span class="pages"></span><img class="cover" src="assets/book-1.webp" alt="Book 1 cover: The Fallen Star, a Starcora interactive storybook for kids" width="440" height="576"></span>
+        <span class="tome"><span class="pages"></span><img class="cover" src="assets/book-1-300.webp" srcset="assets/book-1-300.webp 300w, assets/book-1.webp 440w" sizes="(max-width:760px) 44vw, 13vw" alt="Book 1 cover: The Fallen Star, a Starcora interactive storybook for kids" width="440" height="576"></span>
         <span class="num">1</span><span class="seal" aria-hidden="true"></span>
         <span class="title">The Fallen Star</span>
       </a>
     </li>
     <li class="book ready" data-n="2" style="--x:62%;--y:62%">
       <a href="books/book-2/index.html" aria-label="Book 2: The Star Rocket">
-        <span class="tome"><span class="pages"></span><img class="cover" src="assets/book-2.webp" alt="Book 2 cover: The Star Rocket, a Starcora interactive storybook for kids" width="440" height="576"></span>
+        <span class="tome"><span class="pages"></span><img class="cover" src="assets/book-2-300.webp" srcset="assets/book-2-300.webp 300w, assets/book-2.webp 440w" sizes="(max-width:760px) 44vw, 13vw" alt="Book 2 cover: The Star Rocket, a Starcora interactive storybook for kids" width="440" height="576"></span>
         <span class="num">2</span><span class="seal" aria-hidden="true"></span>
         <span class="title">The Star Rocket</span>
       </a>
     </li>
     <li class="book soon mystery" data-n="3" style="--x:86%;--y:44%">
       <a href="#" aria-label="Book 3: The Rainbow Wisp, coming soon">
-        <span class="tome"><span class="pages"></span><img class="cover" src="assets/book-3.webp" alt="Book 3 cover: The Rainbow Wisp, a Starcora interactive storybook for kids" width="440" height="576"></span>
+        <span class="tome"><span class="pages"></span><img class="cover" src="assets/book-3-300.webp" srcset="assets/book-3-300.webp 300w, assets/book-3.webp 440w" sizes="(max-width:760px) 44vw, 13vw" alt="Book 3 cover: The Rainbow Wisp, a Starcora interactive storybook for kids" width="440" height="576"></span>
         <span class="num">3</span>
         <span class="title">The Rainbow Wisp<small>coming soon</small></span>
       </a>
     </li>
   </ol>
 
-  <div class="guide" aria-hidden="true"><img src="assets/sola.webp" alt="Sola from Starcora waving" width="360" height="692"><span class="say"></span></div>
+  <div class="guide" aria-hidden="true"><img src="assets/sola-200.webp" alt="Sola from Starcora waving" width="200" height="384"><span class="say"></span></div>
 </section>
 
 <section class="grownups" id="about">
@@ -87,7 +89,7 @@
 </main>
 
 <footer class="site-footer">
-  <img src="assets/logo-cream.svg" alt="Starcora" width="160" height="54">
+  <img src="assets/logo-cream.webp" alt="Starcora" width="160" height="53" loading="lazy">
   <p class="tagline">Free kids stories, story games and colouring pages for children aged 4 to 7.</p>
   <nav aria-label="Footer"><a href="index.html">Home</a><a href="stories.html">Storybooks</a><a href="videos.html">Story videos</a><a href="art.html">Colouring pages</a><a href="grownups.html">Parents and teachers</a><a href="privacy.html">Privacy</a><a href="mailto:hello@starcora.world?subject=Starcora%20feedback">Feedback</a></nav>
   <div><a class="mail" href="mailto:hello@starcora.world">hello@starcora.world</a></div>
