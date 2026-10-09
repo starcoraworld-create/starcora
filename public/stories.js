@@ -72,12 +72,7 @@
     a.addEventListener('click',function(e){
       e.preventDefault();
       if(b.classList.contains('soon')){b.classList.remove('shake');void b.offsetWidth;b.classList.add('shake');talk('Coming soon!',2000,true);return}
-      // reading out of order: a gentle nudge first, a second tap opens it anyway
-      if(next!==null&&n>next&&pending!==n){
-        pending=n;clearTimeout(pendTimer);pendTimer=setTimeout(function(){pending=null},5000);
-        var nb=books[next];nb.classList.remove('nudge');void nb.offsetWidth;nb.classList.add('nudge');
-        talk('Try book '+next+' first!',3000,true);return;
-      }
+      // any ready book opens straight away; Sola and the glow just suggest the next one
       open(b,a.getAttribute('href'));
     });
   });
