@@ -148,3 +148,13 @@ ol{list-style:none;margin:0;padding:0}
 .site-footer .tagline{margin:0 auto 16px;max-width:36rem;color:rgba(251,243,228,.85)}
 .grownups .more{text-align:center;margin:36px 0 0;color:var(--ink-soft)}.grownups .more a{color:#8E5C9E;font-weight:700}
 .guide img{height:auto}
+
+/* narrator intro speaker */
+.titles .hear{pointer-events:auto;vertical-align:middle;margin:0 0 0 .4em;width:clamp(40px,4vw,52px);height:clamp(40px,4vw,52px);border-radius:50%;border:0;display:inline-grid;place-items:center;cursor:pointer;
+  background:var(--moon);color:#5E4388;box-shadow:0 4px 0 rgba(70,30,90,.25),0 6px 18px rgba(70,30,90,.3);-webkit-tap-highlight-color:transparent;transition:transform .2s}
+.titles .hear svg{width:26px;height:26px}
+.titles .hear:hover{transform:scale(1.06)}
+.titles .hear.glow{animation:hearglow 1.8s ease-in-out infinite}
+.titles .hear.playing{background:#F2CF85}
+@keyframes hearglow{50%{box-shadow:0 4px 0 rgba(70,30,90,.25),0 0 0 8px rgba(242,207,133,.45),0 0 26px 6px rgba(242,207,133,.8)}}
+@media (prefers-reduced-motion:reduce){.titles .hear.glow{animation:none}}

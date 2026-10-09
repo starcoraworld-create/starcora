@@ -60,6 +60,31 @@
   function talk(text,ms,speak){say.textContent=text;say.classList.add('on');clearTimeout(say._t);say._t=setTimeout(function(){say.classList.remove('on')},ms||2600);if(speak)voice(text)}
 
   update();
+
+  // narrator intro: tries to play on arrival (once per visit); if the browser blocks sound, it plays on the first tap.
+  // The glowing speaker replays it any time.
+  var hear=document.getElementById('hear'),intro=null,introDone=false;
+  function playIntro(){
+    try{
+      if(intro){intro.pause();intro.currentTime=0}
+      intro=new Audio('assets/voice/shelf-intro.mp3');
+      hear&&hear.classList.add('playing');hear&&hear.classList.remove('glow');
+      intro.onended=function(){hear&&hear.classList.remove('playing')};
+      var pr=intro.play();introDone=true;
+      if(pr&&pr.catch)pr.catch(function(){introDone=false;hear&&hear.classList.remove('playing');hear&&hear.classList.add('glow')});
+    }catch(e){}
+  }
+  function stopIntro(){try{intro&&intro.pause();hear&&hear.classList.remove('playing')}catch(e){}}
+  if(hear)hear.addEventListener('click',function(e){e.stopPropagation();if(intro&&!intro.paused){stopIntro()}else playIntro()});
+  var seen=false;try{seen=sessionStorage.getItem('starcora-intro')==='1';sessionStorage.setItem('starcora-intro','1')}catch(e){}
+  if(!seen){
+    hear&&hear.classList.add('glow');
+    setTimeout(playIntro,reduce?300:900);
+    document.addEventListener('pointerdown',function first(ev){
+      document.removeEventListener('pointerdown',first,true);
+      if(!introDone&&!(ev.target.closest&&ev.target.closest('.book,.hear,a')))playIntro();
+    },true);
+  }
   window.addEventListener('resize',function(){draw();place()});
   setTimeout(function(){
     var read=getRead();
@@ -81,7 +106,7 @@
   var jingle=null;
   function playJingle(){try{jingle=new Audio('assets/jingle.mp3');var p=jingle.play();p&&p.catch(function(){})}catch(e){}}
   function open(b,href){
-    say.classList.remove('on');
+    say.classList.remove('on');stopIntro();
     var t=b.querySelector('.tome').getBoundingClientRect();
     flash.style.setProperty('--fx',(t.left+t.width/2)+'px');flash.style.setProperty('--fy',(t.top+t.height/2)+'px');
     playJingle();
