@@ -1168,4 +1168,6 @@ label();
   <span>Storybooks work best held tall</span>
 </div>
 <script id="sc-np">/* lock-screen picture and title when the book plays sound */document.addEventListener("play",function(){try{if("mediaSession" in navigator&&window.MediaMetadata)navigator.mediaSession.metadata=new MediaMetadata({title:(document.querySelector("meta[property='og:title']")||{}).content?document.title.split(":")[0]:"Starcora",artist:"Starcora",artwork:[{src:new URL("../../assets/now-playing.jpg",location.href).href,sizes:"512x512",type:"image/jpeg"}]})}catch(e){}},true)</script>
+<div id="pinimg" hidden><img data-src="../../assets/pins/pin-book-2.jpg" width="1000" height="1500" alt="Book 2: The Star Rocket. A free read-along story game for children aged 4 to 7." data-pin-description="Book 2: The Star Rocket. A free read-along story game for children aged 4 to 7."></div>
+<script>addEventListener("load",function(){setTimeout(function(){var i=document.querySelector("#pinimg img");if(i&&!i.src)i.src=i.dataset.src},1200)})</script>
 </html>

@@ -144,5 +144,7 @@ player.addEventListener('click',e=>{if(e.target===player)close()});
 document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!player.hidden)close()});
 </script>
 <script src="names.js"></script>
+<div id="pinimg" hidden><img data-src="assets/pins/pin-videos.jpg" width="1000" height="1500" alt="Read-along story videos for kids aged 4 to 7. Watch the Starcora storybooks come to life." data-pin-description="Read-along story videos for kids aged 4 to 7. Watch the Starcora storybooks come to life."></div>
+<script>addEventListener("load",function(){setTimeout(function(){var i=document.querySelector("#pinimg img");if(i&&!i.src)i.src=i.dataset.src},1200)})</script>
 </body>
 </html>

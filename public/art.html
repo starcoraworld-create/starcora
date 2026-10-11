@@ -322,5 +322,7 @@ document.getElementById('printPaintBtn').onclick=()=>doPrint(composite().toDataU
 function printBlank(p){doPrint(p.art)}
 </script>
 <script src="names.js"></script>
+<div id="pinimg" hidden><img data-src="assets/pins/pin-colouring.jpg" width="1000" height="1500" alt="Free printable colouring pages for kids aged 4 to 7. Paint on screen or print at home: Sola, Oro, Rose and the Moonmist." data-pin-description="Free printable colouring pages for kids aged 4 to 7. Paint on screen or print at home: Sola, Oro, Rose and the Moonmist."></div>
+<script>addEventListener("load",function(){setTimeout(function(){var i=document.querySelector("#pinimg img");if(i&&!i.src)i.src=i.dataset.src},1200)})</script>
 </body>
 </html>
