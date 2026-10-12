@@ -9,4 +9,61 @@
   <url><loc>https://starcora.world/videos</loc><lastmod>2026-10-09</lastmod><priority>0.8</priority></url>
   <url><loc>https://starcora.world/grownups</loc><lastmod>2026-10-09</lastmod><priority>0.7</priority></url>
   <url><loc>https://starcora.world/privacy</loc><lastmod>2026-10-09</lastmod><priority>0.3</priority></url>
+  <!-- colouring pages: built by tools/build_art_pages.py -->
+  <url>
+    <loc>https://starcora.world/art/sola</loc>
+    <lastmod>2026-10-09</lastmod>
+    <image:image><image:loc>https://starcora.world/assets/colour/sola-colouring-page.png</image:loc><image:title>Sola colouring page</image:title></image:image>
+  </url>
+  <url>
+    <loc>https://starcora.world/art/oro</loc>
+    <lastmod>2026-10-09</lastmod>
+    <image:image><image:loc>https://starcora.world/assets/colour/oro-robot-colouring-page.png</image:loc><image:title>Oro colouring page</image:title></image:image>
+  </url>
+  <url>
+    <loc>https://starcora.world/art/rose</loc>
+    <lastmod>2026-10-09</lastmod>
+    <image:image><image:loc>https://starcora.world/assets/colour/rose-deer-colouring-page.png</image:loc><image:title>Rose colouring page</image:title></image:image>
+  </url>
+  <url>
+    <loc>https://starcora.world/art/dotstool</loc>
+    <lastmod>2026-10-09</lastmod>
+    <image:image><image:loc>https://starcora.world/assets/colour/dotstool-mushroom-colouring-page.png</image:loc><image:title>Dotstool colouring page</image:title></image:image>
+  </url>
+  <url>
+    <loc>https://starcora.world/art/spiral</loc>
+    <lastmod>2026-10-09</lastmod>
+    <image:image><image:loc>https://starcora.world/assets/colour/spiral-tree-colouring-page.png</image:loc><image:title>Spiral Tree colouring page</image:title></image:image>
+  </url>
+  <url>
+    <loc>https://starcora.world/art/swirlbud</loc>
+    <lastmod>2026-10-09</lastmod>
+    <image:image><image:loc>https://starcora.world/assets/colour/swirlbud-lollipop-flower-colouring-page.png</image:loc><image:title>Swirlbud colouring page</image:title></image:image>
+  </url>
+  <url>
+    <loc>https://starcora.world/art/lantern</loc>
+    <lastmod>2026-10-09</lastmod>
+    <image:image><image:loc>https://starcora.world/assets/colour/lantern-bloom-flower-colouring-page.png</image:loc><image:title>Lantern-bloom colouring page</image:title></image:image>
+  </url>
+  <url>
+    <loc>https://starcora.world/art/daisy</loc>
+    <lastmod>2026-10-09</lastmod>
+    <image:image><image:loc>https://starcora.world/assets/colour/daisy-flower-colouring-page.png</image:loc><image:title>Daisy colouring page</image:title></image:image>
+  </url>
+  <url>
+    <loc>https://starcora.world/art/tulip</loc>
+    <lastmod>2026-10-09</lastmod>
+    <image:image><image:loc>https://starcora.world/assets/colour/tulip-flower-colouring-page.png</image:loc><image:title>Tulip colouring page</image:title></image:image>
+  </url>
+  <url>
+    <loc>https://starcora.world/art/sky</loc>
+    <lastmod>2026-10-09</lastmod>
+    <image:image><image:loc>https://starcora.world/assets/colour/moonmist-sky-colouring-page.png</image:loc><image:title>Moonmist Sky colouring page</image:title></image:image>
+  </url>
+  <url>
+    <loc>https://starcora.world/art/chest</loc>
+    <lastmod>2026-10-09</lastmod>
+    <image:image><image:loc>https://starcora.world/assets/colour/cova-treasure-chest-colouring-page.png</image:loc><image:title>Cova Chest colouring page</image:title></image:image>
+  </url>
+  <!-- /colouring pages -->
 </urlset>
