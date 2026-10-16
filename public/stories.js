@@ -46,9 +46,19 @@
     var target=next!==null?books[next]:books.filter(function(b){return b.classList.contains('done')}).pop()||books[0];
     var c=centre(target),t=c[2],h=hero.getBoundingClientRect();
     // she stands on the open side: book on the left, Sola on the right, and the other way round
-    var onRight=(t.left+t.width/2-h.left)<h.width/2;
+    // with five or more books on the path, she stands on whichever side has more room
+    var i=books.indexOf(target),L=t.left-h.left,R=h.right-t.right;
+    if(i>0){var p=books[i-1].querySelector('.tome').getBoundingClientRect();if(p.right<t.left)L=t.left-p.right}
+    if(i<books.length-1){var q=books[i+1].querySelector('.tome').getBoundingClientRect();if(q.left>t.right)R=q.left-t.right}
+    var onRight=window.innerWidth<760?(t.left+t.width/2-h.left)<h.width/2:R>L;
     guide.classList.toggle('right',onRight);
-    guide.style.left=((onRight?t.right:t.left)-h.left)+'px';guide.style.top=(t.top-h.top+t.height*.55)+'px';
+    var gl=(onRight?t.right:t.left)-h.left,gt=t.top-h.top+t.height*.55;
+    // if she would cover a neighbouring book's title, she steps down below it
+    var gw=guide.offsetWidth,gh=guide.offsetHeight,x0=gl+(onRight?.15:-1.15)*gw,x1=x0+gw,y0=gt-.38*gh-34;
+    [books[i-1],books[i+1]].forEach(function(nb){if(!nb)return;var r=nb.querySelector('.title').getBoundingClientRect(),
+      rx0=r.left-h.left,rx1=r.right-h.left,ry0=r.top-h.top,ry1=r.bottom-h.top;
+      if(rx0<x1&&rx1>x0&&ry0<y0+gh&&ry1>y0){gt+=ry1-y0+6;y0=ry1+6}});
+    guide.style.left=gl+'px';guide.style.top=gt+'px';
   }
 
   // the narrator's recorded lines (no robot voice)
