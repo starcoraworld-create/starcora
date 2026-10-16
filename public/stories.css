@@ -91,9 +91,9 @@ ol{list-style:none;margin:0;padding:0}
 .grownups{max-width:60rem;margin:0 auto;padding:clamp(64px,9vw,110px) 24px}
 .grownups h2{font-family:var(--display);font-weight:500;font-variation-settings:"SOFT" 100;font-size:clamp(28px,3.4vw,40px);text-align:center;margin:0 0 14px}
 .lede{max-width:40rem;margin:0 auto 40px;text-align:center;color:var(--ink-soft)}
-.list{display:grid;grid-template-columns:repeat(3,1fr)}
+.list{display:grid;grid-template-columns:repeat(2,1fr);row-gap:28px}
 .list div{padding:0 clamp(16px,2.6vw,34px)}
-.list div+div{border-left:1px solid rgba(201,160,78,.45)}
+.list div:nth-child(even){border-left:1px solid rgba(201,160,78,.45)}
 .list h3{font-family:var(--display);font-weight:500;font-size:20px;margin:0 0 6px}
 .list p{margin:0;font-size:16px;color:var(--ink-soft)}
 .site-footer{background:var(--night);color:rgba(251,243,228,.75);text-align:center;padding:56px 24px 44px;font-size:15px}
@@ -116,6 +116,7 @@ ol{list-style:none;margin:0;padding:0}
   .guide{width:64px}
   .list{grid-template-columns:1fr;gap:24px}
   .list div+div{border-left:0;border-top:1px solid rgba(201,160,78,.45);padding-top:24px}
+  .list div:nth-child(even){border-left:0}
 }
 @media (prefers-reduced-motion:reduce){.book.next .tome,.book.next .tome:before,.guide img,.q,.trail .lit{animation:none}.cover,.guide{transition:none}}
 

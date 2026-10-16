@@ -28,7 +28,18 @@
   }
 
   // a dotted trail of stars from book to book; the part already travelled glows gold
+  // on shorter screens, books that would sit under the title and subtitle drop down until they clear them
+  function fit(){
+    books.forEach(function(b){b.style.top=''});
+    if(window.innerWidth<760)return;
+    var h=hero.getBoundingClientRect(),limit=document.querySelector('.titles p').getBoundingClientRect().bottom-h.top+14;
+    books.forEach(function(b){
+      var r=b.getBoundingClientRect(),n=b.querySelector('.num').getBoundingClientRect(),top=Math.min(r.top,n.top)-h.top;
+      if(top<limit)b.style.top=(parseFloat(getComputedStyle(b).top)+limit-top)+'px';
+    });
+  }
   function draw(){
+    fit();
     var read=getRead(),out='';
     for(var i=0;i<books.length-1;i++){
       var a=centre(books[i]),b=centre(books[i+1]);
@@ -96,6 +107,9 @@
     },true);
   }
   window.addEventListener('resize',function(){draw();place()});
+  // the title font can change the subtitle's height after it loads, so measure again
+  if(document.fonts&&document.fonts.ready)document.fonts.ready.then(function(){draw();place()});
+  window.addEventListener('load',function(){draw();place()});
   setTimeout(function(){
     var read=getRead();
     talk(next===null?'More books soon!':(read.length?'Next one!':'Start here!'),3200);
