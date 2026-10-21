@@ -95,7 +95,7 @@ button:focus-visible{outline:3px solid var(--gold);outline-offset:3px;border-rad
 .story::first-letter{font-family:var(--display);font-weight:900;float:left;font-size:3.4em;line-height:.85;padding:.06em .1em 0 0;color:var(--gold);text-shadow:1px 1px 0 var(--ink)}
 
 /* Right page */
-h1{font-family:var(--display);font-weight:800;font-size:clamp(1.5rem,2.4vw,2.1rem);margin:0;line-height:1.15;text-wrap:balance;color:var(--ink)}
+h2{font-family:var(--display);font-weight:800;font-size:clamp(1.5rem,2.4vw,2.1rem);margin:0;line-height:1.15;text-wrap:balance;color:var(--ink)}
 .ask{margin:0;font-size:clamp(1.05rem,1.4vw,1.25rem);line-height:1.45}
 .stage{
   position:relative;flex:1;min-height:420px;border-radius:18px;padding:clamp(14px,2vw,24px);
@@ -139,7 +139,7 @@ h1{font-family:var(--display);font-weight:800;font-size:clamp(1.5rem,2.4vw,2.1re
 .win .bigstar::before{content:"";position:absolute;inset:-35%;border-radius:50%;background:radial-gradient(closest-side,rgba(244,228,160,.95),rgba(244,228,160,.5) 45%,rgba(244,228,160,0));animation:halo 2.6s ease-in-out infinite}
 @keyframes rise{from{transform:scale(.2) rotate(-40deg);opacity:0}to{transform:none;opacity:1}}
 @keyframes halo{0%,100%{transform:scale(.92);opacity:.85}50%{transform:scale(1.06);opacity:1}}
-.win h2{font-family:var(--display);font-weight:900;font-size:clamp(2.2rem,4.4vw,3.2rem);letter-spacing:.08em;margin:0;color:#7a4f12;text-shadow:0 0 18px rgba(244,228,160,1)}
+.win h3{font-family:var(--display);font-weight:900;font-size:clamp(2.2rem,4.4vw,3.2rem);letter-spacing:.08em;margin:0;color:#7a4f12;text-shadow:0 0 18px rgba(244,228,160,1)}
 .win p{margin:0;font-size:clamp(1.1rem,1.5vw,1.35rem);line-height:1.5;max-width:26em}
 .row{display:flex;flex-wrap:wrap;gap:10px;justify-content:center}
 .read.nudge{animation:glowpulse 1.1s ease-in-out 3}
@@ -379,7 +379,7 @@ svg.game image{-webkit-user-drag:none}
 .peekglow{filter:drop-shadow(0 0 6px rgba(255,240,180,1)) drop-shadow(0 0 12px rgba(244,212,94,.8))}
 .frozen{filter:grayscale(1) brightness(.85)}
 image.lit{filter:drop-shadow(0 0 8px rgba(255,236,160,.95)) brightness(1.08)}
-.win h2{font-size:clamp(1.8rem,3.4vw,2.6rem);letter-spacing:.05em}
+.win h3{font-size:clamp(1.8rem,3.4vw,2.6rem);letter-spacing:.05em}
 .ending{gap:10px;text-align:center}
 .ending p{margin:0 0 .55em}
 .devnav{top:auto!important;bottom:calc(10px + env(safe-area-inset-bottom,0px))!important;right:auto!important;left:50%;transform:translateX(-50%)}
@@ -390,6 +390,8 @@ image.lit{filter:drop-shadow(0 0 8px rgba(255,236,160,.95)) brightness(1.08)}
 @media (prefers-reduced-motion:reduce){.hint,.wobbly,.badge.on .glow{animation:none}.ending .end{opacity:1;transform:none}}
 </style>
 
+<style id="sc-h1-css">.sc-h1{position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}</style>
+<h1 class="sc-h1">Book 2: The Star Rocket. A Starcora read-along storybook for kids aged 4 to 7</h1>
 <section class="coverstage" id="cover" aria-label="The Star Rocket, front cover">
   
 <div class="grim" id="g1">
@@ -414,12 +416,12 @@ image.lit{filter:drop-shadow(0 0 8px rgba(255,236,160,.95)) brightness(1.08)}
   </section>
   <section class="page right" aria-label="Activity">
     <div class="folio"><span>The Crash</span><button class="read" id="readAsk1" aria-pressed="false" aria-label="Read to me"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 9v6h4l5 4V5L8 9z"/><path d="M16.5 8.5a5 5 0 0 1 0 7"/><path d="M19 6a8.5 8.5 0 0 1 0 12"/></svg>Read to me</button></div>
-    <h1>Find the rocket pieces</h1>
+    <h2>Find the rocket pieces</h2>
     <p class="ask" id="ask1"></p>
     <div class="stage">
       <div class="gamewrap" id="game1"></div>
       <p class="sayline" id="say1" aria-live="polite"></p>
-      <div class="win" id="win1" hidden><h2>That’s the lot!</h2><button class="read" id="readWin1" aria-pressed="false" aria-label="Read to me"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 9v6h4l5 4V5L8 9z"/><path d="M16.5 8.5a5 5 0 0 1 0 7"/><path d="M19 6a8.5 8.5 0 0 1 0 12"/></svg>Read to me</button><p id="winText1">Fin! Window! Nose! Gear! “That’s the lot,” said Sola, dusting off her hands. “Let’s take it home.”</p></div>
+      <div class="win" id="win1" hidden><h3>That’s the lot!</h3><button class="read" id="readWin1" aria-pressed="false" aria-label="Read to me"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 9v6h4l5 4V5L8 9z"/><path d="M16.5 8.5a5 5 0 0 1 0 7"/><path d="M19 6a8.5 8.5 0 0 1 0 12"/></svg>Read to me</button><p id="winText1">Fin! Window! Nose! Gear! “That’s the lot,” said Sola, dusting off her hands. “Let’s take it home.”</p></div>
     </div>
   </section>
 </main>
@@ -431,12 +433,12 @@ image.lit{filter:drop-shadow(0 0 8px rgba(255,236,160,.95)) brightness(1.08)}
   </section>
   <section class="page right" aria-label="Activity">
     <div class="folio"><span>Down in the Roots</span><button class="read" id="readAsk2" aria-pressed="false" aria-label="Read to me"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 9v6h4l5 4V5L8 9z"/><path d="M16.5 8.5a5 5 0 0 1 0 7"/><path d="M19 6a8.5 8.5 0 0 1 0 12"/></svg>Read to me</button></div>
-    <h1>Fish out the key</h1>
+    <h2>Fish out the key</h2>
     <p class="ask" id="ask2"></p>
     <div class="stage">
       <div class="gamewrap" id="game2"></div>
       <p class="sayline" id="say2" aria-live="polite"></p>
-      <div class="win" id="win2" hidden><h2>Clink!</h2><button class="read" id="readWin2" aria-pressed="false" aria-label="Read to me"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 9v6h4l5 4V5L8 9z"/><path d="M16.5 8.5a5 5 0 0 1 0 7"/><path d="M19 6a8.5 8.5 0 0 1 0 12"/></svg>Read to me</button><p id="winText2">Clink! Up came the key, safe in Oro’s hand. “I meant to do that,” he announced, wobbling his head proudly.</p></div>
+      <div class="win" id="win2" hidden><h3>Clink!</h3><button class="read" id="readWin2" aria-pressed="false" aria-label="Read to me"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 9v6h4l5 4V5L8 9z"/><path d="M16.5 8.5a5 5 0 0 1 0 7"/><path d="M19 6a8.5 8.5 0 0 1 0 12"/></svg>Read to me</button><p id="winText2">Clink! Up came the key, safe in Oro’s hand. “I meant to do that,” he announced, wobbling his head proudly.</p></div>
     </div>
   </section>
 </main>
@@ -448,12 +450,12 @@ image.lit{filter:drop-shadow(0 0 8px rgba(255,236,160,.95)) brightness(1.08)}
   </section>
   <section class="page right" aria-label="Activity">
     <div class="folio"><span>The Bent Fin</span><button class="read" id="readAsk3" aria-pressed="false" aria-label="Read to me"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 9v6h4l5 4V5L8 9z"/><path d="M16.5 8.5a5 5 0 0 1 0 7"/><path d="M19 6a8.5 8.5 0 0 1 0 12"/></svg>Read to me</button></div>
-    <h1>Fix the fin</h1>
+    <h2>Fix the fin</h2>
     <p class="ask" id="ask3"></p>
     <div class="stage">
       <div class="gamewrap" id="game3"></div>
       <p class="sayline" id="say3" aria-live="polite"></p>
-      <div class="win" id="win3" hidden><h2>Ta-da!</h2><button class="read" id="readWin3" aria-pressed="false" aria-label="Read to me"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 9v6h4l5 4V5L8 9z"/><path d="M16.5 8.5a5 5 0 0 1 0 7"/><path d="M19 6a8.5 8.5 0 0 1 0 12"/></svg>Read to me</button><p id="winText3">Sizzle... tick... ta-da! The fin was straight again. “Good as new,” beamed Sola.</p></div>
+      <div class="win" id="win3" hidden><h3>Ta-da!</h3><button class="read" id="readWin3" aria-pressed="false" aria-label="Read to me"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 9v6h4l5 4V5L8 9z"/><path d="M16.5 8.5a5 5 0 0 1 0 7"/><path d="M19 6a8.5 8.5 0 0 1 0 12"/></svg>Read to me</button><p id="winText3">Sizzle... tick... ta-da! The fin was straight again. “Good as new,” beamed Sola.</p></div>
     </div>
   </section>
 </main>
@@ -465,12 +467,12 @@ image.lit{filter:drop-shadow(0 0 8px rgba(255,236,160,.95)) brightness(1.08)}
   </section>
   <section class="page right" aria-label="Activity">
     <div class="folio"><span>Piece by Piece</span><button class="read" id="readAsk4" aria-pressed="false" aria-label="Read to me"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 9v6h4l5 4V5L8 9z"/><path d="M16.5 8.5a5 5 0 0 1 0 7"/><path d="M19 6a8.5 8.5 0 0 1 0 12"/></svg>Read to me</button></div>
-    <h1>Build the rocket</h1>
+    <h2>Build the rocket</h2>
     <p class="ask" id="ask4"></p>
     <div class="stage">
       <div class="gamewrap" id="game4"></div>
       <p class="sayline" id="say4" aria-live="polite"></p>
-      <div class="win" id="win4" hidden><h2>Oh, look!</h2><button class="read" id="readWin4" aria-pressed="false" aria-label="Read to me"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 9v6h4l5 4V5L8 9z"/><path d="M16.5 8.5a5 5 0 0 1 0 7"/><path d="M19 6a8.5 8.5 0 0 1 0 12"/></svg>Read to me</button><p id="winText4">The crack in the window shimmered away. “Oh, look,” breathed Rose, pressing her nose to the glass. “It’s perfect.”</p></div>
+      <div class="win" id="win4" hidden><h3>Oh, look!</h3><button class="read" id="readWin4" aria-pressed="false" aria-label="Read to me"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 9v6h4l5 4V5L8 9z"/><path d="M16.5 8.5a5 5 0 0 1 0 7"/><path d="M19 6a8.5 8.5 0 0 1 0 12"/></svg>Read to me</button><p id="winText4">The crack in the window shimmered away. “Oh, look,” breathed Rose, pressing her nose to the glass. “It’s perfect.”</p></div>
     </div>
   </section>
 </main>
@@ -482,12 +484,12 @@ image.lit{filter:drop-shadow(0 0 8px rgba(255,236,160,.95)) brightness(1.08)}
   </section>
   <section class="page right" aria-label="Activity">
     <div class="folio"><span>The Clockwork Heart</span><button class="read" id="readAsk5" aria-pressed="false" aria-label="Read to me"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 9v6h4l5 4V5L8 9z"/><path d="M16.5 8.5a5 5 0 0 1 0 7"/><path d="M19 6a8.5 8.5 0 0 1 0 12"/></svg>Read to me</button></div>
-    <h1>Fit the gears</h1>
+    <h2>Fit the gears</h2>
     <p class="ask" id="ask5"></p>
     <div class="stage">
       <div class="gamewrap" id="game5"></div>
       <p class="sayline" id="say5" aria-live="polite"></p>
-      <div class="win" id="win5" hidden><h2>Whirrrrrr!</h2><button class="read" id="readWin5" aria-pressed="false" aria-label="Read to me"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 9v6h4l5 4V5L8 9z"/><path d="M16.5 8.5a5 5 0 0 1 0 7"/><path d="M19 6a8.5 8.5 0 0 1 0 12"/></svg>Read to me</button><p id="winText5">Tick... tick... whirrrrrr! All the gears turned together, just like friends.</p></div>
+      <div class="win" id="win5" hidden><h3>Whirrrrrr!</h3><button class="read" id="readWin5" aria-pressed="false" aria-label="Read to me"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 9v6h4l5 4V5L8 9z"/><path d="M16.5 8.5a5 5 0 0 1 0 7"/><path d="M19 6a8.5 8.5 0 0 1 0 12"/></svg>Read to me</button><p id="winText5">Tick... tick... whirrrrrr! All the gears turned together, just like friends.</p></div>
     </div>
   </section>
 </main>
@@ -499,12 +501,12 @@ image.lit{filter:drop-shadow(0 0 8px rgba(255,236,160,.95)) brightness(1.08)}
   </section>
   <section class="page right" aria-label="Activity">
     <div class="folio"><span>The Star Comes Out</span><button class="read" id="readAsk6" aria-pressed="false" aria-label="Read to me"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 9v6h4l5 4V5L8 9z"/><path d="M16.5 8.5a5 5 0 0 1 0 7"/><path d="M19 6a8.5 8.5 0 0 1 0 12"/></svg>Read to me</button></div>
-    <h1>Free the star</h1>
+    <h2>Free the star</h2>
     <p class="ask" id="ask6"></p>
     <div class="stage">
       <div class="gamewrap" id="game6"></div>
       <p class="sayline" id="say6" aria-live="polite"></p>
-      <div class="win" id="win6" hidden><h2>It fits!</h2><button class="read" id="readWin6" aria-pressed="false" aria-label="Read to me"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 9v6h4l5 4V5L8 9z"/><path d="M16.5 8.5a5 5 0 0 1 0 7"/><path d="M19 6a8.5 8.5 0 0 1 0 12"/></svg>Read to me</button><p id="winText6">Click! The star snuggled into the rocket, and every single gear lit up. “It fits!” cheered Rose, bouncing on her bare toes.</p></div>
+      <div class="win" id="win6" hidden><h3>It fits!</h3><button class="read" id="readWin6" aria-pressed="false" aria-label="Read to me"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 9v6h4l5 4V5L8 9z"/><path d="M16.5 8.5a5 5 0 0 1 0 7"/><path d="M19 6a8.5 8.5 0 0 1 0 12"/></svg>Read to me</button><p id="winText6">Click! The star snuggled into the rocket, and every single gear lit up. “It fits!” cheered Rose, bouncing on her bare toes.</p></div>
     </div>
   </section>
 </main>
@@ -516,12 +518,12 @@ image.lit{filter:drop-shadow(0 0 8px rgba(255,236,160,.95)) brightness(1.08)}
   </section>
   <section class="page right" aria-label="Activity">
     <div class="folio"><span>Up, Up and Away</span><button class="read" id="readAsk7" aria-pressed="false" aria-label="Read to me"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 9v6h4l5 4V5L8 9z"/><path d="M16.5 8.5a5 5 0 0 1 0 7"/><path d="M19 6a8.5 8.5 0 0 1 0 12"/></svg>Read to me</button></div>
-    <h1>Blast off!</h1>
+    <h2>Blast off!</h2>
     <p class="ask" id="ask7"></p>
     <div class="stage">
       <div class="gamewrap" id="game7"></div>
       <p class="sayline" id="say7" aria-live="polite"></p>
-      <div class="win ending" id="win7" hidden><h2 class="end">WHOOOOOSH!</h2><button class="read" id="readWin7" aria-pressed="false" aria-label="Read to me"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 9v6h4l5 4V5L8 9z"/><path d="M16.5 8.5a5 5 0 0 1 0 7"/><path d="M19 6a8.5 8.5 0 0 1 0 12"/></svg>Read to me</button><div id="winText7"><p class="end">Up went the rocket, over the Spiral Trees, higher and higher, with a long rainbow trail streaming out behind it.</p><p class="end">“Bye, little star!” they shouted, waving until their arms went floppy.</p></div></div>
+      <div class="win ending" id="win7" hidden><h3 class="end">WHOOOOOSH!</h3><button class="read" id="readWin7" aria-pressed="false" aria-label="Read to me"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 9v6h4l5 4V5L8 9z"/><path d="M16.5 8.5a5 5 0 0 1 0 7"/><path d="M19 6a8.5 8.5 0 0 1 0 12"/></svg>Read to me</button><div id="winText7"><p class="end">Up went the rocket, over the Spiral Trees, higher and higher, with a long rainbow trail streaming out behind it.</p><p class="end">“Bye, little star!” they shouted, waving until their arms went floppy.</p></div></div>
     </div>
   </section>
 </main>
@@ -533,7 +535,7 @@ image.lit{filter:drop-shadow(0 0 8px rgba(255,236,160,.95)) brightness(1.08)}
   </section>
   <section class="page right" aria-label="Activity">
     <div class="folio"><span>A Rainbow Wisp</span><button class="read" id="readAsk8" aria-pressed="false" aria-label="Read to me"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 9v6h4l5 4V5L8 9z"/><path d="M16.5 8.5a5 5 0 0 1 0 7"/><path d="M19 6a8.5 8.5 0 0 1 0 12"/></svg>Read to me</button></div>
-    <h1>Find the rainbow wisp</h1>
+    <h2>Find the rainbow wisp</h2>
     <p class="ask" id="ask8"></p>
     <div class="stage">
       <div class="gamewrap" id="game8"></div>

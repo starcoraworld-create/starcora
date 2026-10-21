@@ -95,7 +95,7 @@ button:focus-visible{outline:3px solid var(--gold);outline-offset:3px;border-rad
 .story::first-letter{font-family:var(--display);font-weight:900;float:left;font-size:3.4em;line-height:.85;padding:.06em .1em 0 0;color:var(--gold);text-shadow:1px 1px 0 var(--ink)}
 
 /* Right page */
-h1{font-family:var(--display);font-weight:800;font-size:clamp(1.5rem,2.4vw,2.1rem);margin:0;line-height:1.15;text-wrap:balance;color:var(--ink)}
+h2{font-family:var(--display);font-weight:800;font-size:clamp(1.5rem,2.4vw,2.1rem);margin:0;line-height:1.15;text-wrap:balance;color:var(--ink)}
 .ask{margin:0;font-size:clamp(1.05rem,1.4vw,1.25rem);line-height:1.45}
 .stage{
   position:relative;flex:1;min-height:420px;border-radius:18px;padding:clamp(14px,2vw,24px);
@@ -139,7 +139,7 @@ h1{font-family:var(--display);font-weight:800;font-size:clamp(1.5rem,2.4vw,2.1re
 .win .bigstar::before{content:"";position:absolute;inset:-35%;border-radius:50%;background:radial-gradient(closest-side,rgba(244,228,160,.95),rgba(244,228,160,.5) 45%,rgba(244,228,160,0));animation:halo 2.6s ease-in-out infinite}
 @keyframes rise{from{transform:scale(.2) rotate(-40deg);opacity:0}to{transform:none;opacity:1}}
 @keyframes halo{0%,100%{transform:scale(.92);opacity:.85}50%{transform:scale(1.06);opacity:1}}
-.win h2{font-family:var(--display);font-weight:900;font-size:clamp(2.2rem,4.4vw,3.2rem);letter-spacing:.08em;margin:0;color:#7a4f12;text-shadow:0 0 18px rgba(244,228,160,1)}
+.win h3{font-family:var(--display);font-weight:900;font-size:clamp(2.2rem,4.4vw,3.2rem);letter-spacing:.08em;margin:0;color:#7a4f12;text-shadow:0 0 18px rgba(244,228,160,1)}
 .win p{margin:0;font-size:clamp(1.1rem,1.5vw,1.35rem);line-height:1.5;max-width:26em}
 .row{display:flex;flex-wrap:wrap;gap:10px;justify-content:center}
 .read.nudge{animation:glowpulse 1.1s ease-in-out 3}
@@ -379,7 +379,7 @@ svg.game image{-webkit-user-drag:none}
 .peekglow{filter:drop-shadow(0 0 6px rgba(255,240,180,1)) drop-shadow(0 0 12px rgba(244,212,94,.8))}
 .frozen{filter:grayscale(1) brightness(.85)}
 image.lit{filter:drop-shadow(0 0 8px rgba(255,236,160,.95)) brightness(1.08)}
-.win h2{font-size:clamp(1.8rem,3.4vw,2.6rem);letter-spacing:.05em}
+.win h3{font-size:clamp(1.8rem,3.4vw,2.6rem);letter-spacing:.05em}
 .ending{gap:10px;text-align:center}
 .ending p{margin:0 0 .55em}
 .devnav{top:auto!important;bottom:calc(10px + env(safe-area-inset-bottom,0px))!important;right:auto!important;left:50%;transform:translateX(-50%)}
@@ -403,6 +403,8 @@ g.lit{filter:drop-shadow(0 0 7px rgba(255,236,160,.95)) brightness(1.08)}
 @media (prefers-reduced-motion:reduce){.pulse,.flow{animation:none}}
 </style>
 
+<style id="sc-h1-css">.sc-h1{position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}</style>
+<h1 class="sc-h1">Book 3: The Rainbow Wisp. A Starcora read-along storybook for kids aged 4 to 7</h1>
 <section class="coverstage" id="cover" aria-label="The Rainbow Wisp, front cover">
   
 <div class="grim" id="g1">
@@ -427,12 +429,12 @@ g.lit{filter:drop-shadow(0 0 7px rgba(255,236,160,.95)) brightness(1.08)}
   </section>
   <section class="page right" aria-label="Activity">
     <div class="folio"><span>Seven Little Drops</span><button class="read" id="readAsk1" aria-pressed="false" aria-label="Read to me"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 9v6h4l5 4V5L8 9z"/><path d="M16.5 8.5a5 5 0 0 1 0 7"/><path d="M19 6a8.5 8.5 0 0 1 0 12"/></svg>Read to me</button></div>
-    <h1>Put the drops in rainbow order</h1>
+    <h2>Put the drops in rainbow order</h2>
     <p class="ask" id="ask1"></p>
     <div class="stage">
       <div class="gamewrap" id="game1"></div>
       <p class="sayline" id="say1" aria-live="polite"></p>
-      <div class="win" id="win1" hidden><h2>Click, click, click!</h2><button class="read" id="readWin1" aria-pressed="false" aria-label="Read to me"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 9v6h4l5 4V5L8 9z"/><path d="M16.5 8.5a5 5 0 0 1 0 7"/><path d="M19 6a8.5 8.5 0 0 1 0 12"/></svg>Read to me</button><p id="winText1">A thread of colour drifted off into the trees. “It’s showing us the way!” cried Sola. Oro marched off at once. “Other way, Oro!” giggled Rose.</p></div>
+      <div class="win" id="win1" hidden><h3>Click, click, click!</h3><button class="read" id="readWin1" aria-pressed="false" aria-label="Read to me"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 9v6h4l5 4V5L8 9z"/><path d="M16.5 8.5a5 5 0 0 1 0 7"/><path d="M19 6a8.5 8.5 0 0 1 0 12"/></svg>Read to me</button><p id="winText1">A thread of colour drifted off into the trees. “It’s showing us the way!” cried Sola. Oro marched off at once. “Other way, Oro!” giggled Rose.</p></div>
     </div>
   </section>
 </main>
@@ -444,12 +446,12 @@ g.lit{filter:drop-shadow(0 0 7px rgba(255,236,160,.95)) brightness(1.08)}
   </section>
   <section class="page right" aria-label="Activity">
     <div class="folio"><span>The Tangled Trail</span><button class="read" id="readAsk2" aria-pressed="false" aria-label="Read to me"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 9v6h4l5 4V5L8 9z"/><path d="M16.5 8.5a5 5 0 0 1 0 7"/><path d="M19 6a8.5 8.5 0 0 1 0 12"/></svg>Read to me</button></div>
-    <h1>Calm the wind</h1>
+    <h2>Calm the wind</h2>
     <p class="ask" id="ask2"></p>
     <div class="stage">
       <div class="gamewrap" id="game2"></div>
       <p class="sayline" id="say2" aria-live="polite"></p>
-      <div class="win" id="win2" hidden><h2>Shhh... still.</h2><button class="read" id="readWin2" aria-pressed="false" aria-label="Read to me"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 9v6h4l5 4V5L8 9z"/><path d="M16.5 8.5a5 5 0 0 1 0 7"/><path d="M19 6a8.5 8.5 0 0 1 0 12"/></svg>Read to me</button><p id="winText2">One by one the ribbons slid free, and the wind tiptoed sleepily away. “Thank you, Oro,” Rose smiled. Oro’s antennae gave a happy little wiggle.</p></div>
+      <div class="win" id="win2" hidden><h3>Shhh... still.</h3><button class="read" id="readWin2" aria-pressed="false" aria-label="Read to me"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 9v6h4l5 4V5L8 9z"/><path d="M16.5 8.5a5 5 0 0 1 0 7"/><path d="M19 6a8.5 8.5 0 0 1 0 12"/></svg>Read to me</button><p id="winText2">One by one the ribbons slid free, and the wind tiptoed sleepily away. “Thank you, Oro,” Rose smiled. Oro’s antennae gave a happy little wiggle.</p></div>
     </div>
   </section>
 </main>
@@ -461,12 +463,12 @@ g.lit{filter:drop-shadow(0 0 7px rgba(255,236,160,.95)) brightness(1.08)}
   </section>
   <section class="page right" aria-label="Activity">
     <div class="folio"><span>Into the Deep Woods</span><button class="read" id="readAsk3" aria-pressed="false" aria-label="Read to me"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 9v6h4l5 4V5L8 9z"/><path d="M16.5 8.5a5 5 0 0 1 0 7"/><path d="M19 6a8.5 8.5 0 0 1 0 12"/></svg>Read to me</button></div>
-    <h1>Wake the lantern-blooms</h1>
+    <h2>Wake the lantern-blooms</h2>
     <p class="ask" id="ask3"></p>
     <div class="stage">
       <div class="gamewrap" id="game3"></div>
       <p class="sayline" id="say3" aria-live="polite"></p>
-      <div class="win" id="win3" hidden><h2>WHOOSH!</h2><button class="read" id="readWin3" aria-pressed="false" aria-label="Read to me"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 9v6h4l5 4V5L8 9z"/><path d="M16.5 8.5a5 5 0 0 1 0 7"/><path d="M19 6a8.5 8.5 0 0 1 0 12"/></svg>Read to me</button><p id="winText3">One by one the blooms woke up, until the wood glowed like a hundred little moons. “Look!” cried Rose, forgetting all about being scared. Far ahead, a shimmer of colour wound away between the trees.</p></div>
+      <div class="win" id="win3" hidden><h3>WHOOSH!</h3><button class="read" id="readWin3" aria-pressed="false" aria-label="Read to me"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 9v6h4l5 4V5L8 9z"/><path d="M16.5 8.5a5 5 0 0 1 0 7"/><path d="M19 6a8.5 8.5 0 0 1 0 12"/></svg>Read to me</button><p id="winText3">One by one the blooms woke up, until the wood glowed like a hundred little moons. “Look!” cried Rose, forgetting all about being scared. Far ahead, a shimmer of colour wound away between the trees.</p></div>
     </div>
   </section>
 </main>
@@ -478,12 +480,12 @@ g.lit{filter:drop-shadow(0 0 7px rgba(255,236,160,.95)) brightness(1.08)}
   </section>
   <section class="page right" aria-label="Activity">
     <div class="folio"><span>The Rushing Water</span><button class="read" id="readAsk4" aria-pressed="false" aria-label="Read to me"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 9v6h4l5 4V5L8 9z"/><path d="M16.5 8.5a5 5 0 0 1 0 7"/><path d="M19 6a8.5 8.5 0 0 1 0 12"/></svg>Read to me</button></div>
-    <h1>Fix up the raft</h1>
+    <h2>Fix up the raft</h2>
     <p class="ask" id="ask4"></p>
     <div class="stage">
       <div class="gamewrap" id="game4"></div>
       <p class="sayline" id="say4" aria-live="polite"></p>
-      <div class="win" id="win4" hidden><h2>Creak... knot... done!</h2><button class="read" id="readWin4" aria-pressed="false" aria-label="Read to me"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 9v6h4l5 4V5L8 9z"/><path d="M16.5 8.5a5 5 0 0 1 0 7"/><path d="M19 6a8.5 8.5 0 0 1 0 12"/></svg>Read to me</button><p id="winText4">The raft was good as new. Well, it floated. “All aboard!” cried Oro, and hopped on so fast the whole raft wobbled. Splash! Oro got a little bit wet. He pretended he didn’t mind.</p></div>
+      <div class="win" id="win4" hidden><h3>Creak... knot... done!</h3><button class="read" id="readWin4" aria-pressed="false" aria-label="Read to me"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 9v6h4l5 4V5L8 9z"/><path d="M16.5 8.5a5 5 0 0 1 0 7"/><path d="M19 6a8.5 8.5 0 0 1 0 12"/></svg>Read to me</button><p id="winText4">The raft was good as new. Well, it floated. “All aboard!” cried Oro, and hopped on so fast the whole raft wobbled. Splash! Oro got a little bit wet. He pretended he didn’t mind.</p></div>
     </div>
   </section>
 </main>
@@ -495,12 +497,12 @@ g.lit{filter:drop-shadow(0 0 7px rgba(255,236,160,.95)) brightness(1.08)}
   </section>
   <section class="page right" aria-label="Activity">
     <div class="folio"><span>The Steep Climb</span><button class="read" id="readAsk5" aria-pressed="false" aria-label="Read to me"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 9v6h4l5 4V5L8 9z"/><path d="M16.5 8.5a5 5 0 0 1 0 7"/><path d="M19 6a8.5 8.5 0 0 1 0 12"/></svg>Read to me</button></div>
-    <h1>Grow the steps</h1>
+    <h2>Grow the steps</h2>
     <p class="ask" id="ask5"></p>
     <div class="stage">
       <div class="gamewrap" id="game5"></div>
       <p class="sayline" id="say5" aria-live="polite"></p>
-      <div class="win" id="win5" hidden><h2>Up, up, up!</h2><button class="read" id="readWin5" aria-pressed="false" aria-label="Read to me"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 9v6h4l5 4V5L8 9z"/><path d="M16.5 8.5a5 5 0 0 1 0 7"/><path d="M19 6a8.5 8.5 0 0 1 0 12"/></svg>Read to me</button><p id="winText5">Up, up, up they climbed, step by Swirlbud step. At the top, the whole Moonmist glowed below them like a sea of tiny lanterns. “We came all that way,” Rose marvelled. “Together,” Sola beamed.</p></div>
+      <div class="win" id="win5" hidden><h3>Up, up, up!</h3><button class="read" id="readWin5" aria-pressed="false" aria-label="Read to me"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 9v6h4l5 4V5L8 9z"/><path d="M16.5 8.5a5 5 0 0 1 0 7"/><path d="M19 6a8.5 8.5 0 0 1 0 12"/></svg>Read to me</button><p id="winText5">Up, up, up they climbed, step by Swirlbud step. At the top, the whole Moonmist glowed below them like a sea of tiny lanterns. “We came all that way,” Rose marvelled. “Together,” Sola beamed.</p></div>
     </div>
   </section>
 </main>
@@ -512,12 +514,12 @@ g.lit{filter:drop-shadow(0 0 7px rgba(255,236,160,.95)) brightness(1.08)}
   </section>
   <section class="page right" aria-label="Activity">
     <div class="folio"><span>The Shy One</span><button class="read" id="readAsk6" aria-pressed="false" aria-label="Read to me"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 9v6h4l5 4V5L8 9z"/><path d="M16.5 8.5a5 5 0 0 1 0 7"/><path d="M19 6a8.5 8.5 0 0 1 0 12"/></svg>Read to me</button></div>
-    <h1>Find the shy wisp</h1>
+    <h2>Find the shy wisp</h2>
     <p class="ask" id="ask6"></p>
     <div class="stage">
       <div class="gamewrap" id="game6"></div>
       <p class="sayline" id="say6" aria-live="polite"></p>
-      <div class="win" id="win6" hidden><h2>Pop!</h2><button class="read" id="readWin6" aria-pressed="false" aria-label="Read to me"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 9v6h4l5 4V5L8 9z"/><path d="M16.5 8.5a5 5 0 0 1 0 7"/><path d="M19 6a8.5 8.5 0 0 1 0 12"/></svg>Read to me</button><p id="winText6">The bloom opened wide, and out shot the wisp, chiming like tiny bells. “Oh, you’re quick,” laughed Oro.</p></div>
+      <div class="win" id="win6" hidden><h3>Pop!</h3><button class="read" id="readWin6" aria-pressed="false" aria-label="Read to me"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 9v6h4l5 4V5L8 9z"/><path d="M16.5 8.5a5 5 0 0 1 0 7"/><path d="M19 6a8.5 8.5 0 0 1 0 12"/></svg>Read to me</button><p id="winText6">The bloom opened wide, and out shot the wisp, chiming like tiny bells. “Oh, you’re quick,” laughed Oro.</p></div>
     </div>
   </section>
 </main>
@@ -529,12 +531,12 @@ g.lit{filter:drop-shadow(0 0 7px rgba(255,236,160,.95)) brightness(1.08)}
   </section>
   <section class="page right" aria-label="Activity">
     <div class="folio"><span>Catch a Rainbow</span><button class="read" id="readAsk7" aria-pressed="false" aria-label="Read to me"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 9v6h4l5 4V5L8 9z"/><path d="M16.5 8.5a5 5 0 0 1 0 7"/><path d="M19 6a8.5 8.5 0 0 1 0 12"/></svg>Read to me</button></div>
-    <h1>Catch the rainbow wisp</h1>
+    <h2>Catch the rainbow wisp</h2>
     <p class="ask" id="ask7"></p>
     <div class="stage">
       <div class="gamewrap" id="game7"></div>
       <p class="sayline" id="say7" aria-live="polite"></p>
-      <div class="win" id="win7" hidden><h2>We did it!</h2><button class="read" id="readWin7" aria-pressed="false" aria-label="Read to me"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 9v6h4l5 4V5L8 9z"/><path d="M16.5 8.5a5 5 0 0 1 0 7"/><path d="M19 6a8.5 8.5 0 0 1 0 12"/></svg>Read to me</button><p id="winText7">The petals closed, as soft as a sleepy eyelid. “We caught a rainbow wisp!” Rose giggled. Oro whooped so loudly he woke up a lantern-bloom. “Sorry,” he whispered.</p></div>
+      <div class="win" id="win7" hidden><h3>We did it!</h3><button class="read" id="readWin7" aria-pressed="false" aria-label="Read to me"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 9v6h4l5 4V5L8 9z"/><path d="M16.5 8.5a5 5 0 0 1 0 7"/><path d="M19 6a8.5 8.5 0 0 1 0 12"/></svg>Read to me</button><p id="winText7">The petals closed, as soft as a sleepy eyelid. “We caught a rainbow wisp!” Rose giggled. Oro whooped so loudly he woke up a lantern-bloom. “Sorry,” he whispered.</p></div>
     </div>
   </section>
 </main>
@@ -546,7 +548,7 @@ g.lit{filter:drop-shadow(0 0 7px rgba(255,236,160,.95)) brightness(1.08)}
   </section>
   <section class="page right" aria-label="Activity">
     <div class="folio"><span>Home with the Wisp</span><button class="read" id="readAsk8" aria-pressed="false" aria-label="Read to me"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 9v6h4l5 4V5L8 9z"/><path d="M16.5 8.5a5 5 0 0 1 0 7"/><path d="M19 6a8.5 8.5 0 0 1 0 12"/></svg>Read to me</button></div>
-    <h1>Home to the Cova Chest</h1>
+    <h2>Home to the Cova Chest</h2>
     <p class="ask" id="ask8"></p>
     <div class="stage">
       <div class="gamewrap" id="game8"></div>
