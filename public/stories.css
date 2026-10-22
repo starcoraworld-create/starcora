@@ -123,9 +123,9 @@ ol{list-style:none;margin:0;padding:0}
 .site-footer .mail{color:var(--moon);text-decoration:none}
 .site-footer .mail:hover{text-decoration:underline}
 
-/* three-line menu on phones */
+/* three-line menu on phones and tablets (the six-item menu needs about 1060px) */
 .menu-btn,.menu-panel{display:none}
-@media (max-width:760px),(orientation:landscape) and (max-height:520px){
+@media (max-width:1060px),(orientation:landscape) and (max-height:520px){
   .site-header{display:flex;justify-content:center;align-items:center;padding:12px 16px}
   .menu.left,.menu.right{display:none}
   .menu-btn{display:flex;flex-direction:column;justify-content:center;align-items:center;gap:5px;position:absolute;right:14px;top:50%;translate:0 -50%;width:48px;height:48px;padding:0;border:0;border-radius:50%;
@@ -142,7 +142,7 @@ ol{list-style:none;margin:0;padding:0}
 @keyframes menuin{from{opacity:0;transform:translateY(-6px)}}
 
 /* menu icons */
-.menu a{display:inline-flex;align-items:center;gap:6px}
+.menu a{display:inline-flex;align-items:center;gap:6px;white-space:nowrap}
 .menu a .ni{width:30px;height:30px;object-fit:contain;filter:drop-shadow(0 2px 4px rgba(60,30,90,.35))}
 .menu-panel a{display:flex;align-items:center;gap:12px}
 .menu-panel a .ni{width:38px;height:38px;object-fit:contain}
