@@ -102,6 +102,8 @@ ol{list-style:none;margin:0;padding:0}
 .site-footer nav a{color:var(--moon);text-decoration:none;font-weight:600}
 
 /* phones: the path runs down the page in a zigzag */
+/* six or more books on laptop-width screens: slightly smaller books and Sola so she fits between them */
+@media (min-width:761px) and (max-width:1100px){.book{width:clamp(104px,11vw,150px)}.guide{width:clamp(46px,5vw,80px)}}
 @media (max-width:760px){
   .site-header{grid-template-columns:1fr 1fr;grid-template-areas:"brand brand" "l r";gap:8px 22px;padding:14px 16px}
   .brand{grid-area:brand;justify-self:center}.menu.left{grid-area:l}.menu.right{grid-area:r}

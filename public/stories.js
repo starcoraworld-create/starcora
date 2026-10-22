@@ -52,24 +52,39 @@
     svg.innerHTML=out;
   }
 
-  // Sola stands beside the book to read next
+  // Sola stands beside the book to read next. She tries a few spots (the roomier side first, then lower down,
+  // then the other side) and takes the first where she and her speech bubble touch no book, title or number
+  // and stay inside the sky. On phones she keeps the simple left/right rule.
   function place(){
     var target=next!==null?books[next]:books.filter(function(b){return b.classList.contains('done')}).pop()||books[0];
     var c=centre(target),t=c[2],h=hero.getBoundingClientRect();
-    // she stands on the open side: book on the left, Sola on the right, and the other way round
-    // with five or more books on the path, she stands on whichever side has more room
-    var i=books.indexOf(target),L=t.left-h.left,R=h.right-t.right;
+    var i=books.indexOf(target);
+    if(window.innerWidth<760){
+      var onR=(t.left+t.width/2-h.left)<h.width/2;
+      guide.classList.toggle('right',onR);
+      guide.style.left=((onR?t.right:t.left)-h.left)+'px';guide.style.top=(t.top-h.top+t.height*.55)+'px';return;
+    }
+    var L=t.left-h.left,R=h.right-t.right;
     if(i>0){var p=books[i-1].querySelector('.tome').getBoundingClientRect();if(p.right<t.left)L=t.left-p.right}
     if(i<books.length-1){var q=books[i+1].querySelector('.tome').getBoundingClientRect();if(q.left>t.right)R=q.left-t.right}
-    var onRight=window.innerWidth<760?(t.left+t.width/2-h.left)<h.width/2:R>L;
-    guide.classList.toggle('right',onRight);
-    var gl=(onRight?t.right:t.left)-h.left,gt=t.top-h.top+t.height*.55;
-    // if she would cover a neighbouring book's title, she steps down below it
-    var gw=guide.offsetWidth,gh=guide.offsetHeight,x0=gl+(onRight?.15:-1.15)*gw,x1=x0+gw,y0=gt-.38*gh-34;
-    [books[i-1],books[i+1]].forEach(function(nb){if(!nb)return;var r=nb.querySelector('.title').getBoundingClientRect(),
-      rx0=r.left-h.left,rx1=r.right-h.left,ry0=r.top-h.top,ry1=r.bottom-h.top;
-      if(rx0<x1&&rx1>x0&&ry0<y0+gh&&ry1>y0){gt+=ry1-y0+6;y0=ry1+6}});
-    guide.style.left=gl+'px';guide.style.top=gt+'px';
+    var sides=R>L?[true,false]:[false,true];
+    var gw=guide.offsetWidth,gh=guide.offsetHeight,bw=Math.max(say.offsetWidth,150),bh=say.offsetHeight||30;
+    var boxes=[];books.forEach(function(b){['.tome','.title','.num'].forEach(function(s){var e=b.querySelector(s);if(e){var r=e.getBoundingClientRect();boxes.push([r.left-h.left,r.top-h.top,r.right-h.left,r.bottom-h.top])}})});
+    var tb=document.querySelector('.titles p').getBoundingClientRect(),topLimit=tb.bottom-h.top;
+    function clear(x0,y0,x1,y1){for(var k=0;k<boxes.length;k++){var r=boxes[k];if(x0<r[2]-2&&x1>r[0]+2&&y0<r[3]-2&&y1>r[1]+2)return false}return true}
+    var best=null;
+    for(var s=0;s<2&&!best;s++){
+      var onRight=sides[s],gl=(onRight?t.right:t.left)-h.left,x0=gl+(onRight?.15:-1.15)*gw,x1=x0+gw;
+      for(var step=0;step<=6&&!best;step++){
+        var gt=t.top-h.top+t.height*(.55+step*.12),y0=gt-.38*gh,y1=y0+gh;
+        var bx0=(x0+x1)/2-bw/2,bx1=bx0+bw,by0=y0-bh-6;
+        if(x0<4||x1>h.width-4||bx0<4||bx1>h.width-4||by0<topLimit||y1>h.height-4)continue;
+        if(clear(x0,y0,x1,y1))best=[onRight,gl,gt];
+      }
+    }
+    if(!best){var r0=sides[0];best=[r0,(r0?t.right:t.left)-h.left,t.top-h.top+t.height*.55]}
+    guide.classList.toggle('right',best[0]);
+    guide.style.left=best[1]+'px';guide.style.top=best[2]+'px';
   }
 
   // the narrator's recorded lines (no robot voice)
