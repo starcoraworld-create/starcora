@@ -72,7 +72,8 @@
     var boxes=[];books.forEach(function(b){['.tome','.title','.num'].forEach(function(s){var e=b.querySelector(s);if(e){var r=e.getBoundingClientRect();boxes.push([r.left-h.left,r.top-h.top,r.right-h.left,r.bottom-h.top])}})});
     var tb=document.querySelector('.titles p').getBoundingClientRect(),topLimit=tb.bottom-h.top;
     function clear(x0,y0,x1,y1){for(var k=0;k<boxes.length;k++){var r=boxes[k];if(x0<r[2]-2&&x1>r[0]+2&&y0<r[3]-2&&y1>r[1]+2)return false}return true}
-    var best=null;
+    function overlap(x0,y0,x1,y1){var a=0;for(var k=0;k<boxes.length;k++){var r=boxes[k];a+=Math.max(0,Math.min(x1,r[2])-Math.max(x0,r[0]))*Math.max(0,Math.min(y1,r[3])-Math.max(y0,r[1]))}return a}
+    var best=null,fall=null,fallA=1e12;
     for(var s=0;s<2&&!best;s++){
       var onRight=sides[s],gl=(onRight?t.right:t.left)-h.left,x0=gl+(onRight?.15:-1.15)*gw,x1=x0+gw;
       for(var step=0;step<=6&&!best;step++){
@@ -80,8 +81,13 @@
         var bx0=(x0+x1)/2-bw/2,bx1=bx0+bw,by0=y0-bh-6;
         if(x0<4||x1>h.width-4||bx0<4||bx1>h.width-4||by0<topLimit||y1>h.height-4)continue;
         if(clear(x0,y0,x1,y1))best=[onRight,gl,gt];
+        else{var oa=overlap(x0,y0,x1,y1);if(oa<fallA){fallA=oa;fall=[onRight,gl,gt]}}
       }
     }
+    if(!best){var ttl=target.querySelector('.title'),tr=ttl?ttl.getBoundingClientRect():t,cx=t.left+t.width/2-h.left;
+      for(var dx=0;dx<=1&&!best;dx++){var onR=dx===0?sides[0]:!sides[0],ux0=cx-gw/2,ux1=ux0+gw,uy0=tr.bottom-h.top+bh+14,uy1=uy0+gh,ubx0=cx-bw/2;
+        if(ux0>=4&&ux1<=h.width-4&&ubx0>=4&&ubx0+bw<=h.width-4&&uy1<=h.height-4&&clear(ux0,uy0-bh-6,ux1,uy1))best=[onR,ux0+(onR?-.15:1.15)*gw,uy0+.38*gh]}}
+    if(!best&&fall)best=fall;
     if(!best){var r0=sides[0];best=[r0,(r0?t.right:t.left)-h.left,t.top-h.top+t.height*.55]}
     guide.classList.toggle('right',best[0]);
     guide.style.left=best[1]+'px';guide.style.top=best[2]+'px';
