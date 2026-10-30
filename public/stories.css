@@ -33,7 +33,7 @@ ol{list-style:none;margin:0;padding:0}
 
 /* books */
 .books{position:absolute;inset:0;z-index:2}
-.book{position:absolute;left:var(--x);top:var(--y);width:clamp(120px,13vw,210px);transform:translate(-50%,-50%)}
+.book{position:absolute;left:var(--x);top:var(--y);width:clamp(110px,11.5vw,190px);transform:translate(-50%,-50%)}
 .book a{display:block;text-decoration:none;-webkit-tap-highlight-color:transparent}
 .tome{position:relative;display:block;aspect-ratio:987/1293;perspective:1200px;transition:transform .5s cubic-bezier(.3,1.5,.5,1);
   filter:drop-shadow(0 18px 22px rgba(70,30,90,.35))}
@@ -103,7 +103,7 @@ ol{list-style:none;margin:0;padding:0}
 
 /* phones: the path runs down the page in a zigzag */
 /* six or more books on laptop-width screens: slightly smaller books and Sola so she fits between them */
-@media (min-width:761px) and (max-width:1100px){.book{width:clamp(104px,11vw,150px)}.guide{width:clamp(46px,5vw,80px)}}
+@media (min-width:761px) and (max-width:1100px){.book{width:clamp(96px,10vw,140px)}.guide{width:clamp(46px,5vw,80px)}}
 @media (max-width:760px){
   .site-header{grid-template-columns:1fr 1fr;grid-template-areas:"brand brand" "l r";gap:8px 22px;padding:14px 16px}
   .brand{grid-area:brand;justify-self:center}.menu.left{grid-area:l}.menu.right{grid-area:r}
