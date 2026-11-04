@@ -2,7 +2,7 @@
 """Build one page per colouring page: public/art/<slug>/index.html (address starcora.world/art/<slug>/).
 
 Source: the PAGES list in public/art.html. Each line has an id (used for the pin file assets/pins/colour-<id>.jpg),
-a slug (the address; once pinned it NEVER changes), name, tags, art, alt and added (go-live date, YYYY-MM-DD).
+a slug (the address; once pinned it NEVER changes; a second picture of the same subject gets a name for what's different, e.g. oro-rocket), name, tags, art, alt and added (go-live date, YYYY-MM-DD).
 Pages dated in the future are not built and stay hidden on the Art page until their day.
 Also rewrites the colouring-page lines in public/sitemap.xml.
 
@@ -40,6 +40,9 @@ for line in block.split('\n'):
     m = re.search(r"\{id:'([^']+)',slug:'([^']+)',name:'([^']+)',tags:\[([^\]]*)\],art:C\+'([^']+)',alt:'((?:[^'\\]|\\.)*)',added:'([\d-]+)'", line)
     if m: pages.append(dict(id=m[1], slug=m[2], name=m[3], tags=re.findall(r"'([^']+)'", m[4]), art=m[5], alt=m[6].replace("\\'", "'"), added=m[7]))
 assert pages, 'no PAGES found'
+for key in ('id', 'slug'):
+    seen = [p[key] for p in pages]; dup = {x for x in seen if seen.count(x) > 1}
+    assert not dup, f'Two colouring pages share the same {key}: {dup}. Give each its own (e.g. oro-rocket); a pinned address never changes.'
 live = [p for p in pages if p['added'] <= today]
 ART = os.path.join(PUB, 'art'); os.makedirs(ART, exist_ok=True)
 keep = {p['slug'] for p in live}
