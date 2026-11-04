@@ -86,7 +86,7 @@ def build(p):
     s = s.replace('<base href="/">\n', '<base href="/">\n' + seo, 1)
     s = s.replace('<link rel="preload" as="image" href="assets/sky.webp" fetchpriority="high">\n', '', 1)
     s, k = re.subn(r'<div class="titles"><h1 id="t">.*?</h1><p>.*?</p></div>',
-                   f'<div class="titles"><h1 id="t">{E(p["name"])} colouring page</h1><p>Free to print or colour on screen</p></div>', s, count=1)
+                   f'<div class="titles"><h1 id="t" class="no-ico">{E(p["name"])} colouring page</h1><p>Free to print or colour on screen</p></div>', s, count=1)
     assert k == 1
     others = [o for o in live if o['id'] != p['id']]
     same = [o for o in others if set(o['tags']) & set(p['tags'])]
