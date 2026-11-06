@@ -1,0 +1,59 @@
+/* Storybooks teaser: a muted looping preview that opens the full video with sound.
+   Floats in the sky on wide screens; on phones and tight screens it sits as a card under the hero. */
+.tz{--gold:#F2CF85;--gold-d:#8a5a12;position:relative;display:block;width:100%;padding:0;border:0;background:none;cursor:pointer;text-align:left;font:inherit;color:inherit;-webkit-tap-highlight-color:transparent}
+.tz .frame{position:relative;display:block;aspect-ratio:16/9;border-radius:16px;overflow:hidden;background:#2a1834 center/cover no-repeat;
+  box-shadow:0 0 0 3px var(--gold),0 0 0 6px var(--gold-d),0 18px 40px -10px rgba(30,12,48,.6)}
+.tz video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.tz .chip{position:absolute;left:50%;bottom:10px;transform:translateX(-50%);display:inline-flex;align-items:center;gap:7px;white-space:nowrap;
+  padding:7px 14px 7px 10px;border-radius:999px;background:rgba(42,24,52,.88);color:#FFF3C8;font:700 14px/1 var(--body);box-shadow:0 0 0 2px var(--gold)}
+.tz .chip svg{width:16px;height:16px;flex:none}
+.tz:hover .frame,.tz:focus-visible .frame{box-shadow:0 0 0 3px #FFE3A3,0 0 0 6px var(--gold-d),0 22px 46px -10px rgba(30,12,48,.7)}
+.tz:focus-visible{outline:none}
+.tz:focus-visible .frame{outline:3px solid #fff;outline-offset:6px}
+.tz .cap{display:block;margin-top:12px;color:var(--ink);font:700 16px/1.35 var(--body);text-align:center}
+
+/* Floating in the sky (wide screens). teaser.js adds .tz-float when it fits without touching anything. */
+.tz-slot{display:none}
+.hero .tz.tz-float{position:absolute;z-index:6;right:clamp(18px,3.2vw,56px);top:var(--tz-top,118px);width:clamp(220px,19vw,330px);
+  animation:tzbob 7s ease-in-out infinite}
+.hero .tz.tz-float.tz-left{right:auto;left:clamp(18px,3.2vw,56px)}
+.tz.tz-float.tz-small{width:clamp(190px,14.5vw,270px)}
+.hero .tz.tz-float .cap{color:#FFF3C8;font-size:15px;margin-top:10px;text-shadow:0 1px 3px rgba(40,20,60,.75),0 0 14px rgba(40,20,60,.6)}
+@keyframes tzbob{0%,100%{transform:translateY(0) rotate(-1.5deg)}50%{transform:translateY(-8px) rotate(-1.5deg)}}
+
+/* Card under the hero (phones, tablets, short screens) */
+.tz-card{max-width:640px;margin:0 auto;padding:clamp(22px,5vw,40px) 16px 4px}
+.tz-card .tz .chip{font-size:15px;padding:9px 16px 9px 12px;bottom:12px}
+.tz-card .tz .frame{border-radius:18px}
+.hero .tz-card.tz-in{position:relative;z-index:5;padding:6px 16px 26px}
+.hero .tz-card.tz-in .cap{color:#FFF3C8;text-shadow:0 1px 3px rgba(40,20,60,.75),0 0 14px rgba(40,20,60,.6)}
+
+/* Small "See how it works" pill: shown in the sky when the window doesn't fit (phones, short laptops) */
+.tz-pill{position:absolute;z-index:6;left:clamp(16px,3.2vw,56px);top:var(--tz-top,96px);display:inline-flex;align-items:center;gap:9px;
+  padding:5px 16px 5px 5px;border:0;border-radius:999px;background:rgba(42,24,52,.82);color:#FFF3C8;font:700 15px/1 var(--body);white-space:nowrap;cursor:pointer;
+  box-shadow:0 0 0 2px #F2CF85,0 8px 20px -6px rgba(30,12,48,.6);-webkit-tap-highlight-color:transparent}
+.tz-pill[hidden]{display:none}
+.tz-pill img{width:34px;height:34px;border-radius:50%;object-fit:cover;box-shadow:0 0 0 2px #F2CF85}
+.tz-pill .pl{display:grid;place-items:center;width:20px;height:20px;border-radius:50%;background:#F2CF85;color:#3A2438;margin-left:-2px}
+.tz-pill .pl svg{width:10px;height:10px}
+.tz-pill:hover{background:rgba(42,24,52,.94)}
+@media (max-width:760px){.tz-pill{left:50%;transform:translateX(-50%);top:calc(env(safe-area-inset-top,0px) + 84px)}}
+
+/* Full player with sound */
+.tzm{position:fixed;inset:0;z-index:200;display:grid;place-items:center;padding:16px;background:rgba(24,10,34,.86);opacity:0;transition:opacity .25s}
+.tzm.on{opacity:1}
+.tzm[hidden]{display:none}
+.tzm .box{position:relative;width:min(960px,100%);}
+.tzm .vid{position:relative;aspect-ratio:16/9;border-radius:18px;overflow:hidden;background:#2a1834;box-shadow:0 0 0 3px #F2CF85,0 0 0 6px #8a5a12,0 30px 70px rgba(0,0,0,.55)}
+.tzm video{position:absolute;inset:0;width:100%;height:100%;display:block;background:#2a1834}
+.tzm .x{position:absolute;right:-6px;top:-54px;width:44px;height:44px;border-radius:50%;border:0;background:#FBF3E4;color:#3A2438;display:grid;place-items:center;cursor:pointer;box-shadow:0 4px 14px rgba(0,0,0,.35)}
+.tzm .x svg{width:20px;height:20px}
+.tzm .end{position:absolute;inset:0;display:grid;place-content:center;gap:12px;padding:16px;background:rgba(42,24,52,.55);opacity:0;pointer-events:none;transition:opacity .3s}
+.tzm.done .end{opacity:1;pointer-events:auto}
+.tzm .end a,.tzm .end button{display:block;min-width:min(260px,70vw);padding:14px 26px;border-radius:999px;border:0;text-align:center;text-decoration:none;font:800 18px/1.1 var(--body);cursor:pointer}
+.tzm .end .go{background:#F2CF85;color:#3A2438;box-shadow:0 4px 0 #8a5a12}
+.tzm .end .again{background:rgba(251,243,228,.92);color:#3A2438}
+.tzm .note{margin:14px 0 0;text-align:center;color:#FFF3C8;font:600 15px/1.4 var(--body)}
+@media (max-width:760px){.tzm{padding:12px}.tzm .x{top:-52px;right:0}.tzm .end a,.tzm .end button{padding:11px 20px;font-size:16px}}
+@media (orientation:landscape) and (max-height:500px){.tzm .box{width:min(960px,calc((100svh - 40px)*16/9))}.tzm .x{top:6px;right:6px;z-index:2}.tzm .note{display:none}}
+@media (prefers-reduced-motion:reduce){.hero .tz.tz-float{animation:none}.tzm{transition:none}}

@@ -22,6 +22,7 @@
 <link rel="icon" href="assets/favicon-32.png" sizes="32x32" type="image/png">
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
 <link rel="stylesheet" href="stories.css">
+<link rel="stylesheet" href="teaser.css">
 </head>
 <body>
 <div class="flash"></div>
@@ -43,6 +44,7 @@
   </div>
 
   <svg class="trail" aria-hidden="true"></svg>
+  <button class="tz-pill" type="button" data-tz-open hidden aria-label="Watch how the storybooks work (16 seconds)"><img src="assets/video/starcora-storybooks-teaser-thumb.webp" width="96" height="96" alt=""><span class="pl"><svg viewBox="0 0 10 10" fill="currentColor"><path d="M2 1l7 4-7 4z"/></svg></span>See how it works</button>
 
   <ol class="books">
     <li class="book ready" data-n="0" style="--x:8%;--y:64%" >
@@ -99,6 +101,13 @@
   <div class="guide" aria-hidden="true"><img src="assets/sola-200.webp" alt="Sola from Starcora waving" width="200" height="384"><span class="say"></span></div>
 </section>
 
+<div class="tz-card" id="tzCard">
+  <button class="tz tz-small" type="button" data-src="assets/video/starcora-storybooks-teaser-960.mp4" data-src-big="assets/video/starcora-storybooks-teaser-1280.mp4" data-avoid=".titles h1,.titles p,.book,.guide" data-sides="left,right" data-phone-after=".hero .titles" aria-label="Watch how the storybooks work, with sound (16 seconds)">
+    <span class="frame" style="background-image:url(assets/video/starcora-storybooks-teaser-poster.webp)"><video muted loop playsinline preload="none" poster="assets/video/starcora-storybooks-teaser-poster.webp" aria-hidden="true"></video>
+    <span class="chip"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3 9v6h4l5 4V5L7 9H3z"/><path d="M15.5 8.5a5 5 0 0 1 0 7M18.5 5.5a9 9 0 0 1 0 13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>Tap for sound</span></span>
+    <span class="cap">Every storybook reads to you. Then you play the game!</span>
+  </button>
+</div>
 <section class="grownups" id="about">
   <h2>Interactive storybooks for kids</h2>
   <p class="lede">Each Starcora storybook is a short read-along adventure and story game for children aged 4 to 7, starring Sola, Oro and Rose. Every page has a hand-painted picture, a little story read aloud, and a puzzle that moves the story on. The books follow on from each other, so they are best read in order, starting with Book 0. Any book can be opened at any time, and a new storybook arrives every Friday.</p>
@@ -122,6 +131,7 @@
   <div>&copy; 2026 Starcora</div>
 </footer>
 <script src="stories.js"></script>
+<script src="teaser.js" defer></script>
 <script src="names.js"></script>
 <div id="pinimg" hidden><img data-src="assets/pins/pin-storybooks.jpg" width="1000" height="1500" alt="Free interactive storybooks for kids aged 4 to 7. Read along with Sola, Oro and Rose, play the story games and follow the stars. A new story every Friday." data-pin-description="Free interactive storybooks for kids aged 4 to 7. Read along with Sola, Oro and Rose, play the story games and follow the stars. A new story every Friday."></div>
 <script>addEventListener("load",function(){setTimeout(function(){var i=document.querySelector("#pinimg img");if(i&&!i.src)i.src=i.dataset.src},1200)})</script>
