@@ -37,7 +37,7 @@
   var rt;addEventListener('resize',function(){if(!settled)return;clearTimeout(rt);rt=setTimeout(place,150)});
   /* islands and books float in, so decide once they have settled (and again on resize) */
   btn.style.visibility='hidden';if(pl)pl.hidden=true;
-  var settled=false;function settle(){if(settled)return;settled=true;place();btn.style.visibility='';watch()}
+  var settled=false;function settle(){if(settled)return;settled=true;place();btn.style.visibility='';watch();try{dispatchEvent(new Event('resize'))}catch(e){}}
   addEventListener('load',function(){setTimeout(settle,1700)});setTimeout(settle,4000);
 
   /* 2. The muted loop: loads only when on screen, pauses when off screen */
