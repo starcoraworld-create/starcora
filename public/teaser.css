@@ -17,6 +17,7 @@
 .hero .tz.tz-float{position:absolute;z-index:6;right:clamp(18px,3.2vw,56px);top:var(--tz-top,118px);width:clamp(220px,19vw,330px);
   animation:tzbob 7s ease-in-out infinite}
 .hero .tz.tz-float.tz-left{right:auto;left:clamp(18px,3.2vw,56px)}
+.hero .tz.tz-float.tz-bottom{top:auto;bottom:var(--tz-bot,9%)}
 .tz.tz-float.tz-small{width:clamp(190px,14.5vw,270px)}
 .hero .tz.tz-float .cap{color:#FFF3C8;font-size:15px;margin-top:10px;text-shadow:0 1px 3px rgba(40,20,60,.75),0 0 14px rgba(40,20,60,.6)}
 @keyframes tzbob{0%,100%{transform:translateY(0) rotate(-1.5deg)}50%{transform:translateY(-8px) rotate(-1.5deg)}}
@@ -57,3 +58,5 @@
 @media (max-width:760px){.tzm{padding:12px}.tzm .x{top:-52px;right:0}.tzm .end a,.tzm .end button{padding:11px 20px;font-size:16px}}
 @media (orientation:landscape) and (max-height:500px){.tzm .box{width:min(960px,calc((100svh - 40px)*16/9))}.tzm .x{top:6px;right:6px;z-index:2}.tzm .note{display:none}}
 @media (prefers-reduced-motion:reduce){.hero .tz.tz-float{animation:none}.tzm{transition:none}}
+.hero .tz.tz-float{container-type:inline-size}
+@container (max-width:240px){.tz .chip{font-size:12px;padding:5px 10px 5px 8px;bottom:6px;gap:5px}.tz .chip svg{width:13px;height:13px}.hero .tz.tz-float .cap{font-size:13px;margin-top:7px}}

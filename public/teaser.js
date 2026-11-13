@@ -20,17 +20,23 @@
     hero.style.setProperty('--tz-top',Math.max(80,top)+'px');
     btn.classList.add('tz-float');btn.style.animation='none';
     var sides=(btn.getAttribute('data-sides')||'right').split(','),ok=false,els=avoid?hero.querySelectorAll(avoid):[];
-    for(var k=0;k<sides.length&&!ok;k++){
-      btn.classList.toggle('tz-left',sides[k]==='left');
-      var r=btn.getBoundingClientRect(),h=hero.getBoundingClientRect();ok=r.bottom<h.bottom-12&&r.left>h.left&&r.right<h.right;
-      for(var i=0;i<els.length&&ok;i++){var e=box(els[i]);if(e.width&&hit(r,e))ok=false}
+    var spots=[];sides.forEach(function(sd){spots.push([sd,'top'])});sides.forEach(function(sd){spots.push([sd,'bottom'])});
+    var base=btn.offsetWidth,sizes=[1,.85,.72];
+    for(var z=0;z<sizes.length&&!ok;z++){
+      btn.style.width=z?Math.max(170,Math.round(base*sizes[z]))+'px':'';
+      for(var k=0;k<spots.length&&!ok;k++){
+        btn.classList.toggle('tz-left',spots[k][0]==='left');btn.classList.toggle('tz-bottom',spots[k][1]==='bottom');
+        var r=btn.getBoundingClientRect(),h=hero.getBoundingClientRect();ok=r.top>h.top+40&&r.bottom<h.bottom-12&&r.left>h.left&&r.right<h.right;
+        for(var i=0;i<els.length&&ok;i++){var e=box(els[i]);if(e.width&&hit(r,e))ok=false}
+      }
     }
+    if(!ok)btn.style.width='';
     btn.style.animation='';
     if(!ok)toCard();else{if(card)card.hidden=true;pill(false)}
   }
   var home=card&&card.parentNode,next=card&&card.nextSibling,ph=btn.getAttribute('data-phone-after');
   var pl=document.querySelector('.tz-pill');function pill(on){if(pl)pl.hidden=!on}
-  function toCard(){btn.classList.remove('tz-float');pill(!(ph&&innerWidth<761));if(!card)return;card.hidden=false;if(btn.parentNode!==card)card.insertBefore(btn,card.firstChild);
+  function toCard(){btn.classList.remove('tz-float','tz-bottom');btn.style.width='';pill(!(ph&&innerWidth<761));if(!card)return;card.hidden=false;if(btn.parentNode!==card)card.insertBefore(btn,card.firstChild);
     var t=ph&&innerWidth<761&&document.querySelector(ph);
     if(t){if(card.previousSibling!==t)t.parentNode.insertBefore(card,t.nextSibling);card.classList.add('tz-in')}
     else if(card.parentNode!==home||card.nextSibling!==next){home.insertBefore(card,next);card.classList.remove('tz-in')}}
