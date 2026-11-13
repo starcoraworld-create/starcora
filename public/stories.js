@@ -29,7 +29,19 @@
 
   // a dotted trail of stars from book to book; the part already travelled glows gold
   // on shorter screens, books that would sit under the title and subtitle drop down until they clear them
+  // Big screens: rows of seven. The path runs left to right, curves down at the end of the row,
+  // then runs right to left, and so on (Courtney, 13 Nov). The sky grows taller for each new row.
+  var XS=[8,22,35,49,63,77,91],YS=[64,48,62,45,60,46,60],PER=7;
+  function rowOf(i){return Math.floor(i/PER)}
+  function layout(){
+    if(window.innerWidth<761){hero.style.height='';books.forEach(function(b){b.style.left='';b.style.removeProperty('--y')});return}
+    var H0=Math.max(640,window.innerHeight),rows=Math.ceil(books.length/PER),ROWH=Math.max(300,Math.min(H0*.46,window.innerWidth*.3));
+    hero.style.height=rows>1?(H0+(rows-1)*ROWH+H0*.14)+'px':'';
+    books.forEach(function(b,i){var r=rowOf(i),p=i%PER,col=r%2?PER-1-p:p;
+      b.style.left=XS[col]+'%';b.style.setProperty('--y',(YS[col]/100*H0+r*ROWH)+'px')});
+  }
   function fit(){
+    layout();
     books.forEach(function(b){b.style.top=''});
     if(window.innerWidth<760)return;
     var h=hero.getBoundingClientRect(),limit=document.querySelector('.titles p').getBoundingClientRect().bottom-h.top+14;
@@ -46,6 +58,7 @@
       var mx=(a[0]+b[0])/2,dy=Math.abs(b[1]-a[1]);
       var c1=[mx,a[1]+ (window.innerWidth<760?0:-60)],c2=[mx,b[1]+(window.innerWidth<760?0:60)];
       if(window.innerWidth<760){c1=[a[0],(a[1]+b[1])/2];c2=[b[0],(a[1]+b[1])/2]}
+      else if(rowOf(i)!==rowOf(i+1)){var k=(rowOf(i)%2?-1:1)*Math.max(70,window.innerWidth*.06);c1=[a[0]+k,a[1]+(b[1]-a[1])*.1];c2=[b[0]+k,b[1]-(b[1]-a[1])*.1]}
       var lit=read.indexOf(i)>=0;
       out+='<path class="'+(lit?'lit':'dim')+'" d="M'+a[0]+' '+a[1]+' C'+c1[0]+' '+c1[1]+' '+c2[0]+' '+c2[1]+' '+b[0]+' '+b[1]+'"/>';
     }
