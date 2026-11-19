@@ -22,8 +22,9 @@
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
 <link rel="stylesheet" href="sky.css">
 <link rel="stylesheet" href="teaser.css">
+<link rel="stylesheet" href="grimoire.css" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="grimoire.css"></noscript>
 </head>
-<body>
+<body class="parch">
 <div class="flash"></div>
 <header class="site-header">
   <nav class="menu left" aria-label="Main"><a href="index.html" aria-current="page"><img class="ni" src="assets/nav/home.webp" alt="" width="48" height="48">Home</a><a href="stories.html"><img class="ni" src="assets/nav/stories.webp" alt="" width="48" height="48">Storybooks</a><a href="videos.html"><img class="ni" src="assets/nav/videos.webp" alt="" width="48" height="48">Videos</a></nav>
@@ -65,30 +66,69 @@
     <span class="cap">The storybooks read to you, then you play!</span>
   </button>
 </div>
-<section class="intro">
-  <h1>Kids stories, games and colouring from a magical twilight world</h1>
-  <p>Starcora is home to Sola, Oro and Rose. Every island in the sky holds something new for children aged 4 to 7: read along and solve puzzles in the storybooks, colour a page on screen or on paper, and watch the stories come to life.</p>
-  <div class="feat">
-    <a href="stories.html"><h2>Interactive storybooks</h2><p>Read-along kids stories with a little game on every page. Gentle puzzles for listening, early reading and problem solving.</p></a>
-    <a href="art.html"><h2>Free colouring pages</h2><p>Paint online with fill, brush and stickers, zoom in for the small details, or print them out for a quiet activity.</p></a>
-    <a href="videos.html"><h2>Story videos</h2><p>Sit back and watch the storybooks play from the first page to The End, plus short clips of the best bits.</p></a>
+<span class="startrail first" role="presentation"></span>
+<section class="intro split" aria-labelledby="intro-t">
+  <div class="lead-col">
+    <h1 id="intro-t">Kids stories, games and colouring from a magical twilight world</h1>
+    <p>Starcora is home to Sola, Oro and Rose. Every island in the sky holds something new for children aged 4 to 7: read along and solve puzzles in the storybooks, colour a page on screen or on paper, and watch the stories come to life.</p>
+    <ul class="starlist">
+      <li><b>Interactive storybooks:</b> read-along kids stories with a little game on every page, for listening, early reading and problem solving.</li>
+      <li><b>Free colouring pages:</b> paint online with fill, brush and stickers, or print them out for a quiet activity.</li>
+      <li><b>Story videos:</b> watch the storybooks play from the first page to The End, plus short clips of the best bits.</li>
+    </ul>
+    <div class="acts"><a class="gbtn" href="stories.html">Open the bookshelf</a></div>
+    <p class="small">Free for ages 4 to 7, with a new storybook every Friday. Works on tablets, phones and computers. <a href="grownups.html">For parents and teachers</a>.</p>
   </div>
-  <p class="small">Free for ages 4 to 7, with a new storybook every Friday. Works on tablets, phones and computers. <a href="grownups.html">For parents and teachers</a>.</p>
+  <div class="board">
+    <div class="board-l">
+      <button class="beam" type="button" aria-describedby="beam-say"><span class="medal-btn"><img src="assets/stickers/star.webp" width="280" height="267" alt="" loading="lazy"></span><span class="beam-cap">Tap for a Beamdrop</span></button>
+      <p class="beam-say" id="beam-say" aria-live="polite">Which magic will you get?</p>
+      <div class="tiles">
+        <a href="stories.html"><img src="assets/island-stories-400.webp" width="400" height="330" loading="lazy" alt="The storybook island, with a glowing open book"><h2>Storybooks</h2></a>
+        <a href="art.html"><img src="assets/island-art-400.webp" width="400" height="349" loading="lazy" alt="The art island, with an easel and paint pots"><h2>Colouring pages</h2></a>
+        <a href="videos.html"><img src="assets/island-videos-400.webp" width="400" height="345" loading="lazy" alt="The video island, with a cinema screen and cushions"><h2>Story videos</h2></a>
+        <a href="activities/index.html"><img src="assets/island-activities-400.webp" width="400" height="335" loading="lazy" alt="The activities island, with a craft table and bunting"><h2>Activities</h2></a>
+      </div>
+    </div>
+    <div class="board-r">
+      <div class="phone"><video muted loop playsinline preload="none" poster="assets/video/b0-short-3.webp" data-src="assets/video/b0-short-3.mp4" aria-label="A moment from Book 0: matching each friend to their Beamdrop"></video></div>
+      <a class="gbtn big" href="books/book-0/index.html"><span>Play Book 0<small>Welcome to Starcora</small></span></a>
+    </div>
+  </div>
 </section>
+<script>
+(function(){
+  var B=[{i:'sun',t:'Sola\'s sun-power! Light, warmth and a burst of energy.'},{i:'moon',t:'Oro\'s moon-power! It can cool, pull and make things still.'},{i:'flower',t:'Rose\'s flower-power! It makes things grow, mend and bloom.'}];
+  var btn=document.querySelector('.beam'),img=btn.querySelector('img'),say=document.getElementById('beam-say'),last=-1;
+  btn.addEventListener('click',function(){
+    var k;do{k=Math.floor(Math.random()*3)}while(k===last);last=k;
+    btn.classList.remove('spin');void btn.offsetWidth;btn.classList.add('spin');
+    setTimeout(function(){img.src='assets/stickers/'+B[k].i+'.webp';say.textContent=B[k].t;},450);
+  });
+  var v=document.querySelector('.phone video');
+  if('IntersectionObserver' in window&&!matchMedia('(prefers-reduced-motion: reduce)').matches){
+    new IntersectionObserver(function(es){es.forEach(function(e){
+      if(e.isIntersecting){if(!v.src)v.src=v.dataset.src;v.play().catch(function(){})}else if(v.src)v.pause();
+    })},{threshold:.35}).observe(v);
+  }
+})();
+</script>
+<span class="startrail" role="presentation"></span>
 <section class="meet" aria-labelledby="meet-t">
   <h2 id="meet-t">Meet Sola, Oro and Rose</h2>
   <p class="lead">Three best friends who live in the Cova, a cosy home inside a giant tree in the Moonmist forest on the planet Starcora. Each one has their own magic, called a Beamdrop.</p>
-  <div class="trio">
-    <div><img src="assets/face-sola.webp" alt="Sola from Starcora, a girl with long purple hair in a white space suit" width="160" height="160" loading="lazy"><h3>Sola</h3><p>The sunny leader and inventor. Her sun-power brings light, warmth and a burst of energy.</p></div>
-    <div><img src="assets/face-oro.webp" alt="Oro from Starcora, a friendly gold and silver retro robot" width="160" height="160" loading="lazy"><h3>Oro</h3><p>The most enthusiastic little robot in the universe. His moon-power can cool, pull and make things still.</p></div>
-    <div><img src="assets/face-rose.webp" alt="Rose from Starcora, a small pink deer girl with flower buds on her antlers" width="160" height="160" loading="lazy"><h3>Rose</h3><p>Small and quiet, and always somehow right. Her flower-power makes things grow, mend and bloom.</p></div>
+  <div class="trio g">
+    <div class="gpage"><span class="medal"><img src="assets/face-sola.webp" alt="Sola from Starcora, a girl with long purple hair in a white space suit" width="160" height="160" loading="lazy"></span><h3>Sola</h3><p>The sunny leader and inventor. Her sun-power brings light, warmth and a burst of energy.</p></div>
+    <div class="gpage"><span class="medal"><img src="assets/face-oro.webp" alt="Oro from Starcora, a friendly gold and silver retro robot" width="160" height="160" loading="lazy"></span><h3>Oro</h3><p>The most enthusiastic little robot in the universe. His moon-power can cool, pull and make things still.</p></div>
+    <div class="gpage"><span class="medal"><img src="assets/face-rose.webp" alt="Rose from Starcora, a small pink deer girl with flower buds on her antlers" width="160" height="160" loading="lazy"></span><h3>Rose</h3><p>Small and quiet, and always somehow right. Her flower-power makes things grow, mend and bloom.</p></div>
   </div>
 </section>
-<section class="feedback">
+<span class="startrail before-fb" role="presentation"></span>
+<div class="feedback-wrap glabel-wrap"><section class="feedback glabel">
   <h2>We're new, and we'd love your feedback</h2>
   <p>Tell us anything you've noticed, anything we could do better, or what your little ones enjoyed most.</p>
-  <a class="fbtn" href="mailto:hello@starcora.world?subject=Starcora%20feedback">Send us feedback</a>
-</section>
+  <a class="gbtn" href="mailto:hello@starcora.world?subject=Starcora%20feedback">Send us feedback</a>
+</section></div>
 </main>
 <footer class="site-footer">
   <img src="assets/logo-cream.webp" alt="Starcora" width="160" height="40" loading="lazy">

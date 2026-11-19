@@ -162,3 +162,56 @@ ol{list-style:none;margin:0;padding:0}
 @keyframes hearglow{50%{box-shadow:0 4px 0 rgba(70,30,90,.25),0 0 0 8px rgba(242,207,133,.45),0 0 26px 6px rgba(242,207,133,.8)}}
 @media (prefers-reduced-motion:reduce){.titles .hear.glow{animation:none}}
 @media (min-width:761px) and (max-height:760px){.guide{width:clamp(44px,4.4vw,66px)}}
+/* grimoire look for text pages: built from grimoire.css (text-page rules only). Change grimoire.css, then rebuild this block. */
+@font-face{font-family:"Cinzel Decorative";src:url(assets/fonts/cinzel-decorative-latin-900-normal.woff2) format("woff2");font-weight:900;font-display:swap}
+:root{--parch:#F3E1BA;--parch-hi:#FBF1DC;--gold-line:#C9963A;--gold-hi:#F4E4A0;--gold-mid:#E2B04F;--gold-lo:#8C6420;--plum:#5B3A7A;--plum-d:#432A5C;--ink-soft-p:#5E4558}
+body.parch{background:var(--parch) url(assets/parchment.webp) 0 0/933px auto repeat}
+body.parch .doc a,body.parch .intro .small a{color:var(--plum)}
+.startrail{display:block;width:min(520px,86%);height:56px;margin:0 auto;border:0;
+  background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 520 56'%3E%3Cpath d='M30 30C90 10 150 48 210 30' fill='none' stroke='%23C9963A' stroke-width='4.5' stroke-linecap='round' stroke-dasharray='0 15'/%3E%3Cpath d='M310 30C370 12 430 50 490 30' fill='none' stroke='%23C9963A' stroke-width='4.5' stroke-linecap='round' stroke-dasharray='0 15'/%3E%3Cpath d='M260 6l5 19 19 5-19 5-5 19-5-19-19-5 19-5z' fill='%23E2B04F' stroke='%238C6420' stroke-width='1.2'/%3E%3Cpath d='M228 30l2.5 6.5 6.5 2.5-6.5 2.5-2.5 6.5-2.5-6.5-6.5-2.5 6.5-2.5z' transform='translate(0 -9)' fill='%23E2B04F'/%3E%3Cpath d='M292 30l2.5 6.5 6.5 2.5-6.5 2.5-2.5 6.5-2.5-6.5-6.5-2.5 6.5-2.5z' transform='translate(0 -9)' fill='%23E2B04F'/%3E%3Cpath d='M14 30l3 8 8 3-8 3-3 8-3-8-8-3 8-3z' transform='translate(0 -11)' fill='%23E2B04F'/%3E%3Cpath d='M506 30l3 8 8 3-8 3-3 8-3-8-8-3 8-3z' transform='translate(0 -11)' fill='%23E2B04F'/%3E%3C/svg%3E") center/contain no-repeat}
+.startrail.sm{width:min(300px,70%);height:34px;margin:34px auto 6px}
+.gpage{position:relative;display:block;text-decoration:none;color:var(--ink);text-align:center;
+  background:linear-gradient(rgba(255,250,238,.62),rgba(255,250,238,.62)),var(--parch) url(assets/parchment.webp) 0 0/933px auto;
+  border:1.5px solid var(--gold-line);border-radius:999px 999px 12px 12px/150px 150px 12px 12px;
+  box-shadow:inset 0 0 0 6px rgba(255,250,238,.7),inset 0 0 0 7px rgba(201,150,58,.6),0 16px 28px -20px rgba(90,50,20,.55);
+  padding:26px 24px 28px;transition:transform .35s cubic-bezier(.3,1.5,.5,1),box-shadow .35s}
+.gpage::before,.gpage::after{content:"";position:absolute;bottom:-1px;width:34px;height:34px;pointer-events:none;
+  background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 34 34'%3E%3Cpath d='M3 4v27h27' fill='none' stroke='%23C9963A' stroke-width='2'/%3E%3Cpath d='M3 31C7 22 12 17 21 15' fill='none' stroke='%23C9963A' stroke-width='1.4'/%3E%3Ccircle cx='23' cy='14.5' r='2.4' fill='%23E2B04F'/%3E%3Cpath d='M9 31l2.4-4.2L14 31z' fill='%23E2B04F'/%3E%3C/svg%3E") 0 0/100% no-repeat}
+.gpage::before{left:-1px}
+.gpage::after{right:-1px;transform:scaleX(-1)}
+a.gpage:hover,a.gpage:focus-visible{transform:translateY(-5px);box-shadow:inset 0 0 0 6px rgba(255,250,238,.7),inset 0 0 0 7px rgba(201,150,58,.8),0 22px 34px -20px rgba(90,50,20,.6),0 0 0 3px rgba(242,207,133,.45)}
+a.gpage:focus-visible{outline:2px solid var(--plum);outline-offset:4px}
+.gpage .art{display:block;height:150px;width:auto;margin:-58px auto 12px;filter:drop-shadow(0 10px 10px rgba(90,50,20,.22))}
+.gpage h2,.gpage h3{font-family:var(--display);font-weight:500;font-variation-settings:"SOFT" 100;margin:0 0 8px;line-height:1.15;color:var(--ink)}
+.gpage h2{font-size:23px}.gpage h3{font-size:25px}
+.gpage h2::after,.gpage h3::after{content:"";display:block;width:74px;height:10px;margin:8px auto 0;
+  background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 74 10'%3E%3Cpath d='M2 5h28M44 5h28' stroke='%23C9963A' stroke-width='1.3'/%3E%3Cpath d='M37 0l1.6 3.4L42 5l-3.4 1.6L37 10l-1.6-3.4L32 5l3.4-1.6z' fill='%23E2B04F'/%3E%3C/svg%3E") center/contain no-repeat}
+.gpage p{font-size:16px;margin:0;color:var(--ink-soft-p)}
+.gbtn{display:inline-flex;align-items:center;gap:12px;padding:7px 24px 7px 7px;border-radius:14px;
+  background:linear-gradient(#64428A,var(--plum-d));color:#FBF3E4!important;font-family:var(--body);font-weight:700;font-size:17px;line-height:1.2;text-decoration:none;
+  border:2px solid #D9AE55;box-shadow:inset 0 0 0 2px var(--plum-d),inset 0 0 0 3px rgba(244,228,160,.75),0 4px 0 var(--gold-lo),0 10px 18px -8px rgba(60,30,20,.5);
+  transition:transform .2s,box-shadow .2s}
+.gbtn::before{content:"";flex:none;width:40px;height:40px;border-radius:50%;
+  background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M10 2l2 6 6 2-6 2-2 6-2-6-6-2 6-2z' fill='%235B3A7A'/%3E%3C/svg%3E") center/58% no-repeat,
+    radial-gradient(circle at 34% 28%,#FFF4C4,#E9BE5C 45%,#B8862A 82%);
+  box-shadow:inset 0 0 0 2px var(--gold-lo),inset 0 0 0 4px var(--gold-hi),0 1px 2px rgba(0,0,0,.35);transition:transform .5s cubic-bezier(.3,1.5,.5,1)}
+.gbtn:hover{transform:translateY(-2px)}
+.gbtn:hover::before{transform:rotate(45deg)}
+.gbtn:active{transform:translateY(2px);box-shadow:inset 0 0 0 2px var(--plum-d),inset 0 0 0 3px rgba(244,228,160,.75),0 1px 0 var(--gold-lo)}
+.gbtn:focus-visible{outline:3px solid var(--plum);outline-offset:4px}
+.doc .dropcap::first-letter{float:left;font-family:"Cinzel Decorative",var(--display);font-weight:900;font-size:3.5em;line-height:.86;
+  color:var(--plum);padding:.14em .13em .08em;margin:.08em .18em 0 0;background:#F8EACB;border:1.5px solid var(--gold-line);border-radius:3px;
+  box-shadow:inset 0 0 0 3px #F8EACB,inset 0 0 0 4px rgba(201,150,58,.6),2px 3px 0 rgba(201,150,58,.25)}
+.doc h2{color:var(--ink)}
+.doc .startrail.sm+h2{margin-top:6px}
+.doc .gbtn{margin-top:10px}
+.books3.g a{background:linear-gradient(rgba(255,250,238,.66),rgba(255,250,238,.66)),var(--parch) url(assets/parchment.webp) 0 0/933px auto;border:1.5px solid var(--gold-line);border-radius:6px;
+  box-shadow:inset 0 0 0 3px rgba(255,250,238,.8),inset 0 0 0 4px rgba(201,150,58,.45),0 10px 20px -16px rgba(90,50,20,.55);transition:transform .3s cubic-bezier(.3,1.5,.5,1)}
+.books3.g a:hover{transform:translateY(-3px)}
+.books3.g img{box-shadow:0 3px 6px -2px rgba(60,30,20,.45)}
+.books3.g span{color:var(--ink-soft-p)}
+.doc .faq h3{position:relative;padding-left:26px}
+.doc .faq h3::before{content:"";position:absolute;left:0;top:.28em;width:16px;height:16px;
+  background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M10 1l2.3 6.7L19 10l-6.7 2.3L10 19l-2.3-6.7L1 10l6.7-2.3z' fill='%23E2B04F' stroke='%238C6420' stroke-width='.8'/%3E%3C/svg%3E") center/contain no-repeat}
+.doc .faq p{padding-left:26px}
+@media (prefers-reduced-motion:reduce){.gpage,.gbtn,.gbtn::before,.books3.g a{transition:none}}
