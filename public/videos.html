@@ -47,6 +47,7 @@
 .vid .tag{display:inline-block;font-size:13px;font-weight:700;color:#8E5C9E;letter-spacing:.04em}
 .vid .vt{display:block;font-family:var(--display);font-weight:500;font-size:21px;line-height:1.2;margin-top:2px}
 .shorts .vid .vt{font-size:17px}
+@media (min-width:761px){.shorts{display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));overflow:visible;scroll-snap-type:none;margin:0}.shorts .vid{width:auto}}
 .vid.soon{cursor:default}
 .vid.soon .pic img{filter:saturate(.6) brightness(.8)}
 .vid.soon .play{display:none}
@@ -58,11 +59,12 @@
 .player{position:fixed;inset:0;z-index:80;background:rgba(30,16,40,.86);display:grid;place-items:center;padding:16px}
 .frame{position:relative;width:min(100%,1000px);aspect-ratio:16/9;border-radius:18px;overflow:hidden;background:#000;box-shadow:0 30px 80px rgba(0,0,0,.5)}
 .player.tall .frame{width:auto;height:min(86vh,800px);aspect-ratio:9/16}
-.frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.frame iframe,.frame video{position:absolute;inset:0;width:100%;height:100%;border:0;background:#000}
 .close{position:absolute;top:calc(14px + env(safe-area-inset-top,0px));right:14px;width:54px;height:54px;border-radius:50%;border:0;background:#FBF3E4;color:var(--ink);cursor:pointer;display:grid;place-items:center;box-shadow:0 4px 0 rgba(0,0,0,.25)}
 .close svg{width:24px;height:24px}
 @media (max-width:760px){.hero.short{padding:150px 16px 50px}.stories{grid-template-columns:1fr}.shorts .vid{width:150px}}
 </style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "ItemList", "name": "Starcora story videos", "itemListElement": [{"@type": "ListItem", "position": 1, "item": {"@type": "VideoObject", "name": "Book 0: Welcome to Starcora, full read-along story", "description": "A whole Starcora storybook being read and played, from the first page to The End, for kids aged 4 to 7.", "thumbnailUrl": "https://starcora.world/assets/video/b0-story.webp", "contentUrl": "https://starcora.world/assets/video/b0-story.mp4", "uploadDate": "2026-11-19", "duration": "PT6M0S", "isFamilyFriendly": true}}, {"@type": "ListItem", "position": 2, "item": {"@type": "VideoObject", "name": "Book 1: The Fallen Star, full read-along story", "description": "A whole Starcora storybook being read and played, from the first page to The End, for kids aged 4 to 7.", "thumbnailUrl": "https://starcora.world/assets/video/b1-story.webp", "contentUrl": "https://starcora.world/assets/video/b1-story.mp4", "uploadDate": "2026-11-19", "duration": "PT4M54S", "isFamilyFriendly": true}}, {"@type": "ListItem", "position": 3, "item": {"@type": "VideoObject", "name": "Catch 6 shooting stars (Starcora Book 0)", "description": "A short clip from Starcora Book 0: Catch 6 shooting stars.", "thumbnailUrl": "https://starcora.world/assets/video/b0-short-1.webp", "contentUrl": "https://starcora.world/assets/video/b0-short-1.mp4", "uploadDate": "2026-11-19", "duration": "PT0M33S", "isFamilyFriendly": true}}, {"@type": "ListItem", "position": 4, "item": {"@type": "VideoObject", "name": "Wind the spiral vine (Starcora Book 0)", "description": "A short clip from Starcora Book 0: Wind the spiral vine.", "thumbnailUrl": "https://starcora.world/assets/video/b0-short-2.webp", "contentUrl": "https://starcora.world/assets/video/b0-short-2.mp4", "uploadDate": "2026-11-19", "duration": "PT0M36S", "isFamilyFriendly": true}}, {"@type": "ListItem", "position": 5, "item": {"@type": "VideoObject", "name": "Whose Beamdrop is whose? (Starcora Book 0)", "description": "A short clip from Starcora Book 0: Whose Beamdrop is whose?.", "thumbnailUrl": "https://starcora.world/assets/video/b0-short-3.webp", "contentUrl": "https://starcora.world/assets/video/b0-short-3.mp4", "uploadDate": "2026-11-19", "duration": "PT0M40S", "isFamilyFriendly": true}}, {"@type": "ListItem", "position": 6, "item": {"@type": "VideoObject", "name": "Melt the frost (Starcora Book 0)", "description": "A short clip from Starcora Book 0: Melt the frost.", "thumbnailUrl": "https://starcora.world/assets/video/b0-short-4.webp", "contentUrl": "https://starcora.world/assets/video/b0-short-4.mp4", "uploadDate": "2026-11-19", "duration": "PT0M35S", "isFamilyFriendly": true}}, {"@type": "ListItem", "position": 7, "item": {"@type": "VideoObject", "name": "Stop the wobbly stones (Starcora Book 0)", "description": "A short clip from Starcora Book 0: Stop the wobbly stones.", "thumbnailUrl": "https://starcora.world/assets/video/b0-short-5.webp", "contentUrl": "https://starcora.world/assets/video/b0-short-5.mp4", "uploadDate": "2026-11-19", "duration": "PT0M31S", "isFamilyFriendly": true}}, {"@type": "ListItem", "position": 8, "item": {"@type": "VideoObject", "name": "Mend the Dotstool (Starcora Book 0)", "description": "A short clip from Starcora Book 0: Mend the Dotstool.", "thumbnailUrl": "https://starcora.world/assets/video/b0-short-6.webp", "contentUrl": "https://starcora.world/assets/video/b0-short-6.mp4", "uploadDate": "2026-11-19", "duration": "PT0M40S", "isFamilyFriendly": true}}, {"@type": "ListItem", "position": 9, "item": {"@type": "VideoObject", "name": "What's in the Cova Chest? (Starcora Book 0)", "description": "A short clip from Starcora Book 0: What's in the Cova Chest?.", "thumbnailUrl": "https://starcora.world/assets/video/b0-short-7.webp", "contentUrl": "https://starcora.world/assets/video/b0-short-7.mp4", "uploadDate": "2026-11-19", "duration": "PT0M36S", "isFamilyFriendly": true}}, {"@type": "ListItem", "position": 10, "item": {"@type": "VideoObject", "name": "Crack the secret code (Starcora Book 1)", "description": "A short clip from Starcora Book 1: Crack the secret code.", "thumbnailUrl": "https://starcora.world/assets/video/b1-short-1.webp", "contentUrl": "https://starcora.world/assets/video/b1-short-1.mp4", "uploadDate": "2026-11-19", "duration": "PT0M36S", "isFamilyFriendly": true}}, {"@type": "ListItem", "position": 11, "item": {"@type": "VideoObject", "name": "Find 5 hidden lanterns (Starcora Book 1)", "description": "A short clip from Starcora Book 1: Find 5 hidden lanterns.", "thumbnailUrl": "https://starcora.world/assets/video/b1-short-2.webp", "contentUrl": "https://starcora.world/assets/video/b1-short-2.mp4", "uploadDate": "2026-11-19", "duration": "PT0M41S", "isFamilyFriendly": true}}, {"@type": "ListItem", "position": 12, "item": {"@type": "VideoObject", "name": "Wake the sleepy bud (Starcora Book 1)", "description": "A short clip from Starcora Book 1: Wake the sleepy bud.", "thumbnailUrl": "https://starcora.world/assets/video/b1-short-3.webp", "contentUrl": "https://starcora.world/assets/video/b1-short-3.mp4", "uploadDate": "2026-11-19", "duration": "PT0M39S", "isFamilyFriendly": true}}, {"@type": "ListItem", "position": 13, "item": {"@type": "VideoObject", "name": "Wind up Oro (Starcora Book 1)", "description": "A short clip from Starcora Book 1: Wind up Oro.", "thumbnailUrl": "https://starcora.world/assets/video/b1-short-4.webp", "contentUrl": "https://starcora.world/assets/video/b1-short-4.mp4", "uploadDate": "2026-11-19", "duration": "PT0M33S", "isFamilyFriendly": true}}, {"@type": "ListItem", "position": 14, "item": {"@type": "VideoObject", "name": "The star maze (Starcora Book 1)", "description": "A short clip from Starcora Book 1: The star maze.", "thumbnailUrl": "https://starcora.world/assets/video/b1-short-5.webp", "contentUrl": "https://starcora.world/assets/video/b1-short-5.mp4", "uploadDate": "2026-11-19", "duration": "PT0M38S", "isFamilyFriendly": true}}, {"@type": "ListItem", "position": 15, "item": {"@type": "VideoObject", "name": "Where will we keep the star? (Starcora Book 1)", "description": "A short clip from Starcora Book 1: Where will we keep the star?.", "thumbnailUrl": "https://starcora.world/assets/video/b1-short-6.webp", "contentUrl": "https://starcora.world/assets/video/b1-short-6.mp4", "uploadDate": "2026-11-19", "duration": "PT0M41S", "isFamilyFriendly": true}}]}</script>
 </head>
 <body>
 <header class="site-header">
@@ -91,7 +93,7 @@
   <div class="shorts" id="shorts"></div>
 
   <p class="note">Story videos for kids aged 4 to 7: watch the Starcora storybooks being played, page by page, with Sola, Oro and Rose. Lovely for quiet time, and a gentle way into reading.</p>
-  <p class="note">For grown-ups: the videos play from YouTube in privacy-enhanced mode, and only load when you tap play.</p>
+  <p class="note">For grown-ups: the videos play right here on Starcora and only load when you tap play.</p>
 </section>
 </main>
 
@@ -109,24 +111,34 @@
 </div>
 
 <script>
-// Every video is one line. Paste the YouTube link (or just its ID) into "youtube" when it is up.
-// kind: 'story' = a full book (wide), 'short' = a Short (tall). Leave youtube empty to show "coming soon".
+// Every video is one line. "src" = a video file on starcora.world (assets/video). Or paste a YouTube link into "youtube".
+// kind: 'story' = a full book (wide), 'short' = a short clip (tall). Leave both empty to show "coming soon".
+const V='assets/video/';
 const VIDEOS=[
- {kind:'story', book:0, title:'Welcome to Starcora', youtube:'', thumb:'assets/video/b0-story.webp'},
- {kind:'story', book:1, title:'The Fallen Star',     youtube:'', thumb:'assets/video/b1-story.webp'},
- {kind:'story', book:2, title:'The Star Rocket',     youtube:'', thumb:'assets/video/b2-story.webp'},
- {kind:'short', book:0, title:'Count the shooting stars', youtube:'', thumb:'assets/video/b0-short.webp'},
- {kind:'short', book:1, title:'Oh bolts!',           youtube:'', thumb:'assets/video/b1-short.webp'},
- {kind:'short', book:2, title:'Piece by piece',      youtube:'', thumb:'assets/video/b2-short.webp'}
+ {kind:'story', book:0, title:'Welcome to Starcora', src:V+'b0-story.mp4', thumb:V+'b0-story.webp'},
+ {kind:'story', book:1, title:'The Fallen Star',     src:V+'b1-story.mp4', thumb:V+'b1-story.webp'},
+ {kind:'short', book:0, title:'Catch 6 shooting stars',     src:V+'b0-short-1.mp4', thumb:V+'b0-short-1.webp'},
+ {kind:'short', book:0, title:'Wind the spiral vine',       src:V+'b0-short-2.mp4', thumb:V+'b0-short-2.webp'},
+ {kind:'short', book:0, title:'Whose Beamdrop is whose?',   src:V+'b0-short-3.mp4', thumb:V+'b0-short-3.webp'},
+ {kind:'short', book:0, title:'Melt the frost',             src:V+'b0-short-4.mp4', thumb:V+'b0-short-4.webp'},
+ {kind:'short', book:0, title:'Stop the wobbly stones',     src:V+'b0-short-5.mp4', thumb:V+'b0-short-5.webp'},
+ {kind:'short', book:0, title:'Mend the Dotstool',          src:V+'b0-short-6.mp4', thumb:V+'b0-short-6.webp'},
+ {kind:'short', book:0, title:"What's in the Cova Chest?",  src:V+'b0-short-7.mp4', thumb:V+'b0-short-7.webp'},
+ {kind:'short', book:1, title:'Crack the secret code',      src:V+'b1-short-1.mp4', thumb:V+'b1-short-1.webp'},
+ {kind:'short', book:1, title:'Find 5 hidden lanterns',     src:V+'b1-short-2.mp4', thumb:V+'b1-short-2.webp'},
+ {kind:'short', book:1, title:'Wake the sleepy bud',        src:V+'b1-short-3.mp4', thumb:V+'b1-short-3.webp'},
+ {kind:'short', book:1, title:'Wind up Oro',                src:V+'b1-short-4.mp4', thumb:V+'b1-short-4.webp'},
+ {kind:'short', book:1, title:'The star maze',              src:V+'b1-short-5.mp4', thumb:V+'b1-short-5.webp'},
+ {kind:'short', book:1, title:'Where will we keep the star?', src:V+'b1-short-6.mp4', thumb:V+'b1-short-6.webp'}
 ];
 function ytId(s){if(!s)return'';const m=String(s).match(/(?:youtu\.be\/|v=|embed\/|shorts\/)([\w-]{11})/);return m?m[1]:(/^[\w-]{11}$/.test(s)?s:'')}
 function card(v){
-  const id=ytId(v.youtube),b=document.createElement('button');
+  const id=ytId(v.youtube)||v.src||'',b=document.createElement('button');
   b.className='vid'+(id?'':' soon');b.type='button';
   b.setAttribute('aria-label',(id?'Play: ':'Coming soon: ')+v.title);
   b.innerHTML=`<span class="pic"><img src="${v.thumb}" alt="${v.title}: Starcora story video for kids" loading="lazy"><span class="play"></span>${id?'':'<span class="soonlabel">Coming soon</span>'}</span>
     <span class="meta"><span class="tag">Book ${v.book}</span><span class="vt">${v.title}</span></span>`;
-  if(id)b.onclick=()=>play(id,v.kind==='short');else b.disabled=false;
+  if(id)b.onclick=()=>play(v.src?{src:v.src,poster:v.thumb}:id,v.kind==='short');else b.disabled=false;
   return b;
 }
 VIDEOS.filter(v=>v.kind==='story').forEach(v=>document.getElementById('stories').appendChild(card(v)));
@@ -135,7 +147,8 @@ VIDEOS.filter(v=>v.kind==='short').forEach(v=>document.getElementById('shorts').
 const player=document.getElementById('player'),frame=document.getElementById('frame');let last=null;
 function play(id,tall){
   last=document.activeElement;player.classList.toggle('tall',tall);
-  frame.innerHTML=`<iframe src="https://www.youtube-nocookie.com/embed/${id}?autoplay=1&rel=0&modestbranding=1&playsinline=1" title="Starcora video" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe>`;
+  if(typeof id==='object'){frame.innerHTML=`<video src="${id.src}" poster="${id.poster}" controls autoplay playsinline preload="auto" controlslist="nodownload" title="Starcora video"></video>`;const vv=frame.querySelector('video');const p=vv.play();if(p&&p.catch)p.catch(()=>{})}
+  else frame.innerHTML=`<iframe src="https://www.youtube-nocookie.com/embed/${id}?autoplay=1&rel=0&modestbranding=1&playsinline=1" title="Starcora video" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe>`;
   player.hidden=false;document.body.style.overflow='hidden';document.getElementById('close').focus();
 }
 function close(){frame.innerHTML='';player.hidden=true;document.body.style.overflow='';last&&last.focus()}
