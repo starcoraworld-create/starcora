@@ -122,10 +122,6 @@ a{color:inherit}
 .menu-panel a .ni{width:38px;height:38px;object-fit:contain}
 .site-footer .tagline{margin:0 auto 16px;max-width:36rem;color:rgba(251,243,228,.85)}
 .intro .feat{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin:44px auto 0;max-width:60rem;text-align:left}
-.intro .feat a{display:block;background:#fff;border-radius:22px;padding:20px 22px;text-decoration:none;color:var(--ink);box-shadow:0 12px 30px -18px rgba(70,30,90,.45);transition:transform .3s cubic-bezier(.3,1.5,.5,1)}
-.intro .feat a:hover{transform:translateY(-4px)}
-.intro .feat h2{font-family:var(--display);font-weight:500;font-size:22px;margin:0 0 6px}
-.intro .feat p{font-size:16px;margin:0}
 .intro .small{margin-top:28px;font-size:15px}
 .intro .small a{color:#8E5C9E;font-weight:700}
 .intro{max-width:64rem}
@@ -134,13 +130,9 @@ a{color:inherit}
 .meet h2,.feedback h2{font-family:var(--display);font-weight:500;font-variation-settings:"SOFT" 100;font-size:clamp(28px,3.6vw,42px);margin:0 0 10px}
 .meet .lead{max-width:40rem;margin:0 auto 34px;color:var(--ink-soft)}
 .meet .trio{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}
-.meet .trio div{background:#fff;border-radius:24px;padding:22px 20px 24px;box-shadow:0 12px 30px -18px rgba(70,30,90,.45)}
-.meet .trio img{width:120px;height:120px;border-radius:50%;object-fit:cover;margin:0 auto 12px;box-shadow:0 6px 16px -8px rgba(70,30,90,.5)}
-.meet .trio h3{font-family:var(--display);font-weight:500;font-size:26px;margin:0 0 6px}
-.meet .trio p{font-size:16px;margin:0;color:var(--ink-soft)}
-.feedback{max-width:44rem;margin:0 auto clamp(64px,9vw,110px);padding:34px 28px;text-align:center;background:linear-gradient(180deg,#EFE4F7,#F9E3EC);border-radius:28px}
+.feedback{max-width:44rem;margin:0 auto;padding:34px 28px;text-align:center}
+.feedback-wrap{max-width:44rem;margin:0 auto clamp(64px,9vw,110px);padding:0 16px}
 .feedback p{margin:0 auto 18px;color:var(--ink-soft)}
-.fbtn{display:inline-block;padding:13px 26px;border-radius:999px;background:#7E5DAE;color:#fff;font-weight:700;text-decoration:none;box-shadow:0 4px 0 #5E4388}
-@media (max-width:760px){.meet .trio{grid-template-columns:1fr}.feedback{margin-left:16px;margin-right:16px}}
+@media (max-width:760px){.meet .trio{grid-template-columns:1fr}}
 .meet h2,.feedback h2{line-height:1.15}
 .island img{height:auto}

@@ -1,0 +1,165 @@
+/* Starcora grimoire look for the plain text sections (homepage below the islands, Grown-ups, Privacy and other text pages).
+   Parchment from the storybooks, gold-framed page cards, star-trail dividers, gold seal buttons, drop cap.
+   Headings stay Fraunces (brand guidelines); Cinzel Decorative is only used for the drop cap, to link to the books. */
+@font-face{font-family:"Cinzel Decorative";src:url(assets/fonts/cinzel-decorative-latin-900-normal.woff2) format("woff2");font-weight:900;font-display:swap}
+:root{--parch:#F3E1BA;--parch-hi:#FBF1DC;--gold-line:#C9963A;--gold-hi:#F4E4A0;--gold-mid:#E2B04F;--gold-lo:#8C6420;--plum:#5B3A7A;--plum-d:#432A5C;--ink-soft-p:#5E4558}
+
+/* parchment page */
+body.parch{background:var(--parch) url(assets/parchment.webp) 0 0/933px auto repeat}
+body.parch .intro p,body.parch .meet .lead,body.parch .feedback p{color:var(--ink-soft-p)}
+body.parch .doc a,body.parch .intro .small a{color:var(--plum)}
+
+/* star-trail divider, like the bookshelf path */
+.startrail{display:block;width:min(520px,86%);height:56px;margin:0 auto;border:0;
+  background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 520 56'%3E%3Cpath d='M30 30C90 10 150 48 210 30' fill='none' stroke='%23C9963A' stroke-width='4.5' stroke-linecap='round' stroke-dasharray='0 15'/%3E%3Cpath d='M310 30C370 12 430 50 490 30' fill='none' stroke='%23C9963A' stroke-width='4.5' stroke-linecap='round' stroke-dasharray='0 15'/%3E%3Cpath d='M260 6l5 19 19 5-19 5-5 19-5-19-19-5 19-5z' fill='%23E2B04F' stroke='%238C6420' stroke-width='1.2'/%3E%3Cpath d='M228 30l2.5 6.5 6.5 2.5-6.5 2.5-2.5 6.5-2.5-6.5-6.5-2.5 6.5-2.5z' transform='translate(0 -9)' fill='%23E2B04F'/%3E%3Cpath d='M292 30l2.5 6.5 6.5 2.5-6.5 2.5-2.5 6.5-2.5-6.5-6.5-2.5 6.5-2.5z' transform='translate(0 -9)' fill='%23E2B04F'/%3E%3Cpath d='M14 30l3 8 8 3-8 3-3 8-3-8-8-3 8-3z' transform='translate(0 -11)' fill='%23E2B04F'/%3E%3Cpath d='M506 30l3 8 8 3-8 3-3 8-3-8-8-3 8-3z' transform='translate(0 -11)' fill='%23E2B04F'/%3E%3C/svg%3E") center/contain no-repeat}
+.startrail.sm{width:min(300px,70%);height:34px;margin:34px auto 6px}
+
+/* page card: an arched grimoire page with a thin gold frame and gold corner pieces */
+.gpage{position:relative;display:block;text-decoration:none;color:var(--ink);text-align:center;
+  background:linear-gradient(rgba(255,250,238,.62),rgba(255,250,238,.62)),var(--parch) url(assets/parchment.webp) 0 0/933px auto;
+  border:1.5px solid var(--gold-line);border-radius:999px 999px 12px 12px/150px 150px 12px 12px;
+  box-shadow:inset 0 0 0 6px rgba(255,250,238,.7),inset 0 0 0 7px rgba(201,150,58,.6),0 16px 28px -20px rgba(90,50,20,.55);
+  padding:26px 24px 28px;transition:transform .35s cubic-bezier(.3,1.5,.5,1),box-shadow .35s}
+.gpage::before,.gpage::after{content:"";position:absolute;bottom:-1px;width:34px;height:34px;pointer-events:none;
+  background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 34 34'%3E%3Cpath d='M3 4v27h27' fill='none' stroke='%23C9963A' stroke-width='2'/%3E%3Cpath d='M3 31C7 22 12 17 21 15' fill='none' stroke='%23C9963A' stroke-width='1.4'/%3E%3Ccircle cx='23' cy='14.5' r='2.4' fill='%23E2B04F'/%3E%3Cpath d='M9 31l2.4-4.2L14 31z' fill='%23E2B04F'/%3E%3C/svg%3E") 0 0/100% no-repeat}
+.gpage::before{left:-1px}
+.gpage::after{right:-1px;transform:scaleX(-1)}
+a.gpage:hover,a.gpage:focus-visible{transform:translateY(-5px);box-shadow:inset 0 0 0 6px rgba(255,250,238,.7),inset 0 0 0 7px rgba(201,150,58,.8),0 22px 34px -20px rgba(90,50,20,.6),0 0 0 3px rgba(242,207,133,.45)}
+a.gpage:focus-visible{outline:2px solid var(--plum);outline-offset:4px}
+.gpage .art{display:block;height:150px;width:auto;margin:-58px auto 12px;filter:drop-shadow(0 10px 10px rgba(90,50,20,.22))}
+.gpage h2,.gpage h3{font-family:var(--display);font-weight:500;font-variation-settings:"SOFT" 100;margin:0 0 8px;line-height:1.15;color:var(--ink)}
+.gpage h2{font-size:23px}.gpage h3{font-size:25px}
+.gpage h2::after,.gpage h3::after{content:"";display:block;width:74px;height:10px;margin:8px auto 0;
+  background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 74 10'%3E%3Cpath d='M2 5h28M44 5h28' stroke='%23C9963A' stroke-width='1.3'/%3E%3Cpath d='M37 0l1.6 3.4L42 5l-3.4 1.6L37 10l-1.6-3.4L32 5l3.4-1.6z' fill='%23E2B04F'/%3E%3C/svg%3E") center/contain no-repeat}
+.gpage p{font-size:16px;margin:0;color:var(--ink-soft-p)}
+
+/* homepage: three page cards, art standing above the arch */
+.startrail.first{margin-top:clamp(40px,6vw,64px)}
+.startrail.before-fb{margin-bottom:clamp(28px,4vw,44px)}
+body.parch .intro{padding-top:clamp(18px,3vw,30px);padding-bottom:clamp(40px,6vw,64px)}
+body.parch .meet{padding-top:clamp(20px,3vw,32px)}
+.intro .feat.g{gap:26px;margin-top:96px;text-align:center}
+.meet .trio.g{gap:26px;margin-top:100px}
+.meet .trio.g .gpage{padding-top:30px}
+
+/* character medallion, like the cover medallions */
+.medal{display:block;width:132px;height:132px;margin:-74px auto 14px;border-radius:50%;padding:7px;
+  background:radial-gradient(circle at 34% 28%,#FFF4C4,#E9BE5C 42%,#B8862A 78%,#8C6420);
+  box-shadow:0 0 0 2px var(--gold-lo),0 10px 18px -8px rgba(90,50,20,.55)}
+.medal img{width:100%;height:100%;border-radius:50%;object-fit:cover;background:#4E2F6B;box-shadow:0 0 0 3px #4E2F6B,inset 0 0 0 1px rgba(0,0,0,.2)}
+
+/* label panel with cut corners (feedback box) */
+.glabel{position:relative;background:linear-gradient(rgba(255,250,238,.6),rgba(255,250,238,.6)),var(--parch) url(assets/parchment.webp) 0 0/933px auto;
+  -webkit-mask:radial-gradient(circle 20px at 0 0,#0000 97%,#000) top left,radial-gradient(circle 20px at 100% 0,#0000 97%,#000) top right,radial-gradient(circle 20px at 0 100%,#0000 97%,#000) bottom left,radial-gradient(circle 20px at 100% 100%,#0000 97%,#000) bottom right;
+  -webkit-mask-size:51% 51%;-webkit-mask-repeat:no-repeat;
+  mask:radial-gradient(circle 20px at 0 0,#0000 97%,#000) top left,radial-gradient(circle 20px at 100% 0,#0000 97%,#000) top right,radial-gradient(circle 20px at 0 100%,#0000 97%,#000) bottom left,radial-gradient(circle 20px at 100% 100%,#0000 97%,#000) bottom right;
+  mask-size:51% 51%;mask-repeat:no-repeat}
+.glabel::before{content:"";position:absolute;inset:8px;pointer-events:none;
+  background:radial-gradient(circle 14px at 0 0,#0000 calc(100% - 1.5px),var(--gold-line) calc(100% - 1px),var(--gold-line) 100%,#0000 calc(100% + .5px)) top left,
+    radial-gradient(circle 14px at 100% 0,#0000 calc(100% - 1.5px),var(--gold-line) calc(100% - 1px),var(--gold-line) 100%,#0000 calc(100% + .5px)) top right,
+    radial-gradient(circle 14px at 0 100%,#0000 calc(100% - 1.5px),var(--gold-line) calc(100% - 1px),var(--gold-line) 100%,#0000 calc(100% + .5px)) bottom left,
+    radial-gradient(circle 14px at 100% 100%,#0000 calc(100% - 1.5px),var(--gold-line) calc(100% - 1px),var(--gold-line) 100%,#0000 calc(100% + .5px)) bottom right,
+    linear-gradient(var(--gold-line),var(--gold-line)) 14px 0/calc(100% - 28px) 1.5px,
+    linear-gradient(var(--gold-line),var(--gold-line)) 14px 100%/calc(100% - 28px) 1.5px,
+    linear-gradient(var(--gold-line),var(--gold-line)) 0 14px/1.5px calc(100% - 28px),
+    linear-gradient(var(--gold-line),var(--gold-line)) 100% 14px/1.5px calc(100% - 28px);
+  background-size:14px 14px,14px 14px,14px 14px,14px 14px,calc(100% - 28px) 1.5px,calc(100% - 28px) 1.5px,1.5px calc(100% - 28px),1.5px calc(100% - 28px);
+  background-repeat:no-repeat}
+.feedback.glabel{background-color:transparent;border-radius:0;padding:40px 32px 38px}
+.glabel-wrap{filter:drop-shadow(0 14px 16px rgba(90,50,20,.22))}
+
+/* gold seal button, like the medallions and clasps on the books */
+.gbtn{display:inline-flex;align-items:center;gap:12px;padding:7px 24px 7px 7px;border-radius:14px;
+  background:linear-gradient(#64428A,var(--plum-d));color:#FBF3E4!important;font-family:var(--body);font-weight:700;font-size:17px;line-height:1.2;text-decoration:none;
+  border:2px solid #D9AE55;box-shadow:inset 0 0 0 2px var(--plum-d),inset 0 0 0 3px rgba(244,228,160,.75),0 4px 0 var(--gold-lo),0 10px 18px -8px rgba(60,30,20,.5);
+  transition:transform .2s,box-shadow .2s}
+.gbtn::before{content:"";flex:none;width:40px;height:40px;border-radius:50%;
+  background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M10 2l2 6 6 2-6 2-2 6-2-6-6-2 6-2z' fill='%235B3A7A'/%3E%3C/svg%3E") center/58% no-repeat,
+    radial-gradient(circle at 34% 28%,#FFF4C4,#E9BE5C 45%,#B8862A 82%);
+  box-shadow:inset 0 0 0 2px var(--gold-lo),inset 0 0 0 4px var(--gold-hi),0 1px 2px rgba(0,0,0,.35);transition:transform .5s cubic-bezier(.3,1.5,.5,1)}
+.gbtn:hover{transform:translateY(-2px)}
+.gbtn:hover::before{transform:rotate(45deg)}
+.gbtn:active{transform:translateY(2px);box-shadow:inset 0 0 0 2px var(--plum-d),inset 0 0 0 3px rgba(244,228,160,.75),0 1px 0 var(--gold-lo)}
+.gbtn:focus-visible{outline:3px solid var(--plum);outline-offset:4px}
+
+/* text pages: ornate drop cap on the first paragraph */
+.doc .dropcap::first-letter{float:left;font-family:"Cinzel Decorative",var(--display);font-weight:900;font-size:3.5em;line-height:.86;
+  color:var(--plum);padding:.14em .13em .08em;margin:.08em .18em 0 0;background:#F8EACB;border:1.5px solid var(--gold-line);border-radius:3px;
+  box-shadow:inset 0 0 0 3px #F8EACB,inset 0 0 0 4px rgba(201,150,58,.6),2px 3px 0 rgba(201,150,58,.25)}
+.doc h2{color:var(--ink)}
+.doc .startrail.sm+h2{margin-top:6px}
+.doc .gbtn{margin-top:10px}
+
+/* small book labels on the Grown-ups page */
+.books3.g a{background:linear-gradient(rgba(255,250,238,.66),rgba(255,250,238,.66)),var(--parch) url(assets/parchment.webp) 0 0/933px auto;border:1.5px solid var(--gold-line);border-radius:6px;
+  box-shadow:inset 0 0 0 3px rgba(255,250,238,.8),inset 0 0 0 4px rgba(201,150,58,.45),0 10px 20px -16px rgba(90,50,20,.55);transition:transform .3s cubic-bezier(.3,1.5,.5,1)}
+.books3.g a:hover{transform:translateY(-3px)}
+.books3.g img{box-shadow:0 3px 6px -2px rgba(60,30,20,.45)}
+.books3.g span{color:var(--ink-soft-p)}
+
+/* FAQ as a page of questions with gold star markers */
+.doc .faq h3{position:relative;padding-left:26px}
+.doc .faq h3::before{content:"";position:absolute;left:0;top:.28em;width:16px;height:16px;
+  background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M10 1l2.3 6.7L19 10l-6.7 2.3L10 19l-2.3-6.7L1 10l6.7-2.3z' fill='%23E2B04F' stroke='%238C6420' stroke-width='.8'/%3E%3C/svg%3E") center/contain no-repeat}
+.doc .faq p{padding-left:26px}
+
+@media (max-width:760px){
+  .intro .feat.g{gap:72px;margin-top:84px}
+  .meet .trio.g{gap:86px;margin-top:70px}
+  .gpage .art{height:132px}
+}
+@media (prefers-reduced-motion:reduce){.gpage,.gbtn,.gbtn::before,.books3.g a{transition:none}}
+
+/* homepage: text on the left, a Starcora panel on the right (Beamdrop to tap, four islands, a phone playing a Book 0 clip) */
+.intro.split{max-width:76rem;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.12fr);gap:clamp(28px,4vw,56px);align-items:center;text-align:left}
+.intro.split h1{font-size:clamp(34px,4vw,52px)}
+.intro.split p{margin:0;max-width:none}
+.starlist{list-style:none;margin:22px 0 0;padding:0;color:var(--ink-soft-p);font-size:17px}
+.starlist li{position:relative;padding-left:28px;margin:0 0 10px}
+.starlist li::before{content:"";position:absolute;left:0;top:.32em;width:16px;height:16px;
+  background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M10 1l2.3 6.7L19 10l-6.7 2.3L10 19l-2.3-6.7L1 10l6.7-2.3z' fill='%23E2B04F' stroke='%238C6420' stroke-width='.8'/%3E%3C/svg%3E") center/contain no-repeat}
+.starlist b{color:var(--ink);font-weight:700}
+.acts{display:flex;align-items:center;flex-wrap:wrap;gap:14px 22px;margin-top:22px}
+.textlink{color:var(--plum);font-weight:700;text-decoration:underline;text-underline-offset:3px}
+.intro.split .small{margin-top:20px;font-size:15px}
+
+.board{position:relative;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:20px;padding:22px;border-radius:22px;
+  background:linear-gradient(160deg,#4E2F6B,#2E1B40);border:2px solid #D9AE55;
+  box-shadow:inset 0 0 0 4px #3B2352,inset 0 0 0 5px rgba(244,228,160,.55),0 24px 40px -24px rgba(60,30,20,.6)}
+.board::before{content:"";position:absolute;inset:0;border-radius:20px;pointer-events:none;opacity:.5;
+  background:radial-gradient(1.5px 1.5px at 12% 18%,#fff,transparent),radial-gradient(1px 1px at 40% 8%,#fff,transparent),radial-gradient(1.5px 1.5px at 78% 14%,#fff,transparent),radial-gradient(1px 1px at 22% 64%,#fff,transparent),radial-gradient(1px 1px at 60% 92%,#fff,transparent),radial-gradient(1.5px 1.5px at 92% 70%,#fff,transparent)}
+.board-l{display:flex;flex-direction:column;gap:12px;min-width:0}
+.beam{display:flex;align-items:center;gap:14px;padding:0;border:0;background:none;cursor:pointer;color:#FBF3E4;font:inherit;text-align:left;-webkit-tap-highlight-color:transparent}
+.medal-btn{flex:none;display:grid;place-items:center;width:86px;height:86px;border-radius:50%;padding:12px;
+  background:radial-gradient(circle at 34% 28%,#FFF4C4,#E9BE5C 42%,#B8862A 78%,#8C6420);box-shadow:0 0 0 2px var(--gold-lo),inset 0 0 0 5px rgba(255,244,196,.5),0 0 22px rgba(255,214,130,.45)}
+.medal-btn img{width:100%;height:auto}
+.beam-cap{font-family:var(--display);font-size:22px;line-height:1.15;font-variation-settings:"SOFT" 100}
+.beam:hover .medal-btn{box-shadow:0 0 0 2px var(--gold-lo),inset 0 0 0 5px rgba(255,244,196,.5),0 0 32px rgba(255,214,130,.8)}
+.beam:focus-visible{outline:3px solid #F2CF85;outline-offset:6px;border-radius:50px}
+.beam.spin .medal-btn{animation:beamspin .9s cubic-bezier(.3,1.4,.5,1)}
+@keyframes beamspin{0%{transform:rotate(0) scale(1)}45%{transform:rotate(300deg) scale(.82)}100%{transform:rotate(360deg) scale(1)}}
+.beam-say{margin:0!important;min-height:2.9em;color:#F4E4A0!important;font-size:15px;line-height:1.4}
+.tiles{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.tiles a{display:flex;flex-direction:column;align-items:center;justify-content:flex-end;gap:4px;padding:10px 8px 10px;border-radius:14px;text-decoration:none;
+  background:rgba(251,243,228,.07);border:1.5px solid rgba(217,174,85,.65);box-shadow:inset 0 0 0 3px rgba(46,27,64,.6),inset 0 0 0 4px rgba(244,228,160,.25);transition:transform .3s cubic-bezier(.3,1.5,.5,1),background .3s}
+.tiles a:hover,.tiles a:focus-visible{transform:translateY(-3px);background:rgba(251,243,228,.14)}
+.tiles a:focus-visible{outline:3px solid #F2CF85;outline-offset:3px}
+.tiles img{width:82%;height:auto;filter:drop-shadow(0 8px 8px rgba(0,0,0,.3))}
+.tiles h2{margin:0;font-family:var(--display);font-weight:500;font-size:17px;color:#FBF3E4;line-height:1.2;text-align:center}
+.board-r{display:flex;flex-direction:column;align-items:center;gap:16px}
+.phone{width:clamp(170px,15vw,220px);aspect-ratio:9/16;border-radius:26px;padding:7px;background:#1C1026;
+  box-shadow:0 0 0 2px #D9AE55,0 0 0 5px #2E1B40,0 0 0 6px rgba(244,228,160,.5),0 18px 30px -12px rgba(0,0,0,.6)}
+.phone video{display:block;width:100%;height:100%;object-fit:cover;border-radius:20px;background:#2E1B40}
+.gbtn.big{padding:8px 26px 8px 8px;font-size:19px}
+.gbtn.big::before{width:46px;height:46px}
+.gbtn small{display:block;font-weight:600;font-size:13px;opacity:.85}
+@media (max-width:1000px){
+  .intro.split{grid-template-columns:1fr;text-align:left}
+}
+@media (max-width:560px){
+  .board{grid-template-columns:1fr;padding:18px}
+  .board-r{order:-1}
+  .phone{width:58%}
+  .tiles h2{font-size:15px}
+}
+@media (prefers-reduced-motion:reduce){.beam.spin .medal-btn{animation:none}}
