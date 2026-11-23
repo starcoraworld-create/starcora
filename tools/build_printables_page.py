@@ -35,7 +35,7 @@ ACTIVITIES = [
 ]
 
 TITLE = 'Free printable storybooks for kids 4 to 7, with puzzles on every page | Starcora'
-DESC = 'Free printable storybooks for children aged 4 to 7. Read the Starcora story aloud and solve a pencil-and-paper puzzle on every page: codes, mazes, counting, patterns and cut-outs. A4 and US Letter PDFs.'
+DESC = 'Free printable storybooks for children aged 4 to 7, a screen-free way to enjoy Starcora. Read the story aloud and solve a pencil-and-paper puzzle on every page: codes, mazes, counting, patterns and cut-outs. A4 and US Letter PDFs.'
 URL = SITE + '/printables/'
 
 def mb(path):
@@ -170,8 +170,8 @@ def main():
 </section>
 <article class="doc">
   <div class="lead">
-  <p class="big dropcap">Every Starcora storybook has a printable twin. It has the same story and pictures as the book on screen, with a pencil-and-paper puzzle facing every page: codes to crack, mazes, counting, patterns and a cut-out to keep. A grown-up reads the story aloud and your child solves the puzzles.</p>
-  <p>The puzzles are different from the games online, so children who have already read the book on screen still get something new. Each book prints in colour on plain paper and comes in A4 and US Letter.</p>
+  <p class="big dropcap">Every Starcora storybook has a printable twin. It has the same story and pictures as the book on screen, with a pencil-and-paper puzzle facing every page: codes to crack, mazes, counting, patterns and a cut-out to keep. A grown-up or your child can read the story aloud, and your child solves the puzzles.</p>
+  <p>It's a screen-free way to enjoy Starcora. The puzzles are different from the games online, so children who have already read the book on screen still get something new. Each book prints in colour on plain paper and comes in A4 and US Letter.</p>
   </div>
 
   <span class="startrail sm" role="presentation"></span>
