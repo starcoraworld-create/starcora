@@ -34,7 +34,7 @@ ACTIVITIES = [
     ('moonmist-cloud-cups', 'Moonmist cloud cups', 'A no-bake yoghurt recipe with printable star toppers.', 'moonmist-cloud-cups-sola-oro-rose-700.webp'),
 ]
 
-TITLE = 'Free printable storybooks for kids 4 to 7, with puzzles on every page | Starcora'
+TITLE = 'Print & Play: free printable storybooks for kids 4 to 7, with puzzles on every page | Starcora'
 DESC = 'Free printable storybooks for children aged 4 to 7, a screen-free way to enjoy Starcora. Read the story aloud and solve a pencil-and-paper puzzle on every page: codes, mazes, counting, patterns and cut-outs. A4 and US Letter PDFs.'
 URL = SITE + '/printables/'
 
@@ -96,7 +96,7 @@ def main():
            "hasPart": parts},
           {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
               {"@type": "ListItem", "position": 1, "name": "Starcora", "item": SITE + "/"},
-              {"@type": "ListItem", "position": 2, "name": "Printables", "item": URL}]}]
+              {"@type": "ListItem", "position": 2, "name": "Print & Play", "item": URL}]}]
 
     head = '''<!doctype html>
 <html lang="en-GB">
@@ -166,7 +166,7 @@ def main():
     main = '''<main class="no-ico">
 <section class="hero short" aria-labelledby="t">
   <div class="sky"></div>
-  <div class="titles"><h1 id="t">Printables</h1><p>Storybooks to print, read and play at the table</p></div>
+  <div class="titles"><h1 id="t">Print &amp; Play</h1><p>Printable storybooks to read and solve at the table</p></div>
 </section>
 <article class="doc">
   <div class="lead">

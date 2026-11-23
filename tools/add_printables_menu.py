@@ -14,7 +14,7 @@ for root,_,files in os.walk(PUB):
         if not m: print('no activities link',p);continue
         pre,ipre=m.group(1),m.group(4)
         cur=' aria-current="page"' if os.path.normpath(p).endswith(os.path.normpath('printables/index.html')) else ''
-        def link(lazy): return f'<a href="{pre}printables/index.html"{cur}><img class="ni"{lazy} src="{ipre}assets/nav/printables.webp" alt="" width="48" height="48">Printables</a>'
+        def link(lazy): return f'<a href="{pre}printables/index.html"{cur}><img class="ni"{lazy} src="{ipre}assets/nav/printables.webp" alt="" width="48" height="48">Print &amp; Play</a>'
         # desktop menus: move Art to the end of the left menu, add Printables after Activities on the right
         L=re.search(r'<nav class="menu left"[^>]*>(.*?)</nav>',s,re.S);R=re.search(r'<nav class="menu right"[^>]*>(.*?)</nav>',s,re.S)
         art=re.search(r'<a href="[^"]*art\.html"[^>]*><img class="ni"[^>]*>Art</a>',R.group(1)).group(0)
