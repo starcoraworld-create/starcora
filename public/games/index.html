@@ -55,7 +55,7 @@
 .acts3 a>span>span{display:block;font-size:14px;color:#5E4558;line-height:1.45}
 .acts3 b{color:var(--ink)}
 @media (max-width:700px){.pbook{grid-template-columns:96px minmax(0,1fr);gap:16px;padding:18px 16px}.acts3{grid-template-columns:1fr}.pdl{flex-direction:column;align-items:stretch}.pdl .gbtn{font-size:15px;white-space:nowrap}}
-</style>
+.ggrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,320px));justify-content:center;gap:26px;margin:6px auto 8px}.ggrid .gtile{width:100%;margin:0}@media (max-width:560px){.ggrid{grid-template-columns:minmax(0,340px)}}</style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"CollectionPage","name":"Starcora games","url":"https://starcora.world/games/","description":"Free online games for children aged 4 to 7, starring Sola, Oro and Rose. Be Oro's robot doctor: X-ray, snip, saw, stitch and wind his key. Plays on phones, tablets and laptops.","hasPart":[{"@type":"VideoGame","name":"Oro's Check-up","url":"https://starcora.world/games/oros-check-up/","image":"https://starcora.world/assets/games/oros-check-up-share.jpg","isAccessibleForFree":true,"typicalAgeRange":"4-7"}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://starcora.world/"},{"@type":"ListItem","position":2,"name":"Games","item":"https://starcora.world/games/"}]}</script>
 <style>.gtile{display:flex;flex-direction:column;align-items:center;gap:6px;width:min(100%,440px);margin:6px auto 8px;padding:18px 18px 22px;border-radius:28px;background:linear-gradient(160deg,#5B3A7A,#3A2552);box-shadow:0 0 0 3px #C9963A,0 0 0 8px rgba(201,150,58,.25),0 16px 34px rgba(60,30,70,.35);text-decoration:none;color:#FBF3E4;transition:transform .3s cubic-bezier(.3,1.5,.5,1)}.gtile:hover,.gtile:focus-visible{transform:translateY(-4px) rotate(-.6deg)}.gtile .gpic{position:relative;display:block;width:100%;border-radius:20px;overflow:hidden;box-shadow:0 0 0 2px #E8B84A}.gtile img{display:block;width:100%;height:auto}.gplay{position:absolute;right:14px;bottom:14px;width:76px;height:76px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#FFE9A8,#E8B84A 60%,#B9862E);box-shadow:0 6px 18px rgba(0,0,0,.4),0 0 0 4px rgba(255,255,255,.5);animation:gpulse 2.4s ease-in-out infinite}.gplay::after{content:"";position:absolute;left:30px;top:22px;border-left:24px solid #3A2438;border-top:16px solid transparent;border-bottom:16px solid transparent}@keyframes gpulse{50%{transform:scale(1.08)}}@media (prefers-reduced-motion:reduce){.gplay{animation:none}}.doc .gtile .gname,.doc .gtile .gsub{color:#FBF3E4}.gname{font-family:var(--display);font-weight:500;font-size:30px;margin-top:10px;line-height:1.1}.gsub{font-size:16px;opacity:.85;margin-bottom:6px}.gtile .gbtn{pointer-events:none}.doc .pmeta{font-weight:700;color:#7A5A2E;margin:0 0 6px}.gsoon{text-align:center}</style>
@@ -75,17 +75,20 @@
   <div class="titles"><h1 id="t">Games</h1><p>Free games to play with Sola, Oro and Rose</p></div>
 </section>
 <article class="doc">
+  <div class="ggrid">
   <a class="gtile" href="oros-check-up/" aria-label="Play Oro's Check-up">
     <span class="gpic"><img src="../assets/games/oros-check-up-600.webp" srcset="../assets/games/oros-check-up-300.webp 300w, ../assets/games/oros-check-up-600.webp 600w" sizes="(max-width:560px) 90vw, 420px" width="600" height="600" alt="Oro the robot on the worktable with his tummy open, full of tangles, with tools all around him"><span class="gplay" aria-hidden="true"></span></span>
     <span class="gname">Oro's Check-up</span>
     <span class="gsub">Be Oro's robot doctor</span>
     <span class="gbtn big">Play now</span>
   </a>
+  </div>
   <p class="gsoon">More games are on the way, with Sola and Rose too.</p>
   <span class="startrail sm" role="presentation"></span>
   <div class="lead">
   <p class="big dropcap">Games from the Moonmist, made for children aged 4 to 7. Each one is a little adventure with Sola, Oro and Rose, with real Starcora voices and nothing to read. Turn the sound on, tap play and away you go.</p>
   </div>
+  <!-- one "About" section per game, in the same order as the cards -->
   <h2>About Oro's Check-up</h2>
   <p class="pmeta">Ages 4 to 7 &middot; Six levels &middot; Sound on</p>
   <p>Oh bolts! Oro has gone all wonky and he needs a doctor. That's you! X-ray his tummy, snip the tangles, saw off a rusty bolt, stitch him up and wind his key until he's as good as new.</p>
