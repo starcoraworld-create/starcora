@@ -65,22 +65,22 @@ a{color:inherit}
 /* phones held upright */
 @media (max-width:760px) and (orientation:portrait){
   .hero{min-height:920px}
-  .island.i6{--x:29%!important;--y:24%!important;--w:34vw!important}
-  .island.i3{--x:71%!important;--y:34%!important;--w:36vw!important}
-  .island.i1{--x:29%!important;--y:46%!important;--w:42vw!important}
-  .island.i2{--x:71%!important;--y:58%!important;--w:38vw!important}
-  .island.i4{--x:29%!important;--y:70%!important;--w:38vw!important}
-  .island.i5{--x:71%!important;--y:82%!important;--w:38vw!important}
+  .island.i1{--x:29%!important;--y:24%!important;--w:42vw!important}
+  .island.i2{--x:71%!important;--y:35%!important;--w:38vw!important}
+  .island.i4{--x:29%!important;--y:47%!important;--w:38vw!important}
+  .island.i5{--x:71%!important;--y:59%!important;--w:38vw!important}
+  .island.i6{--x:29%!important;--y:71%!important;--w:34vw!important}
+  .island.i3{--x:71%!important;--y:82%!important;--w:36vw!important}
   .island .name{top:94%}
 }
 /* tablets held upright: bigger islands in a zig-zag, like phones */
 @media (min-width:761px) and (max-width:1100px) and (orientation:portrait){
-  .island.i6{--x:30%!important;--y:18%!important;--w:28vw!important}
-  .island.i3{--x:70%!important;--y:30%!important;--w:28vw!important}
-  .island.i1{--x:30%!important;--y:42%!important;--w:36vw!important}
-  .island.i2{--x:70%!important;--y:54%!important;--w:32vw!important}
-  .island.i4{--x:30%!important;--y:66%!important;--w:32vw!important}
-  .island.i5{--x:70%!important;--y:78%!important;--w:32vw!important}
+  .island.i1{--x:30%!important;--y:19%!important;--w:36vw!important}
+  .island.i2{--x:70%!important;--y:31%!important;--w:32vw!important}
+  .island.i4{--x:30%!important;--y:43%!important;--w:32vw!important}
+  .island.i5{--x:70%!important;--y:55%!important;--w:32vw!important}
+  .island.i6{--x:30%!important;--y:67%!important;--w:28vw!important}
+  .island.i3{--x:70%!important;--y:79%!important;--w:28vw!important}
 }
 /* phones turned sideways */
 @media (orientation:landscape) and (max-height:520px){
