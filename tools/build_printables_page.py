@@ -155,7 +155,8 @@ def main():
 .acts3 b{{display:block;font-family:var(--display);font-weight:500;font-size:18px;line-height:1.2;margin-bottom:4px}}
 .acts3 a>span>span{{display:block;font-size:14px;color:#5E4558;line-height:1.45}}
 .acts3 b{{color:var(--ink)}}
-@media (max-width:700px){{.pbook{{grid-template-columns:96px minmax(0,1fr);gap:16px;padding:18px 16px}}.acts3{{grid-template-columns:1fr}}.pdl{{flex-direction:column;align-items:stretch}}.pdl .gbtn{{font-size:15px;white-space:nowrap}}}}
+@media (max-width:700px){{.pbook{{grid-template-columns:96px minmax(0,1fr);gap:16px;padding:18px 16px}}.acts3{{grid-template-columns:1fr}}.pdl{{flex-direction:column;align-items:stretch}}.pdl .gbtn{{font-size:15px;white-space:normal;max-width:100%;box-sizing:border-box;min-width:0}}}}
+@media (max-width:560px){{.pbook{{grid-template-columns:1fr;text-align:center;padding:20px 16px}}.pcover{{width:120px;margin:0 auto}}.pdl{{align-items:center}}.pdl .gbtn{{width:100%;justify-content:center}}}}
 </style>
 <script type="application/ld+json">{ld0}</script>
 <script type="application/ld+json">{ld1}</script>
