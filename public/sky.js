@@ -1,7 +1,7 @@
 (function(){
   var flash=document.querySelector('.flash');
   var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  document.querySelectorAll('.island').forEach(function(isl){
+  document.querySelectorAll('a.island').forEach(function(isl){
     isl.addEventListener('click',function(e){
       if(reduce)return;e.preventDefault();
       var r=isl.getBoundingClientRect();

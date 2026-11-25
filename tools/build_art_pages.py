@@ -18,7 +18,7 @@ if '--date' in sys.argv: today = sys.argv[sys.argv.index('--date') + 1]
 
 # Title words (for the <title>) and one or two short lines about each picture. New pages: add a line here.
 TITLE = {'oro': 'Oro the Robot', 'rose': 'Rose the Deer', 'dotstool': 'Dotstool Mushroom', 'swirlbud': 'Swirlbud Flower',
-         'lantern': 'Lantern-bloom Flower', 'daisy': 'Daisy Flower', 'tulip': 'Tulip Flower', 'chest': 'Cova Treasure Chest'}
+         'lantern': 'Lantern-bloom Flower', 'daisy': 'Daisy Flower', 'tulip': 'Tulip Flower', 'chest': 'Cova Treasure Chest', 'sola-oro-and-rose': 'Sola, Oro and Rose', 'oros-key': "Oro's Wind-up Key", 'shooting-stars': 'Shooting Stars', 'beamdrops': 'Beamdrop Badges', 'secret-letter': 'Secret Letter', 'star-in-the-tree': 'Fallen Star', 'sleepy-bud': 'Sleepy Bud', 'star-rocket': 'Star Rocket', 'blast-off': 'Rocket Blast Off', 'oro-and-the-gears': 'Oro and the Gears', 'tangled-ribbons': 'Oro in a Ribbon Tangle', 'catch-the-wisp': 'Rose and the Rainbow Wisp', 'rainbow-bridge': 'Rainbow Bridge', 'paint-lab': "Sola's Paint Lab", 'oro-juggling': 'Oro Juggling', 'pumpkin-lantern': 'Pumpkin Lantern', 'sweetie-maze': 'Sweetie Maze', 'bounce-park': 'Bounce Park', 'oro-bouncing': 'Oro Bouncing'}
 ABOUT = {
  'sola': 'Sola is the sunny leader and inventor. Her sun-power brings light, warmth and a burst of energy.',
  'oro': 'Oro is the most enthusiastic little robot in the universe. His moon-power can cool, pull and make things still.',
@@ -31,14 +31,33 @@ ABOUT = {
  'tulip': 'A tall tulip with big, easy petals for little hands.',
  'sky': 'The sky over the Moonmist, with the moon, stars, a ringed planet, clouds and treetops.',
  'chest': 'The Cova Chest is where Sola, Oro and Rose keep their treasures. It has a planet carved on the front.',
+ 'sola-oro-and-rose': 'The three best friends of Starcora, waving hello from the Moonmist.',
+ 'oros-key': 'When Oro runs out of wind, someone has to turn his key!',
+ 'shooting-stars': 'Shooting stars whooshing over the Moonmist. Can you catch six?',
+ 'beamdrops': "Sola's sun, Oro's moon and Rose's flower: each friend's special magic.",
+ 'secret-letter': 'A letter in the secret Starcora picture code.',
+ 'star-in-the-tree': 'The fallen star, stuck high in a Spiral Tree, and Oro ready with his basket.',
+ 'sleepy-bud': 'A giant sleepy bud, and Rose asking it kindly to open.',
+ 'star-rocket': 'The clockwork Star Rocket, with its gears and its star.',
+ 'blast-off': 'Up, up and away, with a long rainbow trail!',
+ 'oro-and-the-gears': '"Gears are like friends. Every one is different."',
+ 'tangled-ribbons': 'A naughty wind has tangled Oro up in ribbons. Oh bolts!',
+ 'catch-the-wisp': 'Rose reaching up to catch the shy little rainbow wisp.',
+ 'rainbow-bridge': 'The floating starglass bridge, seven pieces up among the clouds.',
+ 'paint-lab': 'Sola brewing rainbow paint in her copper pot.',
+ 'oro-juggling': '"Look! I\'m juggling!" Oro with the starglass.',
+ 'pumpkin-lantern': 'A happy pumpkin lantern from Lantern Hill.',
+ 'sweetie-maze': 'Giant sweets stacked as high as houses, with a gumdrop gate.',
+ 'bounce-park': 'The trampoline, the swirly slide and the spotty Dotstool tower.',
+ 'oro-bouncing': 'Oro bouncing higher than the Spiral Trees. Wheee!',
 }
 
 src = open(os.path.join(PUB, 'art.html'), encoding='utf8').read()
 block = re.search(r'const PAGES=\[(.*?)\n\];', src, re.S).group(1)
 pages = []
 for line in block.split('\n'):
-    m = re.search(r"\{id:'([^']+)',slug:'([^']+)',name:'([^']+)',tags:\[([^\]]*)\],art:C\+'([^']+)',alt:'((?:[^'\\]|\\.)*)',added:'([\d-]+)'", line)
-    if m: pages.append(dict(id=m[1], slug=m[2], name=m[3], tags=re.findall(r"'([^']+)'", m[4]), art=m[5], alt=m[6].replace("\\'", "'"), added=m[7]))
+    m = re.search(r"\{id:'([^']+)',slug:'([^']+)',name:'((?:[^'\\]|\\.)+)',tags:\[([^\]]*)\],art:C\+'([^']+)',alt:'((?:[^'\\]|\\.)*)',added:'([\d-]+)'", line)
+    if m: pages.append(dict(id=m[1], slug=m[2], name=m[3].replace("\\'", "'"), tags=re.findall(r"'([^']+)'", m[4]), art=m[5], alt=m[6].replace("\\'", "'"), added=m[7]))
 assert pages, 'no PAGES found'
 for key in ('id', 'slug'):
     seen = [p[key] for p in pages]; dup = {x for x in seen if seen.count(x) > 1}
