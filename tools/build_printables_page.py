@@ -29,6 +29,7 @@ BOOKS = [
 ]
 
 ACTIVITIES = [
+    ('race-to-the-cova', 'Race to the Cova', 'A free printable board game. Spin the paperclip spinner and race Sola, Oro and Rose home!', 'race-to-the-cova-board-game-sola-oro-rose-700.webp'),
     ('paper-rocket', 'Paper straw rocket', 'Colour it, roll it, blow it! Print a Star Rocket and send it zooming with one big puff through a straw.', 'paper-straw-rocket-craft-sola-oro-rose-700.webp'),
     ('star-and-moon-pumpkins', 'No-carve star and moon pumpkins', 'Paint a pumpkin purple and cover it in printable stars, moons and friends.', 'no-carve-star-and-moon-pumpkins-sola-oro-rose-700.webp'),
     ('moonmist-cloud-cups', 'Moonmist cloud cups', 'A no-bake yoghurt recipe with printable star toppers.', 'moonmist-cloud-cups-sola-oro-rose-700.webp'),
@@ -145,7 +146,7 @@ def main():
 .readon{{font-weight:700;font-size:15px}}
 .tips{{max-width:42rem;margin:0 auto}}
 .tips li{{margin:0 0 8px}}
-.acts3{{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin:18px 0 0}}
+.acts3{{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:18px;margin:18px 0 0}}
 .acts3 a{{display:block;text-decoration:none;color:var(--ink);border-radius:8px;overflow:hidden;border:1.5px solid var(--gold-line);background:#FBF1DC;
   box-shadow:inset 0 0 0 3px rgba(255,250,238,.8),0 12px 22px -18px rgba(90,50,20,.55);transition:transform .3s cubic-bezier(.3,1.5,.5,1)}}
 .acts3 a:hover{{transform:translateY(-4px)}}
@@ -192,7 +193,7 @@ def main():
 
   <span class="startrail sm" role="presentation"></span>
   <h2>Printable activities</h2>
-  <p style="text-align:center">Crafts and recipes with free printables, made with Sola, Oro and Rose.</p>
+  <p style="text-align:center">A board game, crafts and recipes with free printables, made with Sola, Oro and Rose.</p>
   <div class="acts3">
 {acts}
   </div>
