@@ -35,7 +35,7 @@
   <script>(function(){var b=document.querySelector('.menu-btn'),p=document.getElementById('menu-panel');function set(o){b.setAttribute('aria-expanded',o);p.hidden=!o}b.addEventListener('click',function(e){e.stopPropagation();set(p.hidden)});document.addEventListener('click',function(e){if(!p.hidden&&!p.contains(e.target))set(false)});document.addEventListener('keydown',function(e){if(e.key==='Escape')set(false)})})();</script>
 </header>
 <main>
-<section class="hero" aria-label="The Starcora sky. Choose an island: storybooks, colouring pages, story videos, activities or print and play.">
+<section class="hero" aria-label="The Starcora sky. Choose an island: storybooks, colouring pages, story videos, activities, print and play or games.">
   <div class="sky"></div>
   <div class="stars" aria-hidden="true"><i style="left:25.2%;top:19.1%;--s:0.74;--d:0.8s"></i><i style="left:9.3%;top:31.1%;--s:1.05;--d:4.0s"></i><i style="left:74.9%;top:23.9%;--s:0.82;--d:1.4s"></i><i style="left:19.2%;top:19.2%;--s:0.63;--d:4.6s"></i><i style="left:80.9%;top:47.3%;--s:0.98;--d:1.0s"></i><i style="left:32.1%;top:40.1%;--s:0.94;--d:4.3s"></i><i style="left:85.7%;top:18.5%;--s:0.86;--d:3.4s"></i><i style="left:50.6%;top:22.1%;--s:0.78;--d:0.4s"></i><i style="left:90.9%;top:49.6%;--s:0.83;--d:1.5s"></i><i style="left:88.4%;top:37.9%;--s:1.03;--d:4.2s"></i><i style="left:50.8%;top:31.6%;--s:0.86;--d:2.2s"></i><i style="left:18.2%;top:27.2%;--s:0.99;--d:0.2s"></i><i style="left:7.4%;top:40.1%;--s:0.67;--d:2.7s"></i><i style="left:47.3%;top:28.7%;--s:1.10;--d:1.0s"></i></div>
   <div class="islands">
@@ -59,10 +59,10 @@
       <img src="assets/island-printables.webp" srcset="assets/island-printables-400.webp 400w, assets/island-printables.webp 716w" sizes="(max-width:760px) 54vw, 31vw" decoding="async" alt="Print and Play island: puzzle pages pegged on a washing line, booklets and a giant pencil on a floating island, for printable storybooks" width="716" height="576">
       <span class="name">Print &amp; Play</span>
     </a>
-    <div class="island i6 soon" style="--x:40%;--y:23%;--w:min(14vw,210px);--bob:8.6s;--delay:1.5s" role="img" aria-label="Games island, coming soon">
-      <img src="assets/island-games.webp" srcset="assets/island-games-400.webp 400w, assets/island-games.webp 733w" sizes="(max-width:760px) 54vw, 31vw" decoding="async" alt="" width="733" height="562">
-      <span class="name">Games<small>Coming soon</small></span>
-    </div>
+    <a class="island i6" href="games/index.html" style="--x:40%;--y:23%;--w:min(14vw,210px);--bob:8.6s;--delay:1.5s" aria-label="Games: free online games for kids">
+      <img src="assets/island-games.webp" srcset="assets/island-games-400.webp 400w, assets/island-games.webp 733w" sizes="(max-width:760px) 54vw, 31vw" decoding="async" alt="Games island: a giant games console on a floating island, for free kids games" width="733" height="562">
+      <span class="name">Games</span>
+    </a>
   </div>
   <button class="tz-pill" type="button" data-tz-open hidden aria-label="Watch how the storybooks work (16 seconds)"><img src="assets/video/starcora-storybooks-teaser-thumb.webp" width="96" height="96" alt=""><span class="pl"><svg viewBox="0 0 10 10" fill="currentColor"><path d="M2 1l7 4-7 4z"/></svg></span>See how it works</button>
   <p class="hint">Tap an island</p>
@@ -96,7 +96,7 @@
         <a href="art.html"><img src="assets/island-art-400.webp" width="400" height="349" loading="lazy" alt="The art island, with an easel and paint pots"><h2>Colouring pages</h2></a>
         <a href="activities/index.html"><img src="assets/island-activities-400.webp" width="400" height="335" loading="lazy" alt="The activities island, with a craft table and bunting"><h2>Activities</h2></a>
         <a href="printables/index.html"><img src="assets/island-printables-400.webp" width="400" height="322" loading="lazy" alt="The Print and Play island, with puzzle pages on a washing line"><h2>Print &amp; Play</h2></a>
-        <div class="soon"><img src="assets/island-games-400.webp" width="400" height="307" loading="lazy" alt="The games island, with a giant games console"><h2>Games<small>Coming soon</small></h2></div>
+        <a href="games/index.html"><img src="assets/island-games-400.webp" width="400" height="307" loading="lazy" alt="The games island, with a giant games console"><h2>Games</h2></a>
         <a href="videos.html"><img src="assets/island-videos-400.webp" width="400" height="345" loading="lazy" alt="The video island, with a cinema screen and cushions"><h2>Story videos</h2></a>
       </div>
     </div>
@@ -143,7 +143,7 @@
 <footer class="site-footer">
   <img src="assets/logo-cream.webp" alt="Starcora" width="160" height="40" loading="lazy">
   <p class="tagline">Free kids stories, story games and colouring pages for children aged 4 to 7.</p>
-  <nav aria-label="Footer"><a href="index.html">Home</a><a href="stories.html">Storybooks</a><a href="videos.html">Story videos</a><a href="art.html">Colouring pages</a><a href="activities/index.html">Printable activities</a><a href="printables/index.html">Printable storybooks</a><a href="grownups.html">Parents and teachers</a><a href="privacy.html">Privacy</a><a href="mailto:hello@starcora.world?subject=Starcora%20feedback">Feedback</a></nav>
+  <nav aria-label="Footer"><a href="index.html">Home</a><a href="stories.html">Storybooks</a><a href="videos.html">Story videos</a><a href="art.html">Colouring pages</a><a href="activities/index.html">Printable activities</a><a href="printables/index.html">Printable storybooks</a><a href="games/index.html">Games</a><a href="grownups.html">Parents and teachers</a><a href="privacy.html">Privacy</a><a href="mailto:hello@starcora.world?subject=Starcora%20feedback">Feedback</a></nav>
   <div><a class="mail" href="mailto:hello@starcora.world">hello@starcora.world</a></div>
   <div>&copy; 2026 Starcora</div>
 </footer>
