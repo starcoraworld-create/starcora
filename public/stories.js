@@ -35,7 +35,7 @@
   function rowOf(i){return Math.floor(i/PER)}
   function layout(){
     if(window.innerWidth<761){hero.style.height='';books.forEach(function(b){b.style.left='';b.style.removeProperty('--y')});return}
-    var H0=Math.max(640,window.innerHeight),rows=Math.ceil(books.length/PER),ROWH=Math.max(300,Math.min(H0*.46,window.innerWidth*.3));
+    var H0=Math.max(640,window.innerHeight),rows=Math.ceil(books.length/PER),ROWH=Math.max(370,Math.min(H0*.46,window.innerWidth*.3));
     hero.style.height=rows>1?(H0+(rows-1)*ROWH+H0*.14)+'px':'';
     books.forEach(function(b,i){var r=rowOf(i),p=i%PER,col=r%2?PER-1-p:p;
       b.style.left=XS[col]+'%';b.style.setProperty('--y',(YS[col]/100*H0+r*ROWH)+'px')});
