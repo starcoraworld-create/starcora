@@ -1058,10 +1058,11 @@ function s7(stage,api){
                {text:'The owl loves to swing.',clip:'b8_s7_clue3',who:['owl']},{text:"Rose wants to sit next to the owl's swing.",clip:'b8_s7_clue5',who:['rose']},
                {text:'Oro sits next to the Thank-You Bites.',clip:'b8_s7_clue4',who:['oro']},{text:'Sola sits in the middle chair.',clip:'b8_s7_clue6',who:['sola']}];
   let c=0,sel=null,selRing=null,taken={};const glowL=el('g',{'pointer-events':'none'},svg);
-  function showClue(){glowL.innerHTML='';svg.dataset.clue=c;if(c>=CLUES.length)return;api.setInstr(CLUES[c].text,CLUES[c].clip);
-    CLUES[c].who.forEach(id=>{const g=G.find(q=>q.id===id);if(!g.done){const h=hint(glowL,g.pos.x,g.pos.y,g.w*.55);later(2400,()=>h.remove());}});}
-  later(500,showClue);
-  function guestTap(g){if(g.done||svg.dataset.over)return;
+  let begun=false;
+  function glowWho(){glowL.innerHTML='';CLUES[c].who.forEach(id=>{const g=G.find(q=>q.id===id);if(!g.done){const h=hint(glowL,g.pos.x,g.pos.y,g.w*.55);later(2400,()=>h.remove());}});}
+  function showClue(){glowL.innerHTML='';svg.dataset.clue=c;if(c>=CLUES.length)return;api.setInstr(CLUES[c].text,CLUES[c].clip);glowWho();}
+  startBtn(stage,'Seat the guests!',()=>{begun=true;svg.dataset.begun='1';showClue();});
+  function guestTap(g){if(!begun||g.done||svg.dataset.over)return;
     if(!CLUES[c].who.includes(g.id)){api.sfx('boop');wobble(g.s.inner);api.say('Listen to the clue!','b8_s7_listen');api.voice&&later(900,()=>api.voice([CLUES[c].clip]));return;}
     sel=g;selRing&&selRing.remove();selRing=el('circle',{cx:g.pos.x,cy:g.pos.y,r:g.w*.6,fill:'none',stroke:'#F4E4A0','stroke-width':3,'pointer-events':'none'},svg);api.sfx('click');
     api.say('Now tap a seat!','b8_s7_seat');}
@@ -1081,7 +1082,7 @@ function s7(stage,api){
       // the one that lands on Oro's nose (inside the game picture)
       const G0=G.find(q=>q.id==='oro');const fk=sprite(svg,'flakeS',14);const tgt={x:G0.pos.x+3,y:G0.pos.y-31};at(fk.o,{x:tgt.x,y:-20});
       tween(3600,q=>at(fk.o,{x:tgt.x+Math.sin(q*9)*10*(1-q),y:-20+(tgt.y+20)*q},` rotate(${(q*200).toFixed(0)})`),()=>{twinkle();const gw=glowAt(svg,tgt.x,tgt.y,13,'moon',.9);svg.insertBefore(gw,fk.o);wobble(G0.s.inner);later(1500,()=>{tween(800,q=>L.style.opacity=(1-q).toFixed(2),()=>L.remove());api.solve();});});});}
-  idle(svg,8000,()=>{if(svg.dataset.over||c>=CLUES.length)return;showClue();});
+  idle(svg,8000,()=>{if(!begun||svg.dataset.over||c>=CLUES.length)return;glowWho();});
 }
 
 window.GAMES={1:s1,2:s2,3:s3,4:s4,5:s5,6:s6,7:s7};
